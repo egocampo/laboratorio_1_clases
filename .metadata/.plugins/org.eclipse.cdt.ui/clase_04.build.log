@@ -1,0 +1,7 @@
+20:47:09 **** Clean-only build of configuration Debug for project clase_04 ****
+make clean 
+rm -rf  ./src/clase_04.o ./src/utn.o  ./src/clase_04.d ./src/utn.d  clase_04
+ 
+
+20:47:09 Build Finished. 0 errors, 0 warnings. (took 360ms)
+

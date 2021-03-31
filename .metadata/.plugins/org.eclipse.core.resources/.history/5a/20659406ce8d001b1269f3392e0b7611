@@ -1,0 +1,32 @@
+/*
+ ============================================================================
+ Name        : clase_04.c
+ Author      : 
+ Version     :
+ Copyright   :
+ Description :
+ ============================================================================
+ */
+/*
+ *
+ * */
+#include <stdio.h>
+#include <stdlib.h>
+#include <stdio_ext.h>
+#include "utn.c"
+
+#define MIN_EDAD 0
+#define MAX_EDAD 99
+#define REINTENTOS 3
+
+int getNumero(int* pNumeroSolicitado,char* pTexto,char* pTextoError,int reintentos, int minimo, int maximo);
+
+int main(void) {
+	setbuf(stdout,NULL);// siempre
+	int numero;
+	if(getNumero(&numero,"Ingrese edad: ","Error papu, número fuera del rango\n",REINTENTOS,MIN_EDAD,MAX_EDAD)==0)
+	{
+		printf("Ingresaste %d\n",numero);
+	}
+	return EXIT_SUCCESS;
+}

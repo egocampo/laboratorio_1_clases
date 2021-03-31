@@ -1,0 +1,42 @@
+/*
+ * utn.c
+ *
+ *  Created on: 25 mar. 2021
+ *      Author: gabriel
+ */
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <stdio_ext.h>
+
+int getNumero(int* pNumeroSolicitado,char* pTexto,char* pTextoError,int reintentos, int minimo, int maximo)
+{
+	int contadorReintentos=reintentos;
+	int retorno=0;
+	do
+	{
+		printf("%s",pTexto);
+		__fpurge(stdin);
+		if(scanf("%d",pNumeroSolicitado)==1) // scanf retorna las variables que puede convertir, si no devuelve una hay un error, ej al poner "hola"
+		{
+			if(*pNumeroSolicitado<minimo || *pNumeroSolicitado>99)
+			{
+				printf("%s",pTextoError);
+				contadorReintentos--;
+				retorno=-1;
+			}
+			else
+			{
+				retorno=0;
+				break;
+			}
+		}
+		else
+		{
+			printf("%s",pTextoError);
+			contadorReintentos--;
+			retorno=-1;
+		}
+	}while(contadorReintentos>0);
+	return retorno;
+}

@@ -1,0 +1,26 @@
+/*
+ ============================================================================
+ Name        : clase_04.c
+ Author      : 
+ Version     :
+ Copyright   :
+ Description :
+ ============================================================================
+ */
+/*
+ *
+ * */
+#include <stdio.h>
+#include <stdlib.h>
+#include <stdio_ext.h>
+#include "utn.h"  // para mis bibliotecas se usan comillas
+
+int main(void) {
+	setbuf(stdout,NULL);// siempre
+	int numero;
+	if(utn_getNumero(&numero,"Ingrese edad: ","Error papu, número fuera del rango\n",REINTENTOS,MIN_EDAD,MAX_EDAD)==0)
+	{
+		printf("Ingresaste %d\n",numero);
+	}
+	return EXIT_SUCCESS;
+}

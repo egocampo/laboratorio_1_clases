@@ -1,0 +1,115 @@
+/*
+ * utn.c
+ *
+ *  Created on: 25 mar. 2021
+ *      Author: gabriel
+ */
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <stdio_ext.h>
+#include "utn.h"  // lo incluimos por si otra funcion tambien lo usa
+
+/*
+ * utn_getInteger: pide un numero entero al usuario y lo valida con reintentos
+ * int* pNumeroSolicitado: dirección donde almacenar el numero ingresado validado
+ * char* pTexto: texto que se muestra antes del ingreso
+ * char* pTextoError: texto que se muestra en caso de error
+ * int reintentos: cantidad de reintentos tras ingreso erroneo
+ * int minimo:
+ * */
+int utn_getInteger(int* pNumeroSolicitado,char* pTexto,char* pTextoError,int reintentos, int minimo, int maximo)
+{
+	int contadorReintentos=reintentos;
+	int retorno=0;
+	do
+	{
+		printf("%s",pTexto);
+		__fpurge(stdin);
+		if(scanf("%d",pNumeroSolicitado)==1) // scanf retorna las variables que puede convertir, si no devuelve una hay un error, ej al poner "hola"
+		{
+			if(*pNumeroSolicitado<minimo || *pNumeroSolicitado>99)
+			{
+				printf("%s",pTextoError);
+				contadorReintentos--;
+				retorno=-1;
+			}
+			else
+			{
+				retorno=0;
+				break;
+			}
+		}
+		else
+		{
+			printf("%s",pTextoError);
+			contadorReintentos--;
+			retorno=-1;
+		}
+	}while(contadorReintentos>0);
+	return retorno;
+}
+
+int utn_getFloat(float* pNumeroSolicitado,char* pTexto,char* pTextoError,int reintentos, int minimo, int maximo)
+{
+	int contadorReintentos=reintentos;
+	int retorno=0;
+	do
+	{
+		printf("%s",pTexto);
+		__fpurge(stdin);
+		if(scanf("%f",pNumeroSolicitado)==1) // scanf retorna las variables que puede convertir, si no devuelve una hay un error, ej al poner "hola"
+		{
+			if(*pNumeroSolicitado<minimo || *pNumeroSolicitado>99)
+			{
+				printf("%s",pTextoError);
+				contadorReintentos--;
+				retorno=-1;
+			}
+			else
+			{
+				retorno=0;
+				break;
+			}
+		}
+		else
+		{
+			printf("%s",pTextoError);
+			contadorReintentos--;
+			retorno=-1;
+		}
+	}while(contadorReintentos>0);
+	return retorno;
+}
+
+int utn_getChar(int* pNumeroSolicitado,char* pTexto,char* pTextoError,int reintentos, int minimo, int maximo)
+{
+	int contadorReintentos=reintentos;
+	int retorno=0;
+	do
+	{
+		printf("%s",pTexto);
+		__fpurge(stdin);
+		if(scanf("%d",pNumeroSolicitado)==1) // scanf retorna las variables que puede convertir, si no devuelve una hay un error, ej al poner "hola"
+		{
+			if(*pNumeroSolicitado<minimo || *pNumeroSolicitado>99)
+			{
+				printf("%s",pTextoError);
+				contadorReintentos--;
+				retorno=-1;
+			}
+			else
+			{
+				retorno=0;
+				break;
+			}
+		}
+		else
+		{
+			printf("%s",pTextoError);
+			contadorReintentos--;
+			retorno=-1;
+		}
+	}while(contadorReintentos>0);
+	return retorno;
+}

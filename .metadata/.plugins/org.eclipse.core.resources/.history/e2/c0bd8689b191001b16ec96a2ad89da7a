@@ -1,0 +1,13 @@
+/*
+ * utn.c
+ *
+ *  Created on: 30 mar. 2021
+ *      Author: gabriel
+ */
+
+int utn_getInteger(int* pNumeroSolicitado,char* pTexto,char* pTextoError,int reintentos, int minimo, int maximo)
+{
+	retorno = -1;
+
+	return retorno;
+}

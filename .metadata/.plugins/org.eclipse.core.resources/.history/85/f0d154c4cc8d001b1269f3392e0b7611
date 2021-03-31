@@ -1,0 +1,63 @@
+/*
+ ============================================================================
+ Name        : clase_04.c
+ Author      : 
+ Version     :
+ Copyright   :
+ Description :
+ ============================================================================
+ */
+/*
+ *
+ * */
+#include <stdio.h>
+#include <stdlib.h>
+#include <stdio_ext.h>
+
+#define MIN_EDAD 0
+#define MAX_EDAD 99
+#define REINTENTOS 3
+
+int getNumero(int* pNumeroSolicitado,char* pTexto,char* pTextoError,int reintentos, int minimo, int maximo);
+
+int main(void) {
+	setbuf(stdout,NULL);// siempre
+	int numero;
+	if(getNumero(&numero,"Ingrese edad: ","Error papu, número fuera del rango\n",REINTENTOS,MIN_EDAD,MAX_EDAD)==0)
+	{
+		printf("Ingresaste %d\n",numero);
+	}
+	return EXIT_SUCCESS;
+}
+
+int getNumero(int* pNumeroSolicitado,char* pTexto,char* pTextoError,int reintentos, int minimo, int maximo)
+{
+	int reintentos=reintentos;
+	int retorno=0;
+	do
+	{
+		printf("%s",pTexto);
+		__fpurge(stdin);
+		if(scanf("%d",pNumeroSolicitado)==1) // scanf retorna las variables que puede convertir, si no devuelve una hay un error, ej al poner "hola"
+		{
+			if(*pNumeroSolicitado<minimo || *pNumeroSolicitado>99)
+			{
+				printf("%s",pTextoError);
+				reintentos--;
+				retorno=-1;
+			}
+			else
+			{
+				retorno=0;
+				break;
+			}
+		}
+		else
+		{
+			printf("%s",pTextoError);
+			reintentos--;
+			retorno=-1;
+		}
+	}while(reintentos>0);
+	return retorno;
+}

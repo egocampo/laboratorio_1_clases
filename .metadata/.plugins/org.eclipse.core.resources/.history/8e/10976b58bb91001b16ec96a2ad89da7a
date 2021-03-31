@@ -1,0 +1,56 @@
+/*
+ ============================================================================
+ Name        : Clase_05.c
+ Author      : 
+ Version     :
+ Copyright   : Your copyright notice
+ Description : Hello World in C, Ansi-style
+ ============================================================================
+ */
+
+#include <stdio.h>
+#include <stdlib.h>
+#include "utn.h"
+#define CANTIDAD_EDADES 2
+#define UTN_MIN_EDAD 0
+#define UTN_MAX_EDAD 99
+#define UTN_REINTENTOS 3
+int arr_calcularMaximoInt(int* pArray, int limite, int* maximo);
+
+int main(void) {
+	int arrayEdades[CANTIDAD_EDADES];
+	int maximo;
+	for(int i=0;i<CANTIDAD_EDADES;i++)
+	{
+		utn_getInteger(&arrayEdades[i],"Ingrese la edad: ","Edad no válida",UTN_REINTENTOS,UTN_MIN_EDAD,UTN_MAX_EDAD);
+	}
+	arr_calcularMaximoInt(arrayEdades,CANTIDAD_EDADES,&maximo);
+	{
+		printf("El mayor es %d",maximo);
+	}
+	return EXIT_SUCCESS;
+}
+
+// funciones:
+// maximo
+int arr_calcularMaximoInt(int* pArray, int limite, int* maximo)
+{
+	int retorno = -1;
+	if(pArray != NULL && maximo>=0 && maximo != NULL)
+	{
+		retorno = -2;
+		int bufferIntMax=pArray[0];
+		for(int i=0;i<limite;i++)
+		{
+			if(pArray[i]>bufferIntMax)
+			{
+				bufferIntMax=pArray[i];
+				retorno=0;
+			}
+		}
+	}
+	return 0;
+}
+
+// minimo
+// promedio
