@@ -1,30 +1,7 @@
-22:08:16 **** Build of configuration Debug for project Clase_05 ****
-make all 
-Building file: ../src/Clase_05.c
-Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Clase_05.d" -MT"src/Clase_05.o" -o "src/Clase_05.o" "../src/Clase_05.c"
-Finished building: ../src/Clase_05.c
+22:20:26 **** Clean-only build of configuration Debug for project Clase_05 ****
+make clean 
+rm -rf  ./src/arrays.o ./src/clase_05.o ./src/utn.o  ./src/arrays.d ./src/clase_05.d ./src/utn.d  Clase_05
  
-Building file: ../src/arrays.c
-Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/arrays.d" -MT"src/arrays.o" -o "src/arrays.o" "../src/arrays.c"
-Finished building: ../src/arrays.c
- 
-Building file: ../src/utn.c
-Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/utn.d" -MT"src/utn.o" -o "src/utn.o" "../src/utn.c"
-Finished building: ../src/utn.c
- 
-Building target: Clase_05
-Invoking: GCC C Linker
-gcc  -o "Clase_05"  ./src/Clase_05.o ./src/arrays.o ./src/utn.o   
-/usr/bin/ld: ./src/arrays.o: en la función `arr_calcularMaximoInt':
-/home/gabriel/UTN/primerCuatrimestre/programacion1_laboratorio1/repositoriosClonados/laboratorio1_clases/Clase_05/Debug/../src/arrays.c:18: definiciones múltiples de `arr_calcularMaximoInt'; ./src/Clase_05.o:/home/gabriel/UTN/primerCuatrimestre/programacion1_laboratorio1/repositoriosClonados/laboratorio1_clases/Clase_05/Debug/../src/arrays.c:18: primero se definió aquí
-/usr/bin/ld: ./src/arrays.o: en la función `arr_calcularMinimoInt':
-/home/gabriel/UTN/primerCuatrimestre/programacion1_laboratorio1/repositoriosClonados/laboratorio1_clases/Clase_05/Debug/../src/arrays.c:43: definiciones múltiples de `arr_calcularMinimoInt'; ./src/Clase_05.o:/home/gabriel/UTN/primerCuatrimestre/programacion1_laboratorio1/repositoriosClonados/laboratorio1_clases/Clase_05/Debug/../src/arrays.c:43: primero se definió aquí
-collect2: error: ld returned 1 exit status
-make: *** [makefile:43: Clase_05] Error 1
-"make all" terminated with exit code 2. Build might be incomplete.
 
-22:08:16 Build Failed. 5 errors, 0 warnings. (took 475ms)
+22:20:26 Build Finished. 0 errors, 0 warnings. (took 325ms)
 
