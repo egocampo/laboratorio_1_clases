@@ -540,3 +540,273 @@ Finished building target: clase_05_arrays
 08:36:53 **** Incremental Build of configuration Debug for project clase_05_arrays ****
 make all 
 make: No se hace nada para 'all'.
+15:20:28 **** Incremental Build of configuration Debug for project clase_05_arrays ****
+make all 
+Building file: ../src/array.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/array.d" -MT"src/array.o" -o "src/array.o" "../src/array.c"
+Finished building: ../src/array.c
+ 
+Building file: ../src/clase_05_arrays.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/clase_05_arrays.d" -MT"src/clase_05_arrays.o" -o "src/clase_05_arrays.o" "../src/clase_05_arrays.c"
+Finished building: ../src/clase_05_arrays.c
+ 
+Building file: ../src/utn.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/utn.d" -MT"src/utn.o" -o "src/utn.o" "../src/utn.c"
+Finished building: ../src/utn.c
+ 
+Building target: clase_05_arrays
+Invoking: GCC C Linker
+gcc  -o "clase_05_arrays"  ./src/array.o ./src/clase_05_arrays.o ./src/utn.o   
+Finished building target: clase_05_arrays
+ 
+15:27:02 **** Incremental Build of configuration Debug for project clase_05_arrays ****
+make all 
+Building file: ../src/array.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/array.d" -MT"src/array.o" -o "src/array.o" "../src/array.c"
+Finished building: ../src/array.c
+ 
+Building file: ../src/clase_05_arrays.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/clase_05_arrays.d" -MT"src/clase_05_arrays.o" -o "src/clase_05_arrays.o" "../src/clase_05_arrays.c"
+Finished building: ../src/clase_05_arrays.c
+ 
+Building target: clase_05_arrays
+Invoking: GCC C Linker
+gcc  -o "clase_05_arrays"  ./src/array.o ./src/clase_05_arrays.o ./src/utn.o   
+Finished building target: clase_05_arrays
+ 
+15:27:04 **** Incremental Build of configuration Debug for project clase_05_arrays ****
+make all 
+make: No se hace nada para 'all'.
+15:28:18 **** Incremental Build of configuration Debug for project clase_05_arrays ****
+make all 
+Building file: ../src/clase_05_arrays.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/clase_05_arrays.d" -MT"src/clase_05_arrays.o" -o "src/clase_05_arrays.o" "../src/clase_05_arrays.c"
+Finished building: ../src/clase_05_arrays.c
+ 
+Building target: clase_05_arrays
+Invoking: GCC C Linker
+gcc  -o "clase_05_arrays"  ./src/array.o ./src/clase_05_arrays.o ./src/utn.o   
+Finished building target: clase_05_arrays
+ 
+15:28:20 **** Incremental Build of configuration Debug for project clase_05_arrays ****
+make all 
+make: No se hace nada para 'all'.
+15:32:43 **** Incremental Build of configuration Debug for project clase_05_arrays ****
+make all 
+Building file: ../src/array.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/array.d" -MT"src/array.o" -o "src/array.o" "../src/array.c"
+../src/array.c: In function ‘arr_burbujeo’:
+../src/array.c:144:2: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘for’
+  144 |  for(int i=0;i<limite;i++)
+      |  ^~~
+../src/array.c:146:3: error: ‘arrayAuxiliar’ undeclared (first use in this function)
+  146 |   arrayAuxiliar[i]=array[i];
+      |   ^~~~~~~~~~~~~
+../src/array.c:146:3: note: each undeclared identifier is reported only once for each function it appears in
+../src/array.c:147:3: warning: implicit declaration of function ‘print’; did you mean ‘printf’? [-Wimplicit-function-declaration]
+  147 |   print("%d",arrayAuxiliar[i]);
+      |   ^~~~~
+      |   printf
+make: *** [src/subdir.mk:26: src/array.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+15:32:55 **** Incremental Build of configuration Debug for project clase_05_arrays ****
+make all 
+Building file: ../src/array.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/array.d" -MT"src/array.o" -o "src/array.o" "../src/array.c"
+../src/array.c: In function ‘arr_burbujeo’:
+../src/array.c:147:3: warning: implicit declaration of function ‘print’; did you mean ‘printf’? [-Wimplicit-function-declaration]
+  147 |   print("%d",arrayAuxiliar[i]);
+      |   ^~~~~
+      |   printf
+Finished building: ../src/array.c
+ 
+Building file: ../src/clase_05_arrays.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/clase_05_arrays.d" -MT"src/clase_05_arrays.o" -o "src/clase_05_arrays.o" "../src/clase_05_arrays.c"
+Finished building: ../src/clase_05_arrays.c
+ 
+Building target: clase_05_arrays
+Invoking: GCC C Linker
+gcc  -o "clase_05_arrays"  ./src/array.o ./src/clase_05_arrays.o ./src/utn.o   
+/usr/bin/ld: ./src/array.o: en la función `arr_burbujeo':
+/home/gabriel/UTN/primerCuatrimestre/programacion1_laboratorio1/repositoriosClonados/laboratorio1_clases/clase_05_arrays/Debug/../src/array.c:147: referencia a `print' sin definir
+collect2: error: ld returned 1 exit status
+make: *** [makefile:43: clase_05_arrays] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+15:33:03 **** Incremental Build of configuration Debug for project clase_05_arrays ****
+make all 
+Building file: ../src/array.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/array.d" -MT"src/array.o" -o "src/array.o" "../src/array.c"
+Finished building: ../src/array.c
+ 
+Building target: clase_05_arrays
+Invoking: GCC C Linker
+gcc  -o "clase_05_arrays"  ./src/array.o ./src/clase_05_arrays.o ./src/utn.o   
+Finished building target: clase_05_arrays
+ 
+15:33:06 **** Incremental Build of configuration Debug for project clase_05_arrays ****
+make all 
+make: No se hace nada para 'all'.
+15:35:51 **** Incremental Build of configuration Debug for project clase_05_arrays ****
+make all 
+Building file: ../src/array.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/array.d" -MT"src/array.o" -o "src/array.o" "../src/array.c"
+Finished building: ../src/array.c
+ 
+Building target: clase_05_arrays
+Invoking: GCC C Linker
+gcc  -o "clase_05_arrays"  ./src/array.o ./src/clase_05_arrays.o ./src/utn.o   
+Finished building target: clase_05_arrays
+ 
+15:36:31 **** Incremental Build of configuration Debug for project clase_05_arrays ****
+make all 
+Building file: ../src/clase_05_arrays.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/clase_05_arrays.d" -MT"src/clase_05_arrays.o" -o "src/clase_05_arrays.o" "../src/clase_05_arrays.c"
+Finished building: ../src/clase_05_arrays.c
+ 
+Building target: clase_05_arrays
+Invoking: GCC C Linker
+gcc  -o "clase_05_arrays"  ./src/array.o ./src/clase_05_arrays.o ./src/utn.o   
+Finished building target: clase_05_arrays
+ 
+15:36:33 **** Incremental Build of configuration Debug for project clase_05_arrays ****
+make all 
+make: No se hace nada para 'all'.
+15:36:46 **** Incremental Build of configuration Debug for project clase_05_arrays ****
+make all 
+make: No se hace nada para 'all'.
+15:36:52 **** Incremental Build of configuration Debug for project clase_05_arrays ****
+make all 
+make: No se hace nada para 'all'.
+15:37:47 **** Incremental Build of configuration Debug for project clase_05_arrays ****
+make all 
+make: No se hace nada para 'all'.
+15:37:48 **** Incremental Build of configuration Debug for project clase_05_arrays ****
+make all 
+make: No se hace nada para 'all'.
+15:39:08 **** Incremental Build of configuration Debug for project clase_05_arrays ****
+make all 
+Building file: ../src/array.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/array.d" -MT"src/array.o" -o "src/array.o" "../src/array.c"
+../src/array.c: In function ‘arr_burbujeo’:
+../src/array.c:163:3: error: invalid type argument of unary ‘*’ (have ‘int’)
+  163 |   *arrayOrdenado[i]=arrayAuxiliar[i];
+      |   ^~~~~~~~~~~~~~~~~
+make: *** [src/subdir.mk:26: src/array.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+15:40:05 **** Incremental Build of configuration Debug for project clase_05_arrays ****
+make all 
+Building file: ../src/array.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/array.d" -MT"src/array.o" -o "src/array.o" "../src/array.c"
+../src/array.c: In function ‘arr_burbujeo’:
+../src/array.c:163:12: warning: format ‘%d’ expects argument of type ‘int’, but argument 2 has type ‘int *’ [-Wformat=]
+  163 |   printf("%d\n",arrayOrdenado);
+      |           ~^    ~~~~~~~~~~~~~
+      |            |    |
+      |            int  int *
+      |           %ls
+Finished building: ../src/array.c
+ 
+Building file: ../src/clase_05_arrays.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/clase_05_arrays.d" -MT"src/clase_05_arrays.o" -o "src/clase_05_arrays.o" "../src/clase_05_arrays.c"
+Finished building: ../src/clase_05_arrays.c
+ 
+Building target: clase_05_arrays
+Invoking: GCC C Linker
+gcc  -o "clase_05_arrays"  ./src/array.o ./src/clase_05_arrays.o ./src/utn.o   
+Finished building target: clase_05_arrays
+ 
+15:40:18 **** Incremental Build of configuration Debug for project clase_05_arrays ****
+make all 
+Building file: ../src/array.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/array.d" -MT"src/array.o" -o "src/array.o" "../src/array.c"
+Finished building: ../src/array.c
+ 
+Building target: clase_05_arrays
+Invoking: GCC C Linker
+gcc  -o "clase_05_arrays"  ./src/array.o ./src/clase_05_arrays.o ./src/utn.o   
+Finished building target: clase_05_arrays
+ 
+15:40:19 **** Incremental Build of configuration Debug for project clase_05_arrays ****
+make all 
+make: No se hace nada para 'all'.
+15:40:54 **** Incremental Build of configuration Debug for project clase_05_arrays ****
+make all 
+Building file: ../src/array.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/array.d" -MT"src/array.o" -o "src/array.o" "../src/array.c"
+Finished building: ../src/array.c
+ 
+Building target: clase_05_arrays
+Invoking: GCC C Linker
+gcc  -o "clase_05_arrays"  ./src/array.o ./src/clase_05_arrays.o ./src/utn.o   
+Finished building target: clase_05_arrays
+ 
+15:40:55 **** Incremental Build of configuration Debug for project clase_05_arrays ****
+make all 
+make: No se hace nada para 'all'.
+15:41:34 **** Incremental Build of configuration Debug for project clase_05_arrays ****
+make all 
+Building file: ../src/array.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/array.d" -MT"src/array.o" -o "src/array.o" "../src/array.c"
+Finished building: ../src/array.c
+ 
+Building target: clase_05_arrays
+Invoking: GCC C Linker
+gcc  -o "clase_05_arrays"  ./src/array.o ./src/clase_05_arrays.o ./src/utn.o   
+Finished building target: clase_05_arrays
+ 
+15:41:36 **** Incremental Build of configuration Debug for project clase_05_arrays ****
+make all 
+make: No se hace nada para 'all'.
+15:41:49 **** Incremental Build of configuration Debug for project clase_05_arrays ****
+make all 
+Building file: ../src/array.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/array.d" -MT"src/array.o" -o "src/array.o" "../src/array.c"
+Finished building: ../src/array.c
+ 
+Building file: ../src/clase_05_arrays.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/clase_05_arrays.d" -MT"src/clase_05_arrays.o" -o "src/clase_05_arrays.o" "../src/clase_05_arrays.c"
+Finished building: ../src/clase_05_arrays.c
+ 
+Building target: clase_05_arrays
+Invoking: GCC C Linker
+gcc  -o "clase_05_arrays"  ./src/array.o ./src/clase_05_arrays.o ./src/utn.o   
+Finished building target: clase_05_arrays
+ 
+15:41:51 **** Incremental Build of configuration Debug for project clase_05_arrays ****
+make all 
+make: No se hace nada para 'all'.
+15:42:27 **** Incremental Build of configuration Debug for project clase_05_arrays ****
+make all 
+Building file: ../src/array.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/array.d" -MT"src/array.o" -o "src/array.o" "../src/array.c"
+Finished building: ../src/array.c
+ 
+Building target: clase_05_arrays
+Invoking: GCC C Linker
+gcc  -o "clase_05_arrays"  ./src/array.o ./src/clase_05_arrays.o ./src/utn.o   
+Finished building target: clase_05_arrays
+ 
+15:42:28 **** Incremental Build of configuration Debug for project clase_05_arrays ****
+make all 
+make: No se hace nada para 'all'.

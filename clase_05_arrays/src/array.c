@@ -105,3 +105,61 @@ int arr_calcularPromedioInt(int* array,int limite, float* resultado)
 	}
 	return retorno;
 }
+/*
+ * arr_buscarNumeroInt: busca si existe un valor en un array
+ * *array: puntero a la dirección de memoria del array
+ * limite: tamaño del array
+ * *resultado: puntero a la dirección de memoria donde almacenar el promedio
+ * * retorno: 0 si encuentra el numero, -2 si no lo encuentra, -1 si hubo error de validación de datos.
+ * */
+int arr_buscarNumeroInt(int* array,int limite,int numeroBuscado)
+{
+	int retorno = -1;
+	if(array != NULL && limite >=0)
+	{
+		retorno = -2;
+		for(int i=0;i<limite;i++)
+		{
+			if(array[i]==numeroBuscado)
+			{
+				retorno = 0;
+			}
+		}
+	}
+	return retorno;
+}
+
+void arr_getIntegers(int* array,int limite, char* pTexto,char* pTextoError, int reintentos, int minimo, int maximo)
+{
+	for(int i=0;i<limite;i++)
+	{
+		utn_getInteger(&array[i], pTexto, pTextoError, reintentos, minimo, maximo);
+	}
+
+}
+
+void arr_burbujeo(int* array,int limite,int* arrayOrdenado)
+{
+	int arrayAuxiliar[limite];
+	int aux;
+	for(int i=0;i<limite;i++)
+	{
+		arrayAuxiliar[i]=array[i];
+	}
+	for(int i=0;i<limite-1;i++)
+	{
+		for(int j=i+1;j<limite;j++)
+		{
+			if(arrayAuxiliar[i]>arrayAuxiliar[j])
+			{
+				aux=arrayAuxiliar[i];
+				arrayAuxiliar[i]=arrayAuxiliar[j];
+				arrayAuxiliar[j]=aux;
+			}
+		}
+	}
+	for(int i=0;i<limite;i++)
+	{
+		arrayOrdenado[i]=arrayAuxiliar[i];
+	}
+}
