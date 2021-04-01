@@ -12,115 +12,112 @@
 #include "array.h"
 
 /*
- * arr_calcularMaximoInt: calcula el maximo numero de un array
- * *array: puntero a la dirección de memoria del array
- * limite: tamaño del array
- * *resultado: puntero a la dirección de memoria donde almacenar el maximo
- * retorno: 0 sin errores, -1 error de validación de datos.
+ * \brief Calcula el valor maximo de un array de enteros
+ * \param pArray puntero a la dirección de memoria del array
+ * \param len tamaño del array
+ * \param pResultado puntero a la dirección de memoria donde almacenar el maximo
+ * \return 0 sin errores, -1 error de validación de datos.
  * */
-int arr_calcularMaximoInt(int* array,int limite, int* resultado)
+int arr_buscarMaximoInt(int* pArray,int len, int* pResultado)
 {
 	int retorno = -1;
-	if(array != NULL && limite >= 0 && resultado != NULL)
+	if(pArray != NULL && len >= 0 && pResultado != NULL)
 	{
 		retorno = 0;
-		int bufferIntMax=array[0];
-		for(int i=0;i<limite;i++)
+		int bufferIntMax=pArray[0];
+		for(int i=0;i<len;i++)
 		{
-			if(array[i]>bufferIntMax)
+			if(pArray[i]>bufferIntMax)
 			{
-				bufferIntMax=array[i];
+				bufferIntMax=pArray[i];
 			}
 		}
-		*resultado = bufferIntMax;
+		*pResultado = bufferIntMax;
 	}
 	return retorno;
 }
 /*
- * arr_calcularMinimoInt: calcula el minimo numero de un array
- * *array: puntero a la dirección de memoria del array
- * limite: tamaño del array
- * *resultado: puntero a la dirección de memoria donde almacenar el maximo
- * * retorno: 0 sin errores, -1 error de validación de datos.
+ * \brief Calcula el valor minimo de un array de enteros
+ * \param pArray puntero a la dirección de memoria del array
+ * \param len tamaño del array
+ * \param pResultado puntero a la dirección de memoria donde almacenar el maximo
+ * \return 0 sin errores, -1 error de validación de datos.
  * */
-int arr_calcularMinimoInt(int* array,int limite, int* resultado)
+int arr_buscarMinimoInt(int* pArray,int len, int* pResultado)
 {
 	int retorno = -1;
-	if(array != NULL && limite >= 0 && resultado != NULL)
+	if(pArray != NULL && len >= 0 && pResultado != NULL)
 	{
 		retorno = 0;
-		int bufferIntMin=array[0];
-		for(int i=0;i<limite;i++)
+		int bufferIntMin=pArray[0];
+		for(int i=0;i<len;i++)
 		{
-			if(array[i]<bufferIntMin)
+			if(pArray[i]<bufferIntMin)
 			{
-				bufferIntMin=array[i];
+				bufferIntMin=pArray[i];
 			}
 		}
-		*resultado = bufferIntMin;
+		*pResultado = bufferIntMin;
 	}
 	return retorno;
 }
 /*
- * arr_calcularSumaInt: acumula los numeros de un array
- * *array: puntero a la dirección de memoria del array
- * limite: tamaño del array
- * *resultado: puntero a la dirección de memoria donde almacenar el acumulado
- * * retorno: 0 sin errores, -1 error de validación de datos.
+ * \brief Acumula los numeros de un array de enteros
+ * \param pArray: puntero a la dirección de memoria del array
+ * \param len: tamaño del array
+ * \param pResultado puntero a la dirección de memoria donde almacenar el acumulado
+ * \return 0 sin errores, -1 error de validación de datos.
  * */
-int arr_calcularSumaInt(int* array,int limite, int* resultado)
+int arr_acumularInt(int* pArray,int len, int* pResultado)
 {
 	int retorno = -1;
-	if(array != NULL && limite >= 0 && resultado != NULL)
+	if(pArray != NULL && len >= 0 && pResultado != NULL)
 	{
 		retorno = 0;
 		int acumulador = 0;
-		for(int i=0;i<limite;i++)
+		for(int i=0;i<len;i++)
 		{
-			acumulador += array[i];
+			acumulador += pArray[i];
 		}
-		*resultado = acumulador;
+		*pResultado = acumulador;
 	}
 	return retorno;
 }
 /*
- * arr_calcularPromedioInt: calcula el promedio de valores de un array
- * *array: puntero a la dirección de memoria del array
- * limite: tamaño del array
- * *resultado: puntero a la dirección de memoria donde almacenar el promedio
- * * retorno: 0 sin errores, -1 error de validación de datos.
+ * \brief Calcula el promedio de valores de un array de enteros
+ * \param pArray puntero a la dirección de memoria del array
+ * \param len tamaño del array
+ * \param pResultado: puntero a la dirección de memoria donde almacenar el promedio
+ * \return 0 sin errores, -1 error de validación de datos.
  * */
-int arr_calcularPromedioInt(int* array,int limite, float* resultado)
+int arr_calcularPromedioInt(int* pArray,int len, float* pResultado)
 {
 	int retorno = -1;
-	if(array != NULL && limite >= 0 && resultado != NULL)
+	if(pArray != NULL && len >= 0 && pResultado != NULL)
 	{
 		retorno = 0;
 		int acumulador = 0;
-		for(int i=0;i<limite;i++)
-		{
-			acumulador += array[i];
-		}
-		*resultado=acumulador/(float)limite;
+		arr_acumularInt(pArray, len, &acumulador);
+		*pResultado=acumulador/(float)len;
 	}
 	return retorno;
 }
 /*
- * arr_buscarNumeroInt: busca si existe un valor en un array
- * *array: puntero a la dirección de memoria del array
- * limite: tamaño del array
- * *resultado: puntero a la dirección de memoria donde almacenar el promedio
- * * retorno: 0 si encuentra el numero, -2 si no lo encuentra, -1 si hubo error de validación de datos.
+ * \brief Busca si existe un valor en un array de enteros
+ * \param pArray puntero a la dirección de memoria del array
+ * \param len tamaño del array
+ * \param numeroBuscado valor buscado en el array
+ * \return 0 si encuentra el numero, 1 si no lo encuentra, -1 si hubo error de validación de datos.
  * */
-int arr_buscarNumeroInt(int* array,int limite,int numeroBuscado)
+int arr_buscarInt(int* pArray,int len,int numeroBuscado)
 {
 	int retorno = -1;
-	if(array != NULL && limite >=0)
+	if(pArray != NULL && len >=0)
 	{
-		retorno = -2;
-		for(int i=0;i<limite;i++)
+		retorno = 1;
+		for(int i=0;i<len;i++)
 		{
-			if(array[i]==numeroBuscado)
+			if(pArray[i]==numeroBuscado)
 			{
 				retorno = 0;
 			}
@@ -129,37 +126,145 @@ int arr_buscarNumeroInt(int* array,int limite,int numeroBuscado)
 	return retorno;
 }
 
-void arr_getIntegers(int* array,int limite, char* pTexto,char* pTextoError, int reintentos, int minimo, int maximo)
+/*
+ * \brief Ordenamiento de array por método de burbujeo básico, guardando el resultado en otro array
+ * \param pArray puntero a la dirección de memoria del array
+ * \param len tamaño del array
+ * \param arrayOrdenado puntero a la dirección de memoria del array ordenado
+ * \return 0 sin errores, -1 error de validación de datos.
+ * */
+int arr_getIntegers(int* pArray,int len, char* pTexto,char* pTextoError, int reintentos, int minimo, int maximo)
 {
-	for(int i=0;i<limite;i++)
+	int retorno = -1;
+	if(pArray != NULL && len >= 0 && pTexto != NULL && pTextoError != NULL && reintentos >= 0 && minimo < maximo)
 	{
-		utn_getInteger(&array[i], pTexto, pTextoError, reintentos, minimo, maximo);
+		retorno = 0;
+		for(int i=0;i<len;i++)
+		{
+			utn_getInteger(&pArray[i], pTexto, pTextoError, reintentos, minimo, maximo);
+		}
 	}
 
+	return retorno;
 }
 
-void arr_burbujeo(int* array,int limite,int* arrayOrdenado)
+/*
+ * \brief Ordenamiento de array por método de burbujeo básico, guardando el resultado en otro array
+ * \param pArray puntero a la dirección de memoria del array
+ * \param len tamaño del array
+ * \param arrayOrdenado puntero a la dirección de memoria del array ordenado
+ * \return 0 sin errores, -1 error de validación de datos.
+ * */
+int arr_burbujeoBasico(int* pArray,int len,int* arrayOrdenado)
 {
-	int arrayAuxiliar[limite];
-	int aux;
-	for(int i=0;i<limite;i++)
+	int retorno = -1;
+	if(pArray != NULL && len >= 0 && arrayOrdenado != NULL)
 	{
-		arrayAuxiliar[i]=array[i];
-	}
-	for(int i=0;i<limite-1;i++)
-	{
-		for(int j=i+1;j<limite;j++)
+		retorno = 0;
+		int arrayAuxiliar[len];
+		int aux;
+		for(int i=0;i<len;i++)
 		{
-			if(arrayAuxiliar[i]>arrayAuxiliar[j])
+			arrayAuxiliar[i]=pArray[i];
+		}
+		for(int i=0;i<len-1;i++)
+		{
+			for(int j=i+1;j<len;j++)
 			{
-				aux=arrayAuxiliar[i];
-				arrayAuxiliar[i]=arrayAuxiliar[j];
-				arrayAuxiliar[j]=aux;
+				if(arrayAuxiliar[i]>arrayAuxiliar[j])
+				{
+					aux=arrayAuxiliar[i];
+					arrayAuxiliar[i]=arrayAuxiliar[j];
+					arrayAuxiliar[j]=aux;
+				}
+			}
+		}
+		for(int i=0;i<len;i++)
+		{
+			arrayOrdenado[i]=arrayAuxiliar[i];
+		}
+	}
+	return retorno;
+}
+
+/*
+ * \brief Ordenamiento de array por método de burbujeo eficiente
+ * \param pArray puntero a la dirección de memoria del array
+ * \param len tamaño del array
+ * \return 0 sin errores, -1 error de validación de datos.
+ * */
+int arr_burbujeoEficiente(int* pArray,int len)
+{
+	int retorno = -1;
+	if(pArray != NULL && len >= 0)
+	{
+		retorno = 0;
+		int j, aux;
+		int flagNoEstaOrdenado = 1;
+		while(flagNoEstaOrdenado==1)
+		{
+			flagNoEstaOrdenado = 0;
+			for(j=1;j<len;j++)
+			{
+				if(pArray[j]<pArray[j-1])
+				{
+					aux=pArray[j];
+					pArray[j-1]=pArray[j];
+					pArray[j-1]=aux;
+					flagNoEstaOrdenado = 1;
+				}
 			}
 		}
 	}
-	for(int i=0;i<limite;i++)
-	{
-		arrayOrdenado[i]=arrayAuxiliar[i];
-	}
+	return retorno;
 }
+
+/*
+ * \brief Ordenamiento de array por método de insersión
+ * \param pArray puntero a la dirección de memoria del array
+ * \param len tamaño del array
+ * \return 0 sin errores, -1 error de validación de datos.
+ * */
+int arr_ordenamientoInsersion(int* pArray,int len)
+{
+	int retorno = -1;
+	if(pArray != NULL && len >= 0)
+	{
+		retorno = 0;
+		int i, j;
+		int temp;
+		for(i=1;i<len;i++)
+		{
+			temp=pArray[i];
+			j=i-1;
+			while(j>=0 && temp < pArray[j])
+			{
+				pArray[j+1] = pArray[j];
+				j--;
+			}
+			pArray[j+1] = temp;
+		}
+	}
+	return retorno;
+}
+
+/*
+ * \brief Imprime el contenido de un array de enteros
+ * \param pArray puntero a la dirección de memoria del array
+ * \param len tamaño del array
+ * \return 0 sin errores, -1 error de validación de datos.
+ * */
+int arr_imprimirArrayInt(int* pArray,int len)
+{
+	int retorno = -1;
+	if(pArray != NULL && len >= 0)
+	{
+		retorno = 0;
+		for(int i=0;i<len;i++)
+		{
+			printf("[DEBUG] Indice: %d - Valor: %d\n",i,pArray[i]);
+		}
+	}
+	return retorno;
+}
+
