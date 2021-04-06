@@ -1,22 +1,305 @@
-09:13:02 **** Build of configuration Debug for project clase_05_arrays ****
+19:50:07 **** Incremental Build of configuration Debug for project clase_06 ****
+make all 
+Building file: ../src/array.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/array.d" -MT"src/array.o" -o "src/array.o" "../src/array.c"
+../src/array.c: In function ‘arr_searchPositionOfMinimum’:
+../src/array.c:395:7: error: ‘i’ undeclared (first use in this function)
+  395 |   for(i=inicio;i<len;i++)
+      |       ^
+../src/array.c:395:7: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [src/subdir.mk:29: src/array.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+19:50:58 **** Incremental Build of configuration Debug for project clase_06 ****
 make all 
 Building file: ../src/array.c
 Invoking: GCC C Compiler
 gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/array.d" -MT"src/array.o" -o "src/array.o" "../src/array.c"
 Finished building: ../src/array.c
  
-Building file: ../src/clase_05_arrays.c
+Building file: ../src/clase_06.c
 Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/clase_05_arrays.d" -MT"src/clase_05_arrays.o" -o "src/clase_05_arrays.o" "../src/clase_05_arrays.c"
-Finished building: ../src/clase_05_arrays.c
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/clase_06.d" -MT"src/clase_06.o" -o "src/clase_06.o" "../src/clase_06.c"
+../src/clase_06.c: In function ‘main’:
+../src/clase_06.c:26:46: warning: passing argument 1 of ‘arr_searchPositionOfMinimum’ from incompatible pointer type [-Wincompatible-pointer-types]
+   26 |   posicionMinimo=arr_searchPositionOfMinimum(arrayInt,LIMITE,i,&posicionMinimo));
+      |                                              ^~~~~~~~
+      |                                              |
+      |                                              int *
+In file included from ../src/clase_06.c:13:
+../src/array.h:26:40: note: expected ‘float *’ but argument is of type ‘int *’
+   26 | int arr_searchPositionOfMinimum(float* pArray,int len, int inicio,int* pPosicionRetorno);
+      |                                 ~~~~~~~^~~~~~
+../src/clase_06.c:26:80: error: expected ‘;’ before ‘)’ token
+   26 |   posicionMinimo=arr_searchPositionOfMinimum(arrayInt,LIMITE,i,&posicionMinimo));
+      |                                                                                ^
+      |                                                                                ;
+../src/clase_06.c:26:80: error: expected statement before ‘)’ token
+../src/clase_06.c:22:6: warning: unused variable ‘aux’ [-Wunused-variable]
+   22 |  int aux;
+      |      ^~~
+make: *** [src/subdir.mk:29: src/clase_06.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+19:51:01 **** Incremental Build of configuration Debug for project clase_06 ****
+make all 
+Building file: ../src/clase_06.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/clase_06.d" -MT"src/clase_06.o" -o "src/clase_06.o" "../src/clase_06.c"
+../src/clase_06.c: In function ‘main’:
+../src/clase_06.c:26:46: warning: passing argument 1 of ‘arr_searchPositionOfMinimum’ from incompatible pointer type [-Wincompatible-pointer-types]
+   26 |   posicionMinimo=arr_searchPositionOfMinimum(arrayInt,LIMITE,i,&posicionMinimo));
+      |                                              ^~~~~~~~
+      |                                              |
+      |                                              int *
+In file included from ../src/clase_06.c:13:
+../src/array.h:26:40: note: expected ‘float *’ but argument is of type ‘int *’
+   26 | int arr_searchPositionOfMinimum(float* pArray,int len, int inicio,int* pPosicionRetorno);
+      |                                 ~~~~~~~^~~~~~
+../src/clase_06.c:26:80: error: expected ‘;’ before ‘)’ token
+   26 |   posicionMinimo=arr_searchPositionOfMinimum(arrayInt,LIMITE,i,&posicionMinimo));
+      |                                                                                ^
+      |                                                                                ;
+../src/clase_06.c:26:80: error: expected statement before ‘)’ token
+../src/clase_06.c:22:6: warning: unused variable ‘aux’ [-Wunused-variable]
+   22 |  int aux;
+      |      ^~~
+make: *** [src/subdir.mk:29: src/clase_06.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+19:52:02 **** Incremental Build of configuration Debug for project clase_06 ****
+make all 
+Building file: ../src/array.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/array.d" -MT"src/array.o" -o "src/array.o" "../src/array.c"
+../src/array.c:386:5: error: conflicting types for ‘arr_searchPositionOfMinimum’
+  386 | int arr_searchPositionOfMinimum(int* pArray,int len, int inicio,int* pPosicionRetorno)
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from ../src/array.c:12:
+../src/array.h:26:5: note: previous declaration of ‘arr_searchPositionOfMinimum’ was here
+   26 | int arr_searchPositionOfMinimum(float* pArray,int len, int inicio,int* pPosicionRetorno);
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+make: *** [src/subdir.mk:29: src/array.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+19:52:12 **** Incremental Build of configuration Debug for project clase_06 ****
+make all 
+Building file: ../src/array.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/array.d" -MT"src/array.o" -o "src/array.o" "../src/array.c"
+Finished building: ../src/array.c
+ 
+Building file: ../src/clase_06.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/clase_06.d" -MT"src/clase_06.o" -o "src/clase_06.o" "../src/clase_06.c"
+../src/clase_06.c: In function ‘main’:
+../src/clase_06.c:26:80: error: expected ‘;’ before ‘}’ token
+   26 |   posicionMinimo=arr_searchPositionOfMinimum(arrayInt,LIMITE,i,&posicionMinimo)
+      |                                                                                ^
+      |                                                                                ;
+   27 |  }
+      |  ~                                                                              
+../src/clase_06.c:22:6: warning: unused variable ‘aux’ [-Wunused-variable]
+   22 |  int aux;
+      |      ^~~
+make: *** [src/subdir.mk:29: src/clase_06.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+19:53:07 **** Incremental Build of configuration Debug for project clase_06 ****
+make all 
+Building file: ../src/clase_06.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/clase_06.d" -MT"src/clase_06.o" -o "src/clase_06.o" "../src/clase_06.c"
+Finished building: ../src/clase_06.c
  
 Building file: ../src/utn.c
 Invoking: GCC C Compiler
 gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/utn.d" -MT"src/utn.o" -o "src/utn.o" "../src/utn.c"
 Finished building: ../src/utn.c
  
-Building target: clase_05_arrays
+Building target: clase_06
 Invoking: GCC C Linker
-gcc  -o "clase_05_arrays"  ./src/array.o ./src/clase_05_arrays.o ./src/utn.o   
-Finished building target: clase_05_arrays
+gcc  -o "clase_06"  ./src/array.o ./src/clase_06.o ./src/matematicas.o ./src/utn.o   
+Finished building target: clase_06
  
+19:54:28 **** Incremental Build of configuration Debug for project clase_06 ****
+make all 
+Building file: ../src/clase_06.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/clase_06.d" -MT"src/clase_06.o" -o "src/clase_06.o" "../src/clase_06.c"
+Finished building: ../src/clase_06.c
+ 
+Building target: clase_06
+Invoking: GCC C Linker
+gcc  -o "clase_06"  ./src/array.o ./src/clase_06.o ./src/matematicas.o ./src/utn.o   
+Finished building target: clase_06
+ 
+19:54:30 **** Incremental Build of configuration Debug for project clase_06 ****
+make all 
+make: No se hace nada para 'all'.
+19:55:42 **** Incremental Build of configuration Debug for project clase_06 ****
+make all 
+Building file: ../src/clase_06.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/clase_06.d" -MT"src/clase_06.o" -o "src/clase_06.o" "../src/clase_06.c"
+Finished building: ../src/clase_06.c
+ 
+Building target: clase_06
+Invoking: GCC C Linker
+gcc  -o "clase_06"  ./src/array.o ./src/clase_06.o ./src/matematicas.o ./src/utn.o   
+Finished building target: clase_06
+ 
+19:55:44 **** Incremental Build of configuration Debug for project clase_06 ****
+make all 
+make: No se hace nada para 'all'.
+19:55:53 **** Incremental Build of configuration Debug for project clase_06 ****
+make all 
+Building file: ../src/clase_06.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/clase_06.d" -MT"src/clase_06.o" -o "src/clase_06.o" "../src/clase_06.c"
+Finished building: ../src/clase_06.c
+ 
+Building target: clase_06
+Invoking: GCC C Linker
+gcc  -o "clase_06"  ./src/array.o ./src/clase_06.o ./src/matematicas.o ./src/utn.o   
+Finished building target: clase_06
+ 
+19:55:54 **** Incremental Build of configuration Debug for project clase_06 ****
+make all 
+make: No se hace nada para 'all'.
+19:56:04 **** Incremental Build of configuration Debug for project clase_06 ****
+make all 
+make: No se hace nada para 'all'.
+19:57:59 **** Incremental Build of configuration Debug for project clase_06 ****
+make all 
+Building file: ../src/array.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/array.d" -MT"src/array.o" -o "src/array.o" "../src/array.c"
+Finished building: ../src/array.c
+ 
+Building target: clase_06
+Invoking: GCC C Linker
+gcc  -o "clase_06"  ./src/array.o ./src/clase_06.o ./src/matematicas.o ./src/utn.o   
+Finished building target: clase_06
+ 
+19:58:01 **** Incremental Build of configuration Debug for project clase_06 ****
+make all 
+make: No se hace nada para 'all'.
+19:58:32 **** Incremental Build of configuration Debug for project clase_06 ****
+make all 
+make: No se hace nada para 'all'.
+19:58:33 **** Incremental Build of configuration Debug for project clase_06 ****
+make all 
+make: No se hace nada para 'all'.
+20:00:10 **** Incremental Build of configuration Debug for project clase_06 ****
+make all 
+Building file: ../src/array.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/array.d" -MT"src/array.o" -o "src/array.o" "../src/array.c"
+Finished building: ../src/array.c
+ 
+Building target: clase_06
+Invoking: GCC C Linker
+gcc  -o "clase_06"  ./src/array.o ./src/clase_06.o ./src/matematicas.o ./src/utn.o   
+Finished building target: clase_06
+ 
+20:00:11 **** Incremental Build of configuration Debug for project clase_06 ****
+make all 
+make: No se hace nada para 'all'.
+20:00:43 **** Incremental Build of configuration Debug for project clase_06 ****
+make all 
+Building file: ../src/clase_06.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/clase_06.d" -MT"src/clase_06.o" -o "src/clase_06.o" "../src/clase_06.c"
+Finished building: ../src/clase_06.c
+ 
+Building target: clase_06
+Invoking: GCC C Linker
+gcc  -o "clase_06"  ./src/array.o ./src/clase_06.o ./src/matematicas.o ./src/utn.o   
+Finished building target: clase_06
+ 
+20:00:44 **** Incremental Build of configuration Debug for project clase_06 ****
+make all 
+make: No se hace nada para 'all'.
+20:02:19 **** Incremental Build of configuration Debug for project clase_06 ****
+make all 
+Building file: ../src/clase_06.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/clase_06.d" -MT"src/clase_06.o" -o "src/clase_06.o" "../src/clase_06.c"
+Finished building: ../src/clase_06.c
+ 
+Building target: clase_06
+Invoking: GCC C Linker
+gcc  -o "clase_06"  ./src/array.o ./src/clase_06.o ./src/matematicas.o ./src/utn.o   
+Finished building target: clase_06
+ 
+20:02:21 **** Incremental Build of configuration Debug for project clase_06 ****
+make all 
+make: No se hace nada para 'all'.
+20:05:29 **** Incremental Build of configuration Debug for project clase_06 ****
+make all 
+Building file: ../src/clase_06.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/clase_06.d" -MT"src/clase_06.o" -o "src/clase_06.o" "../src/clase_06.c"
+Finished building: ../src/clase_06.c
+ 
+Building target: clase_06
+Invoking: GCC C Linker
+gcc  -o "clase_06"  ./src/array.o ./src/clase_06.o ./src/matematicas.o ./src/utn.o   
+Finished building target: clase_06
+ 
+20:05:31 **** Incremental Build of configuration Debug for project clase_06 ****
+make all 
+make: No se hace nada para 'all'.
+20:05:38 **** Incremental Build of configuration Debug for project clase_06 ****
+make all 
+Building file: ../src/clase_06.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/clase_06.d" -MT"src/clase_06.o" -o "src/clase_06.o" "../src/clase_06.c"
+Finished building: ../src/clase_06.c
+ 
+Building target: clase_06
+Invoking: GCC C Linker
+gcc  -o "clase_06"  ./src/array.o ./src/clase_06.o ./src/matematicas.o ./src/utn.o   
+Finished building target: clase_06
+ 
+20:05:40 **** Incremental Build of configuration Debug for project clase_06 ****
+make all 
+make: No se hace nada para 'all'.
+20:05:49 **** Incremental Build of configuration Debug for project clase_06 ****
+make all 
+Building file: ../src/clase_06.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/clase_06.d" -MT"src/clase_06.o" -o "src/clase_06.o" "../src/clase_06.c"
+Finished building: ../src/clase_06.c
+ 
+Building target: clase_06
+Invoking: GCC C Linker
+gcc  -o "clase_06"  ./src/array.o ./src/clase_06.o ./src/matematicas.o ./src/utn.o   
+Finished building target: clase_06
+ 
+20:05:51 **** Incremental Build of configuration Debug for project clase_06 ****
+make all 
+make: No se hace nada para 'all'.
+20:08:43 **** Incremental Build of configuration Debug for project clase_06 ****
+make all 
+Building file: ../src/clase_06.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/clase_06.d" -MT"src/clase_06.o" -o "src/clase_06.o" "../src/clase_06.c"
+../src/clase_06.c: In function ‘main’:
+../src/clase_06.c:26:52: error: expected expression before ‘void’
+   26 |   arr_searchPositionOfMinimum(arrayInt, LIMITE, i, void);
+      |                                                    ^~~~
+make: *** [src/subdir.mk:29: src/clase_06.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+20:13:32 **** Incremental Build of configuration Debug for project clase_06 ****
+make all 
+Building file: ../src/clase_06.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/clase_06.d" -MT"src/clase_06.o" -o "src/clase_06.o" "../src/clase_06.c"
+Finished building: ../src/clase_06.c
+ 
+Building target: clase_06
+Invoking: GCC C Linker
+gcc  -o "clase_06"  ./src/array.o ./src/clase_06.o ./src/matematicas.o ./src/utn.o   
+Finished building target: clase_06
+ 
+20:13:37 **** Incremental Build of configuration Debug for project clase_06 ****
+make all 
+make: No se hace nada para 'all'.

@@ -1,10 +1,11 @@
 LaunchTargetManager/configs/Clase_05=org.eclipse.launchbar.core.launchTargetType.local\:Local
 LaunchTargetManager/configs/clase_04=org.eclipse.launchbar.core.launchTargetType.local\:Local
 LaunchTargetManager/configs/clase_05_arrays=org.eclipse.launchbar.core.launchTargetType.local\:Local
+LaunchTargetManager/configs/clase_06=org.eclipse.launchbar.core.launchTargetType.local\:Local
 LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/arch=x86_64
 LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/name=Local
 LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/os=linux
-configDescList=org.eclipse.launchbar.core.descriptorType.default\:Clase_05,org.eclipse.launchbar.core.descriptorType.default\:clase_04,org.eclipse.launchbar.core.descriptorType.default\:clase_05_arrays
+configDescList=org.eclipse.launchbar.core.descriptorType.default\:Clase_05,org.eclipse.launchbar.core.descriptorType.default\:clase_04,org.eclipse.launchbar.core.descriptorType.default\:clase_05_arrays,org.eclipse.launchbar.core.descriptorType.default\:clase_06
 eclipse.preferences.version=1
 org.eclipse.launchbar.core.descriptorType.default\:Clase_05/activeLaunchMode=run
 org.eclipse.launchbar.core.descriptorType.default\:Clase_05/activeLaunchTarget=org.eclipse.launchbar.core.launchTargetType.local\:Local
