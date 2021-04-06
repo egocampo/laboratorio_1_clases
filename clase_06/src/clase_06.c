@@ -19,17 +19,13 @@ int main(void)
 	int arrayInt[LIMITE]={21,18,15,9,5};
 	int i;
 	int posicionMinimo;
-	int aux;
 
 	for(i=0;i<LIMITE-1;i++)
 	{
 		arr_searchPositionOfMinimum(arrayInt, LIMITE, i, &posicionMinimo);
+		arr_intercambiarPosicion(arrayInt, i,posicionMinimo);
 		if(i != posicionMinimo)
-		{
-			aux=arrayInt[i];
-			arrayInt[i]=arrayInt[posicionMinimo];
-			arrayInt[posicionMinimo]=aux;
-		}
+
 	}
 	arr_imprimirArrayInt(arrayInt, LIMITE);
 	return EXIT_SUCCESS;

@@ -303,3 +303,39 @@ Finished building target: clase_06
 20:13:37 **** Incremental Build of configuration Debug for project clase_06 ****
 make all 
 make: No se hace nada para 'all'.
+20:32:58 **** Incremental Build of configuration Debug for project clase_06 ****
+make all 
+Building file: ../src/array.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/array.d" -MT"src/array.o" -o "src/array.o" "../src/array.c"
+Finished building: ../src/array.c
+ 
+Building file: ../src/clase_06.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/clase_06.d" -MT"src/clase_06.o" -o "src/clase_06.o" "../src/clase_06.c"
+../src/clase_06.c: In function ‘main’:
+../src/clase_06.c:22:6: warning: unused variable ‘aux’ [-Wunused-variable]
+   22 |  int aux;
+      |      ^~~
+Finished building: ../src/clase_06.c
+ 
+Building target: clase_06
+Invoking: GCC C Linker
+gcc  -o "clase_06"  ./src/array.o ./src/clase_06.o ./src/matematicas.o ./src/utn.o   
+Finished building target: clase_06
+ 
+20:33:04 **** Incremental Build of configuration Debug for project clase_06 ****
+make all 
+Building file: ../src/clase_06.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/clase_06.d" -MT"src/clase_06.o" -o "src/clase_06.o" "../src/clase_06.c"
+Finished building: ../src/clase_06.c
+ 
+Building target: clase_06
+Invoking: GCC C Linker
+gcc  -o "clase_06"  ./src/array.o ./src/clase_06.o ./src/matematicas.o ./src/utn.o   
+Finished building target: clase_06
+ 
+20:33:05 **** Incremental Build of configuration Debug for project clase_06 ****
+make all 
+make: No se hace nada para 'all'.
