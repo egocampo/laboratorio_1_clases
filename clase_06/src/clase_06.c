@@ -23,9 +23,10 @@ int main(void)
 	for(i=0;i<LIMITE-1;i++)
 	{
 		arr_searchPositionOfMinimum(arrayInt, LIMITE, i, &posicionMinimo);
-		arr_intercambiarPosicion(arrayInt, i,posicionMinimo);
 		if(i != posicionMinimo)
-
+		{
+			arr_intercambiarPosicion(arrayInt, i,posicionMinimo);
+		}
 	}
 	arr_imprimirArrayInt(arrayInt, LIMITE);
 	return EXIT_SUCCESS;
