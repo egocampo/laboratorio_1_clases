@@ -184,6 +184,6 @@ int utn_getIntWithoutMinimumOrMaximum(int* pNumeroSolicitado,char* pTexto,char* 
 			reintentos--;
 			retorno=-1;
 		}
-	}while(reintentos>0);
+	}while(reintentos>=0);
 	return retorno;
 }

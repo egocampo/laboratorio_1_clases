@@ -12,22 +12,15 @@
 #include <stdlib.h>
 #include "array.h"
 
+int sortLudmila(int* pArray, int len);
+
+
 #define LIMITE 5
 
 int main(void)
 {
-	int arrayInt[LIMITE]={21,18,15,9,5};
-	int i;
-	int posicionMinimo;
-
-	for(i=0;i<LIMITE-1;i++)
-	{
-		arr_searchPositionOfMinimum(arrayInt, LIMITE, i, &posicionMinimo);
-		if(i != posicionMinimo)
-		{
-			arr_intercambiarPosicion(arrayInt, i,posicionMinimo);
-		}
-	}
-	arr_imprimirArrayInt(arrayInt, LIMITE);
+	int array[LIMITE]={2,8,5,7,6};
+	arr_sortLudmila(array, LIMITE);
+	arr_printfArrayInt(array, LIMITE);
 	return EXIT_SUCCESS;
 }
