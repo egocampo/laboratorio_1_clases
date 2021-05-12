@@ -304,3 +304,283 @@ Invoking: GCC C Linker
 gcc  -o "clase_17"  ./src/Nacionalidad.o ./src/Producto.o ./src/Tipo.o ./src/clase_17.o   
 Finished building target: clase_17
  
+21:56:46 **** Incremental Build of configuration Debug for project clase_17 ****
+make all 
+Building file: ../src/Producto.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Producto.d" -MT"src/Producto.o" -o "src/Producto.o" "../src/Producto.c"
+../src/Producto.c: In function ‘producto_setIdProducto’:
+../src/Producto.c:52:21: warning: implicit declaration of function ‘isValidId’ [-Wimplicit-function-declaration]
+   52 |  if(this != NULL && isValidId(idProducto))
+      |                     ^~~~~~~~~
+../src/Producto.c:51:6: warning: unused variable ‘retorno’ [-Wunused-variable]
+   51 |  int retorno = -1;
+      |      ^~~~~~~
+../src/Producto.c: In function ‘producto_isValidId’:
+../src/Producto.c:58:5: warning: type of ‘idProducto’ defaults to ‘int’ [-Wimplicit-int]
+   58 | int producto_isValidId(idProducto)
+      |     ^~~~~~~~~~~~~~~~~~
+../src/Producto.c: In function ‘producto_setIdProducto’:
+../src/Producto.c:56:1: warning: control reaches end of non-void function [-Wreturn-type]
+   56 | }
+      | ^
+Finished building: ../src/Producto.c
+ 
+Building target: clase_17
+Invoking: GCC C Linker
+gcc  -o "clase_17"  ./src/Nacionalidad.o ./src/Producto.o ./src/Tipo.o ./src/clase_17.o   
+/usr/bin/ld: ./src/Producto.o: en la función `producto_setIdProducto':
+/home/gabriel/UTN/primerCuatrimestre/programacion1_laboratorio1/repositoriosClonados/laboratorio1_clases/clase_17/Debug/../src/Producto.c:52: referencia a `isValidId' sin definir
+collect2: error: ld returned 1 exit status
+make: *** [makefile:43: clase_17] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+21:56:58 **** Incremental Build of configuration Debug for project clase_17 ****
+make all 
+Building file: ../src/Producto.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Producto.d" -MT"src/Producto.o" -o "src/Producto.o" "../src/Producto.c"
+../src/Producto.c: In function ‘producto_setIdProducto’:
+../src/Producto.c:52:21: warning: implicit declaration of function ‘producto_isValidId’ [-Wimplicit-function-declaration]
+   52 |  if(this != NULL && producto_isValidId(idProducto))
+      |                     ^~~~~~~~~~~~~~~~~~
+../src/Producto.c:51:6: warning: unused variable ‘retorno’ [-Wunused-variable]
+   51 |  int retorno = -1;
+      |      ^~~~~~~
+../src/Producto.c: In function ‘producto_isValidId’:
+../src/Producto.c:58:5: warning: type of ‘idProducto’ defaults to ‘int’ [-Wimplicit-int]
+   58 | int producto_isValidId(idProducto)
+      |     ^~~~~~~~~~~~~~~~~~
+../src/Producto.c: In function ‘producto_setIdProducto’:
+../src/Producto.c:56:1: warning: control reaches end of non-void function [-Wreturn-type]
+   56 | }
+      | ^
+Finished building: ../src/Producto.c
+ 
+Building target: clase_17
+Invoking: GCC C Linker
+gcc  -o "clase_17"  ./src/Nacionalidad.o ./src/Producto.o ./src/Tipo.o ./src/clase_17.o   
+Finished building target: clase_17
+ 
+21:57:12 **** Incremental Build of configuration Debug for project clase_17 ****
+make all 
+Building file: ../src/Nacionalidad.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Nacionalidad.d" -MT"src/Nacionalidad.o" -o "src/Nacionalidad.o" "../src/Nacionalidad.c"
+In file included from ../src/Nacionalidad.c:10:
+../src/Producto.h:48:1: warning: parameter names (without types) in function declaration
+   48 | int producto_isValidId(idProducto);
+      | ^~~
+Finished building: ../src/Nacionalidad.c
+ 
+Building file: ../src/Producto.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Producto.d" -MT"src/Producto.o" -o "src/Producto.o" "../src/Producto.c"
+In file included from ../src/Producto.c:10:
+../src/Producto.h:48:1: warning: parameter names (without types) in function declaration
+   48 | int producto_isValidId(idProducto);
+      | ^~~
+../src/Producto.c: In function ‘producto_setIdProducto’:
+../src/Producto.c:51:6: warning: unused variable ‘retorno’ [-Wunused-variable]
+   51 |  int retorno = -1;
+      |      ^~~~~~~
+../src/Producto.c: In function ‘producto_isValidId’:
+../src/Producto.c:58:5: warning: type of ‘idProducto’ defaults to ‘int’ [-Wimplicit-int]
+   58 | int producto_isValidId(idProducto)
+      |     ^~~~~~~~~~~~~~~~~~
+../src/Producto.c: In function ‘producto_setIdProducto’:
+../src/Producto.c:56:1: warning: control reaches end of non-void function [-Wreturn-type]
+   56 | }
+      | ^
+Finished building: ../src/Producto.c
+ 
+Building file: ../src/Tipo.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Tipo.d" -MT"src/Tipo.o" -o "src/Tipo.o" "../src/Tipo.c"
+In file included from ../src/Tipo.c:10:
+../src/Producto.h:48:1: warning: parameter names (without types) in function declaration
+   48 | int producto_isValidId(idProducto);
+      | ^~~
+Finished building: ../src/Tipo.c
+ 
+Building file: ../src/clase_17.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/clase_17.d" -MT"src/clase_17.o" -o "src/clase_17.o" "../src/clase_17.c"
+In file included from ../src/clase_17.c:32:
+../src/Producto.h:48:1: warning: parameter names (without types) in function declaration
+   48 | int producto_isValidId(idProducto);
+      | ^~~
+Finished building: ../src/clase_17.c
+ 
+Building target: clase_17
+Invoking: GCC C Linker
+gcc  -o "clase_17"  ./src/Nacionalidad.o ./src/Producto.o ./src/Tipo.o ./src/clase_17.o   
+Finished building target: clase_17
+ 
+21:57:25 **** Incremental Build of configuration Debug for project clase_17 ****
+make all 
+Building file: ../src/Producto.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Producto.d" -MT"src/Producto.o" -o "src/Producto.o" "../src/Producto.c"
+In file included from ../src/Producto.c:10:
+../src/Producto.h:48:1: warning: parameter names (without types) in function declaration
+   48 | int producto_isValidId(idProducto);
+      | ^~~
+../src/Producto.c: In function ‘producto_setIdProducto’:
+../src/Producto.c:51:6: warning: unused variable ‘retorno’ [-Wunused-variable]
+   51 |  int retorno = -1;
+      |      ^~~~~~~
+../src/Producto.c: In function ‘producto_isValidId’:
+../src/Producto.c:58:5: warning: type of ‘idProducto’ defaults to ‘int’ [-Wimplicit-int]
+   58 | int producto_isValidId(idProducto)
+      |     ^~~~~~~~~~~~~~~~~~
+../src/Producto.c: In function ‘producto_setIdProducto’:
+../src/Producto.c:56:1: warning: control reaches end of non-void function [-Wreturn-type]
+   56 | }
+      | ^
+Finished building: ../src/Producto.c
+ 
+Building target: clase_17
+Invoking: GCC C Linker
+gcc  -o "clase_17"  ./src/Nacionalidad.o ./src/Producto.o ./src/Tipo.o ./src/clase_17.o   
+Finished building target: clase_17
+ 
+21:57:35 **** Incremental Build of configuration Debug for project clase_17 ****
+make all 
+Building file: ../src/Producto.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Producto.d" -MT"src/Producto.o" -o "src/Producto.o" "../src/Producto.c"
+In file included from ../src/Producto.c:10:
+../src/Producto.h:48:1: warning: parameter names (without types) in function declaration
+   48 | int producto_isValidId(idProducto);
+      | ^~~
+../src/Producto.c: In function ‘producto_setIdProducto’:
+../src/Producto.c:51:6: warning: unused variable ‘retorno’ [-Wunused-variable]
+   51 |  int retorno = -1;
+      |      ^~~~~~~
+../src/Producto.c: In function ‘producto_isValidId’:
+../src/Producto.c:59:5: warning: type of ‘idProducto’ defaults to ‘int’ [-Wimplicit-int]
+   59 | int producto_isValidId(idProducto)
+      |     ^~~~~~~~~~~~~~~~~~
+Finished building: ../src/Producto.c
+ 
+Building target: clase_17
+Invoking: GCC C Linker
+gcc  -o "clase_17"  ./src/Nacionalidad.o ./src/Producto.o ./src/Tipo.o ./src/clase_17.o   
+Finished building target: clase_17
+ 
+21:57:43 **** Incremental Build of configuration Debug for project clase_17 ****
+make all 
+Building file: ../src/Producto.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Producto.d" -MT"src/Producto.o" -o "src/Producto.o" "../src/Producto.c"
+In file included from ../src/Producto.c:10:
+../src/Producto.h:48:1: warning: parameter names (without types) in function declaration
+   48 | int producto_isValidId(idProducto);
+      | ^~~
+../src/Producto.c: In function ‘producto_isValidId’:
+../src/Producto.c:59:5: warning: type of ‘idProducto’ defaults to ‘int’ [-Wimplicit-int]
+   59 | int producto_isValidId(idProducto)
+      |     ^~~~~~~~~~~~~~~~~~
+Finished building: ../src/Producto.c
+ 
+Building target: clase_17
+Invoking: GCC C Linker
+gcc  -o "clase_17"  ./src/Nacionalidad.o ./src/Producto.o ./src/Tipo.o ./src/clase_17.o   
+Finished building target: clase_17
+ 
+21:57:58 **** Incremental Build of configuration Debug for project clase_17 ****
+make all 
+Building file: ../src/Producto.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Producto.d" -MT"src/Producto.o" -o "src/Producto.o" "../src/Producto.c"
+In file included from ../src/Producto.c:10:
+../src/Producto.h:48:1: warning: parameter names (without types) in function declaration
+   48 | int producto_isValidId(idProducto);
+      | ^~~
+Finished building: ../src/Producto.c
+ 
+Building target: clase_17
+Invoking: GCC C Linker
+gcc  -o "clase_17"  ./src/Nacionalidad.o ./src/Producto.o ./src/Tipo.o ./src/clase_17.o   
+Finished building target: clase_17
+ 
+21:58:08 **** Incremental Build of configuration Debug for project clase_17 ****
+make all 
+make: No se hace nada para 'all'.
+21:59:15 **** Incremental Build of configuration Debug for project clase_17 ****
+make all 
+make: No se hace nada para 'all'.
+22:05:21 **** Incremental Build of configuration Debug for project clase_17 ****
+make all 
+Building file: ../src/Producto.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Producto.d" -MT"src/Producto.o" -o "src/Producto.o" "../src/Producto.c"
+In file included from ../src/Producto.c:10:
+../src/Producto.h:48:1: warning: parameter names (without types) in function declaration
+   48 | int producto_isValidId(idProducto);
+      | ^~~
+Finished building: ../src/Producto.c
+ 
+Building target: clase_17
+Invoking: GCC C Linker
+gcc  -o "clase_17"  ./src/Nacionalidad.o ./src/Producto.o ./src/Tipo.o ./src/clase_17.o   
+Finished building target: clase_17
+ 
+22:05:34 **** Incremental Build of configuration Debug for project clase_17 ****
+make all 
+Building file: ../src/Nacionalidad.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Nacionalidad.d" -MT"src/Nacionalidad.o" -o "src/Nacionalidad.o" "../src/Nacionalidad.c"
+Finished building: ../src/Nacionalidad.c
+ 
+Building file: ../src/Producto.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Producto.d" -MT"src/Producto.o" -o "src/Producto.o" "../src/Producto.c"
+Finished building: ../src/Producto.c
+ 
+Building file: ../src/Tipo.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Tipo.d" -MT"src/Tipo.o" -o "src/Tipo.o" "../src/Tipo.c"
+Finished building: ../src/Tipo.c
+ 
+Building file: ../src/clase_17.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/clase_17.d" -MT"src/clase_17.o" -o "src/clase_17.o" "../src/clase_17.c"
+Finished building: ../src/clase_17.c
+ 
+Building target: clase_17
+Invoking: GCC C Linker
+gcc  -o "clase_17"  ./src/Nacionalidad.o ./src/Producto.o ./src/Tipo.o ./src/clase_17.o   
+Finished building target: clase_17
+ 
+22:07:02 **** Incremental Build of configuration Debug for project clase_17 ****
+make all 
+Building file: ../src/clase_17.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/clase_17.d" -MT"src/clase_17.o" -o "src/clase_17.o" "../src/clase_17.c"
+../src/clase_17.c: In function ‘main’:
+../src/clase_17.c:37:12: warning: unused variable ‘listadoProductos’ [-Wunused-variable]
+   37 |  Producto* listadoProductos[500];
+      |            ^~~~~~~~~~~~~~~~
+Finished building: ../src/clase_17.c
+ 
+Building target: clase_17
+Invoking: GCC C Linker
+gcc  -o "clase_17"  ./src/Nacionalidad.o ./src/Producto.o ./src/Tipo.o ./src/clase_17.o   
+Finished building target: clase_17
+ 
+22:07:05 **** Incremental Build of configuration Debug for project clase_17 ****
+make all 
+Building file: ../src/clase_17.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/clase_17.d" -MT"src/clase_17.o" -o "src/clase_17.o" "../src/clase_17.c"
+Finished building: ../src/clase_17.c
+ 
+Building target: clase_17
+Invoking: GCC C Linker
+gcc  -o "clase_17"  ./src/Nacionalidad.o ./src/Producto.o ./src/Tipo.o ./src/clase_17.o   
+Finished building target: clase_17
+ 
+22:07:07 **** Incremental Build of configuration Debug for project clase_17 ****
+make all 
+make: No se hace nada para 'all'.

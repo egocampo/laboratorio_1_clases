@@ -35,6 +35,10 @@ Realizar un programa que permita interactuar con un menú de usuarios con las
 
 int main(void) {
 	//Producto* listadoProductos[500];
+	Producto* auxProducto;
+	auxProducto = producto_new();
+	producto_setIdProducto(auxProducto, 100);
+	printf("Id Producto: %d",auxProducto->idProducto);
 
 	return EXIT_SUCCESS;
 }

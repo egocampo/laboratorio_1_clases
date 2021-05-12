@@ -45,6 +45,8 @@ int producto_getIdTipo(Producto* this,int* flagError);
 int producto_setPrecioUnitario(Producto* this,int precioUnitario);
 int producto_getPrecioUnitario(Producto* this,int* flagError);
 
+int producto_isValidId(int idProducto);
+
 
 
 #endif /* PRODUCTO_H_ */

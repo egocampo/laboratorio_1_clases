@@ -26,7 +26,7 @@ Producto* producto_newParam(int idProducto,char* descripcion,int idNacionalidad,
 	Producto* auxProducto = producto_new();
 	if(auxProducto != NULL)
 	{
-		//if(producto_setIdProducto(auxProducto, idProducto) < 0 || producto_setDescripcion(auxProducto, descripcion) < 0)
+		if(producto_setIdProducto(auxProducto, idProducto) < 0)
 		{
 			producto_delete(auxProducto);
 			auxProducto = NULL;
@@ -46,6 +46,41 @@ int producto_delete(Producto* this)
 	return retorno;
 }
 
+int producto_setIdProducto(Producto* this,int idProducto)
+{
+	int retorno = -1;
+	if(this != NULL && producto_isValidId(idProducto))
+	{
+		this->idProducto = idProducto;
+		retorno = 0;
+	}
+	return retorno;
+}
 
+int producto_isValidId(int idProducto)
+{
+	return 1;
+}
 
+int producto_getIdProducto(Producto* this,int* flagError)
+{
+	*flagError = -1;
+	int auxId = -1;
+	if(this != NULL && flagError != NULL )
+	{
+		auxId = this->idProducto;
+		*flagError = 0;
+	}
+	return auxId;
+}
 
+//int producto_setDescripcion(Producto* this,int descripcion);
+//char* producto_getDescripcion(Producto* this,int* flagError);
+//int producto_setIdNacionalidad(Producto* this,int idNacionalidad);
+//int producto_getIdNacionalidad(Producto* this,int* flagError);
+//int producto_setIdTipo(Producto* this,int idTipo);
+//int producto_getIdTipo(Producto* this,int* flagError);
+//int producto_setPrecioUnitario(Producto* this,int precioUnitario);
+//int producto_getPrecioUnitario(Producto* this,int* flagError);
+//
+//
