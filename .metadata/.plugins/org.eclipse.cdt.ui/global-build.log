@@ -178,3 +178,129 @@ Finished building target: clase_17
 21:37:38 **** Incremental Build of configuration Debug for project clase_17 ****
 make all 
 make: No se hace nada para 'all'.
+21:51:57 **** Incremental Build of configuration Debug for project clase_17 ****
+make all 
+Building file: ../src/Nacionalidad.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Nacionalidad.d" -MT"src/Nacionalidad.o" -o "src/Nacionalidad.o" "../src/Nacionalidad.c"
+Finished building: ../src/Nacionalidad.c
+ 
+Building file: ../src/Producto.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Producto.d" -MT"src/Producto.o" -o "src/Producto.o" "../src/Producto.c"
+../src/Producto.c: In function ‘producto_newParam’:
+../src/Producto.c:26:20: warning: initialization of ‘int’ from ‘Producto *’ {aka ‘struct <anonymous> *’} makes integer from pointer without a cast [-Wint-conversion]
+   26 |  int auxProducto = producto_new();
+      |                    ^~~~~~~~~~~~
+../src/Producto.c:27:17: warning: comparison between pointer and integer
+   27 |  if(auxProducto != NULL)
+      |                 ^~
+../src/Producto.c:29:29: warning: passing argument 1 of ‘producto_setIdProducto’ makes pointer from integer without a cast [-Wint-conversion]
+   29 |   if(producto_setIdProducto(auxProducto, idProducto) < 0 || producto_setDescripcion(auxProducto, descripcion) < 0)
+      |                             ^~~~~~~~~~~
+      |                             |
+      |                             int
+In file included from ../src/Producto.c:10:
+../src/Producto.h:37:38: note: expected ‘Producto *’ {aka ‘struct <anonymous> *’} but argument is of type ‘int’
+   37 | int producto_setIdProducto(Producto* this,int idProducto);
+      |                            ~~~~~~~~~~^~~~
+../src/Producto.c:29:85: warning: passing argument 1 of ‘producto_setDescripcion’ makes pointer from integer without a cast [-Wint-conversion]
+   29 |   if(producto_setIdProducto(auxProducto, idProducto) < 0 || producto_setDescripcion(auxProducto, descripcion) < 0)
+      |                                                                                     ^~~~~~~~~~~
+      |                                                                                     |
+      |                                                                                     int
+In file included from ../src/Producto.c:10:
+../src/Producto.h:39:39: note: expected ‘Producto *’ {aka ‘struct <anonymous> *’} but argument is of type ‘int’
+   39 | int producto_setDescripcion(Producto* this,int descripcion);
+      |                             ~~~~~~~~~~^~~~
+../src/Producto.c:29:98: warning: passing argument 2 of ‘producto_setDescripcion’ makes integer from pointer without a cast [-Wint-conversion]
+   29 |   if(producto_setIdProducto(auxProducto, idProducto) < 0 || producto_setDescripcion(auxProducto, descripcion) < 0)
+      |                                                                                                  ^~~~~~~~~~~
+      |                                                                                                  |
+      |                                                                                                  char *
+In file included from ../src/Producto.c:10:
+../src/Producto.h:39:48: note: expected ‘int’ but argument is of type ‘char *’
+   39 | int producto_setDescripcion(Producto* this,int descripcion);
+      |                                            ~~~~^~~~~~~~~~~
+../src/Producto.c:31:20: warning: passing argument 1 of ‘producto_delete’ makes pointer from integer without a cast [-Wint-conversion]
+   31 |    producto_delete(auxProducto);
+      |                    ^~~~~~~~~~~
+      |                    |
+      |                    int
+In file included from ../src/Producto.c:10:
+../src/Producto.h:35:31: note: expected ‘Producto *’ {aka ‘struct <anonymous> *’} but argument is of type ‘int’
+   35 | int producto_delete(Producto* this);
+      |                     ~~~~~~~~~~^~~~
+../src/Producto.c:32:16: warning: assignment to ‘int’ from ‘void *’ makes integer from pointer without a cast [-Wint-conversion]
+   32 |    auxProducto = NULL;
+      |                ^
+../src/Producto.c:35:9: warning: returning ‘int’ from a function with return type ‘Producto *’ {aka ‘struct <anonymous> *’} makes pointer from integer without a cast [-Wint-conversion]
+   35 |  return auxProducto;
+      |         ^~~~~~~~~~~
+Finished building: ../src/Producto.c
+ 
+Building file: ../src/Tipo.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Tipo.d" -MT"src/Tipo.o" -o "src/Tipo.o" "../src/Tipo.c"
+Finished building: ../src/Tipo.c
+ 
+Building file: ../src/clase_17.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/clase_17.d" -MT"src/clase_17.o" -o "src/clase_17.o" "../src/clase_17.c"
+Finished building: ../src/clase_17.c
+ 
+Building target: clase_17
+Invoking: GCC C Linker
+gcc  -o "clase_17"  ./src/Nacionalidad.o ./src/Producto.o ./src/Tipo.o ./src/clase_17.o   
+/usr/bin/ld: ./src/Producto.o: en la función `producto_newParam':
+/home/gabriel/UTN/primerCuatrimestre/programacion1_laboratorio1/repositoriosClonados/laboratorio1_clases/clase_17/Debug/../src/Producto.c:29: referencia a `producto_setIdProducto' sin definir
+/usr/bin/ld: /home/gabriel/UTN/primerCuatrimestre/programacion1_laboratorio1/repositoriosClonados/laboratorio1_clases/clase_17/Debug/../src/Producto.c:29: referencia a `producto_setDescripcion' sin definir
+collect2: error: ld returned 1 exit status
+make: *** [makefile:43: clase_17] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+21:52:15 **** Incremental Build of configuration Debug for project clase_17 ****
+make all 
+Building file: ../src/Producto.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Producto.d" -MT"src/Producto.o" -o "src/Producto.o" "../src/Producto.c"
+../src/Producto.c: In function ‘producto_newParam’:
+../src/Producto.c:26:20: warning: initialization of ‘int’ from ‘Producto *’ {aka ‘struct <anonymous> *’} makes integer from pointer without a cast [-Wint-conversion]
+   26 |  int auxProducto = producto_new();
+      |                    ^~~~~~~~~~~~
+../src/Producto.c:27:17: warning: comparison between pointer and integer
+   27 |  if(auxProducto != NULL)
+      |                 ^~
+../src/Producto.c:31:20: warning: passing argument 1 of ‘producto_delete’ makes pointer from integer without a cast [-Wint-conversion]
+   31 |    producto_delete(auxProducto);
+      |                    ^~~~~~~~~~~
+      |                    |
+      |                    int
+In file included from ../src/Producto.c:10:
+../src/Producto.h:35:31: note: expected ‘Producto *’ {aka ‘struct <anonymous> *’} but argument is of type ‘int’
+   35 | int producto_delete(Producto* this);
+      |                     ~~~~~~~~~~^~~~
+../src/Producto.c:32:16: warning: assignment to ‘int’ from ‘void *’ makes integer from pointer without a cast [-Wint-conversion]
+   32 |    auxProducto = NULL;
+      |                ^
+../src/Producto.c:35:9: warning: returning ‘int’ from a function with return type ‘Producto *’ {aka ‘struct <anonymous> *’} makes pointer from integer without a cast [-Wint-conversion]
+   35 |  return auxProducto;
+      |         ^~~~~~~~~~~
+Finished building: ../src/Producto.c
+ 
+Building target: clase_17
+Invoking: GCC C Linker
+gcc  -o "clase_17"  ./src/Nacionalidad.o ./src/Producto.o ./src/Tipo.o ./src/clase_17.o   
+Finished building target: clase_17
+ 
+21:52:43 **** Incremental Build of configuration Debug for project clase_17 ****
+make all 
+Building file: ../src/Producto.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Producto.d" -MT"src/Producto.o" -o "src/Producto.o" "../src/Producto.c"
+Finished building: ../src/Producto.c
+ 
+Building target: clase_17
+Invoking: GCC C Linker
+gcc  -o "clase_17"  ./src/Nacionalidad.o ./src/Producto.o ./src/Tipo.o ./src/clase_17.o   
+Finished building target: clase_17
+ 

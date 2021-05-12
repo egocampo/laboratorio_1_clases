@@ -23,13 +23,29 @@ Producto* producto_new(void)
 
 Producto* producto_newParam(int idProducto,char* descripcion,int idNacionalidad,int idTipo,float precioUnitario)
 {
-	int auxProducto = producto_new();
+	Producto* auxProducto = producto_new();
 	if(auxProducto != NULL)
 	{
-		if(producto_setIdProducto(this, idProducto) < 0 || producto_setDescripcion(this, descripcion) < 0)
+		//if(producto_setIdProducto(auxProducto, idProducto) < 0 || producto_setDescripcion(auxProducto, descripcion) < 0)
 		{
 			producto_delete(auxProducto);
+			auxProducto = NULL;
 		}
 	}
 	return auxProducto;
 }
+
+int producto_delete(Producto* this)
+{
+	int retorno = -1;
+	if(this != NULL)
+	{
+		free(this);
+		retorno = 0;
+	}
+	return retorno;
+}
+
+
+
+

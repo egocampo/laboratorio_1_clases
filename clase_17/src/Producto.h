@@ -32,7 +32,7 @@ typedef struct
 
 Producto* producto_new(void);
 Producto* producto_newParam(int idProducto,char* descripcion,int idNacionalidad,int idTipo,float precioUnitario);
-Producto* producto_delete(Producto* this);
+int producto_delete(Producto* this);
 
 int producto_setIdProducto(Producto* this,int idProducto);
 int producto_getIdProducto(Producto* this,int* flagError);
