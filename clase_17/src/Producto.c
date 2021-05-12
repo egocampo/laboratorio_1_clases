@@ -21,14 +21,14 @@ Producto* producto_new(void)
 //int idTipo;
 //float precioUnitario;
 
-Producto* producto_newParam(Producto* this,int idProducto,char* descripcion,int idNacionalidad,int idTipo,float precioUnitario)
+Producto* producto_newParam(int idProducto,char* descripcion,int idNacionalidad,int idTipo,float precioUnitario)
 {
 	int auxProducto = producto_new();
 	if(auxProducto != NULL)
 	{
 		if(producto_setIdProducto(this, idProducto) < 0 || producto_setDescripcion(this, descripcion) < 0)
 		{
-			empleado
+			producto_delete(auxProducto);
 		}
 	}
 	return auxProducto;
