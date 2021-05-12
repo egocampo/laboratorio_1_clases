@@ -34,7 +34,7 @@
 int arr_getIntWithMinMax(int* pArray,int len, char* pTexto,char* pTextoError, int reintentos, int minimo, int maximo)
 {
 	int retorno = -1;
-	if(pArray != NULL && len >= 0 && pTexto != NULL && pTextoError != NULL && reintentos >= 0 && minimo < maximo)
+	if(pArray != NULL && len > 0 && pTexto != NULL && pTextoError != NULL && reintentos >= 0 && minimo < maximo)
 	{
 		retorno = 0;
 		for(int i=0;i<len;i++)
@@ -56,7 +56,7 @@ int arr_getIntWithMinMax(int* pArray,int len, char* pTexto,char* pTextoError, in
 int arr_getIntSimple(int* pArray,int len, char* pTexto,char* pTextoError, int reintentos)
 {
 	int retorno = -1;
-	if(pArray != NULL && len >= 0 && pTexto != NULL && pTextoError != NULL && reintentos >= 0)
+	if(pArray != NULL && len > 0 && pTexto != NULL && pTextoError != NULL && reintentos >= 0)
 	{
 		retorno = 0;
 		for(int i=0;i<len;i++)
@@ -76,7 +76,7 @@ int arr_getIntSimple(int* pArray,int len, char* pTexto,char* pTextoError, int re
 int arr_getIntShowingPosition(int* pArray, int len,char* pText)
 {
 	int retorno = -1;
-	if(pArray != NULL && pText != NULL && len >=0 )
+	if(pArray != NULL && pText != NULL && len > 0 )
 	{
 		retorno = 0;
 		int i;
@@ -102,7 +102,7 @@ int arr_getIntShowingPosition(int* pArray, int len,char* pText)
 int arr_efficientBubbleInt(int* pArray, int len, int flagDecreasing)
 {
 	int retorno = -1;
-	if(pArray != NULL && len >= 0 && (flagDecreasing == 1 || flagDecreasing == 0))
+	if(pArray != NULL && len > 0 && (flagDecreasing == 1 || flagDecreasing == 0))
 	{
 		retorno = 0;
 		int i;
@@ -155,7 +155,7 @@ int arr_efficientBubbleInt(int* pArray, int len, int flagDecreasing)
 int arr_searchValueInt(int* pArray,int len,int numeroBuscado)
 {
 	int retorno = -1;
-	if(pArray != NULL && len >=0)
+	if(pArray != NULL && len > 0)
 	{
 		retorno = 1;
 		for(int i=0;i<len;i++)
@@ -178,7 +178,7 @@ int arr_searchValueInt(int* pArray,int len,int numeroBuscado)
 int arr_searchMaximumValueInt(int* pArray,int len, int* pResultado)
 {
 	int retorno = -1;
-	if(pArray != NULL && len >= 0 && pResultado != NULL)
+	if(pArray != NULL && len > 0 && pResultado != NULL)
 	{
 		retorno = 0;
 		int bufferIntMax=pArray[0];
@@ -203,7 +203,7 @@ int arr_searchMaximumValueInt(int* pArray,int len, int* pResultado)
 int arr_searchMinimumValueInt(int* pArray,int len, int* pResultado)
 {
 	int retorno = -1;
-	if(pArray != NULL && len >= 0 && pResultado != NULL)
+	if(pArray != NULL && len > 0 && pResultado != NULL)
 	{
 		retorno = 0;
 		int bufferIntMin=pArray[0];
@@ -230,7 +230,7 @@ int arr_searchPositionOfMinimumInt(int* pArray,int len, int initial,int* pPosici
 {
 	int retorno = -1;
 	int minimumPosition;
-	if(pArray != NULL && len >=0)
+	if(pArray != NULL && len > 0)
 	{
 		retorno = 0;
 		minimumPosition=initial;
@@ -280,7 +280,7 @@ int arr_swapInt(int* pArray, int i, int j)
 int arr_printfArrayInt(int* pArray,int len)
 {
 	int retorno = -1;
-	if(pArray != NULL && len >= 0)
+	if(pArray != NULL && len > 0)
 	{
 		retorno = 0;
 		for(int i=0;i<len;i++)
@@ -300,7 +300,7 @@ int arr_printfArrayInt(int* pArray,int len)
 int arr_initializeArrayInt(int* pArray, int len, int value)
 {
 	int retorno = -1;
-	if(pArray != NULL && len >= 0)
+	if(pArray != NULL && len > 0)
 	{
 		retorno = 0;
 		for(int i=0;i<len;i++)
@@ -323,7 +323,7 @@ int arr_initializeArrayInt(int* pArray, int len, int value)
 int arr_accumulateInt(int* pArray,int len, int* pResultado)
 {
 	int retorno = -1;
-	if(pArray != NULL && len >= 0 && pResultado != NULL)
+	if(pArray != NULL && len > 0 && pResultado != NULL)
 	{
 		retorno = 0;
 		int accumulator = 0;
@@ -345,7 +345,7 @@ int arr_accumulateInt(int* pArray,int len, int* pResultado)
 int arr_calculateAverageInt(int* pArray,int len, float* pResultado)
 {
 	int retorno = -1;
-	if(pArray != NULL && len >= 0 && pResultado != NULL)
+	if(pArray != NULL && len > 0 && pResultado != NULL)
 	{
 		retorno = 0;
 		int acumulador = 0;
@@ -395,7 +395,7 @@ int arr_calculateAverageInt(int* pArray,int len, float* pResultado)
 int arr_sortLudmila(int* pArray, int len)
 {
 	int retorno = -1;
-	if(pArray != NULL && len >= 0)
+	if(pArray != NULL && len > 0)
 	{
 		retorno = 0;
 		int i, positionMinimum;
@@ -421,7 +421,7 @@ int arr_sortLudmila(int* pArray, int len)
 int arr_burbujeoBasico(int* pArray,int len,int* arrayOrdenado)
 {
 	int retorno = -1;
-	if(pArray != NULL && len >= 0 && arrayOrdenado != NULL)
+	if(pArray != NULL && len > 0 && arrayOrdenado != NULL)
 	{
 		retorno = 0;
 		int arrayAuxiliar[len];
@@ -459,7 +459,7 @@ int arr_burbujeoBasico(int* pArray,int len,int* arrayOrdenado)
 int arr_burbujeoEficiente(int* pArray,int len)
 {
 	int retorno = -1;
-	if(pArray != NULL && len >= 0)
+	if(pArray != NULL && len > 0)
 	{
 		retorno = 0;
 		int j, aux;
@@ -491,7 +491,7 @@ int arr_burbujeoEficiente(int* pArray,int len)
 int arr_ordenamientoInsersion(int* pArray,int len)
 {
 	int retorno = -1;
-	if(pArray != NULL && len >= 0)
+	if(pArray != NULL && len > 0)
 	{
 		retorno = 0;
 		int i, j;
