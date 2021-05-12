@@ -39,3 +39,142 @@ Invoking: GCC C Linker
 gcc  -o "clase_17"  ./src/Producto.o ./src/clase_17.o   
 Finished building target: clase_17
  
+21:25:37 **** Incremental Build of configuration Debug for project clase_17 ****
+make all 
+make: No se hace nada para 'all'.
+21:27:42 **** Incremental Build of configuration Debug for project clase_17 ****
+make all 
+make: No se hace nada para 'all'.
+21:28:20 **** Incremental Build of configuration Debug for project clase_17 ****
+make all 
+Building file: ../src/Producto.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Producto.d" -MT"src/Producto.o" -o "src/Producto.o" "../src/Producto.c"
+Finished building: ../src/Producto.c
+ 
+Building file: ../src/clase_17.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/clase_17.d" -MT"src/clase_17.o" -o "src/clase_17.o" "../src/clase_17.c"
+Finished building: ../src/clase_17.c
+ 
+Building target: clase_17
+Invoking: GCC C Linker
+gcc  -o "clase_17"  ./src/Producto.o ./src/clase_17.o   
+Finished building target: clase_17
+ 
+21:28:38 **** Incremental Build of configuration Debug for project clase_17 ****
+make all 
+Building file: ../src/clase_17.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/clase_17.d" -MT"src/clase_17.o" -o "src/clase_17.o" "../src/clase_17.c"
+../src/clase_17.c: In function ‘main’:
+../src/clase_17.c:35:12: warning: unused variable ‘listadoProductos’ [-Wunused-variable]
+   35 |  Producto* listadoProductos[500];
+      |            ^~~~~~~~~~~~~~~~
+Finished building: ../src/clase_17.c
+ 
+Building target: clase_17
+Invoking: GCC C Linker
+gcc  -o "clase_17"  ./src/Producto.o ./src/clase_17.o   
+Finished building target: clase_17
+ 
+21:29:54 **** Incremental Build of configuration Debug for project clase_17 ****
+make all 
+Building file: ../src/Producto.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Producto.d" -MT"src/Producto.o" -o "src/Producto.o" "../src/Producto.c"
+../src/Producto.c:14:1: error: expected identifier or ‘(’ before ‘{’ token
+   14 | {
+      | ^
+make: *** [src/subdir.mk:23: src/Producto.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+21:30:13 **** Incremental Build of configuration Debug for project clase_17 ****
+make all 
+Building file: ../src/Producto.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Producto.d" -MT"src/Producto.o" -o "src/Producto.o" "../src/Producto.c"
+Finished building: ../src/Producto.c
+ 
+Building file: ../src/clase_17.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/clase_17.d" -MT"src/clase_17.o" -o "src/clase_17.o" "../src/clase_17.c"
+../src/clase_17.c: In function ‘main’:
+../src/clase_17.c:35:12: warning: unused variable ‘listadoProductos’ [-Wunused-variable]
+   35 |  Producto* listadoProductos[500];
+      |            ^~~~~~~~~~~~~~~~
+Finished building: ../src/clase_17.c
+ 
+Building target: clase_17
+Invoking: GCC C Linker
+gcc  -o "clase_17"  ./src/Producto.o ./src/clase_17.o   
+Finished building target: clase_17
+ 
+21:30:21 **** Incremental Build of configuration Debug for project clase_17 ****
+make all 
+Building file: ../src/clase_17.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/clase_17.d" -MT"src/clase_17.o" -o "src/clase_17.o" "../src/clase_17.c"
+Finished building: ../src/clase_17.c
+ 
+Building target: clase_17
+Invoking: GCC C Linker
+gcc  -o "clase_17"  ./src/Producto.o ./src/clase_17.o   
+Finished building target: clase_17
+ 
+21:33:24 **** Incremental Build of configuration Debug for project clase_17 ****
+make all 
+Building file: ../src/Producto.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Producto.d" -MT"src/Producto.o" -o "src/Producto.o" "../src/Producto.c"
+../src/Producto.c: In function ‘producto_newParam’:
+../src/Producto.c:20:20: warning: initialization of ‘int’ from ‘Producto *’ {aka ‘struct <anonymous> *’} makes integer from pointer without a cast [-Wint-conversion]
+   20 |  int auxProducto = producto_new();
+      |                    ^~~~~~~~~~~~
+../src/Producto.c:20:6: warning: unused variable ‘auxProducto’ [-Wunused-variable]
+   20 |  int auxProducto = producto_new();
+      |      ^~~~~~~~~~~
+../src/Producto.c:21:1: warning: control reaches end of non-void function [-Wreturn-type]
+   21 | }
+      | ^
+Finished building: ../src/Producto.c
+ 
+Building file: ../src/clase_17.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/clase_17.d" -MT"src/clase_17.o" -o "src/clase_17.o" "../src/clase_17.c"
+Finished building: ../src/clase_17.c
+ 
+Building target: clase_17
+Invoking: GCC C Linker
+gcc  -o "clase_17"  ./src/Producto.o ./src/clase_17.o   
+Finished building target: clase_17
+ 
+21:37:18 **** Incremental Build of configuration Debug for project clase_17 ****
+make all 
+Building file: ../src/Producto.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Producto.d" -MT"src/Producto.o" -o "src/Producto.o" "../src/Producto.c"
+../src/Producto.c: In function ‘producto_newParam’:
+../src/Producto.c:20:20: warning: initialization of ‘int’ from ‘Producto *’ {aka ‘struct <anonymous> *’} makes integer from pointer without a cast [-Wint-conversion]
+   20 |  int auxProducto = producto_new();
+      |                    ^~~~~~~~~~~~
+../src/Producto.c:20:6: warning: unused variable ‘auxProducto’ [-Wunused-variable]
+   20 |  int auxProducto = producto_new();
+      |      ^~~~~~~~~~~
+../src/Producto.c:21:1: warning: control reaches end of non-void function [-Wreturn-type]
+   21 | }
+      | ^
+Finished building: ../src/Producto.c
+ 
+Building file: ../src/clase_17.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/clase_17.d" -MT"src/clase_17.o" -o "src/clase_17.o" "../src/clase_17.c"
+Finished building: ../src/clase_17.c
+ 
+Building target: clase_17
+Invoking: GCC C Linker
+gcc  -o "clase_17"  ./src/Producto.o ./src/clase_17.o   
+Finished building target: clase_17
+ 
+21:37:38 **** Incremental Build of configuration Debug for project clase_17 ****
+make all 
+make: No se hace nada para 'all'.
