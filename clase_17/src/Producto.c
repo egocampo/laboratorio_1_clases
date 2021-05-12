@@ -7,8 +7,10 @@
 
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 #include "Producto.h"
-
+#include "Nacionalidad.h"
+#include "Tipo.h"
 
 Producto* producto_new(void)
 {
@@ -26,7 +28,7 @@ Producto* producto_newParam(int idProducto,char* descripcion,int idNacionalidad,
 	Producto* auxProducto = producto_new();
 	if(auxProducto != NULL)
 	{
-		if(producto_setIdProducto(auxProducto, idProducto) < 0)
+		if(producto_setIdProducto(auxProducto, idProducto) < 0 || producto_setDescripcion(auxProducto, descripcion) < 0)
 		{
 			producto_delete(auxProducto);
 			auxProducto = NULL;
@@ -57,16 +59,11 @@ int producto_setIdProducto(Producto* this,int idProducto)
 	return retorno;
 }
 
-int producto_isValidId(int idProducto)
-{
-	return 1;
-}
-
 int producto_getIdProducto(Producto* this,int* flagError)
 {
 	*flagError = -1;
 	int auxId = -1;
-	if(this != NULL && flagError != NULL )
+	if(this != NULL && flagError != NULL)
 	{
 		auxId = this->idProducto;
 		*flagError = 0;
@@ -74,8 +71,39 @@ int producto_getIdProducto(Producto* this,int* flagError)
 	return auxId;
 }
 
-//int producto_setDescripcion(Producto* this,int descripcion);
-//char* producto_getDescripcion(Producto* this,int* flagError);
+int producto_isValidId(int idProducto)
+{
+	return 1;
+}
+
+int producto_setDescripcion(Producto* this,char* descripcion)
+{
+	int retorno = -1;
+	if(this != NULL && descripcion != NULL && producto_isValidDescripcion(descripcion))
+	{
+		strcpy(this->descripcion,descripcion);
+		retorno = 0;
+	}
+	return retorno;
+}
+
+char* producto_getDescripcion(Producto* this,int* flagError)
+{
+	*flagError = -1;
+	char* auxDescripcion = NULL;
+	if(this != NULL && flagError != NULL)
+	{
+		auxDescripcion = this->descripcion;
+		*flagError = 0;
+	}
+	return auxDescripcion;
+}
+
+int producto_isValidDescripcion(char* descripcion)
+{
+	return 1;
+}
+
 //int producto_setIdNacionalidad(Producto* this,int idNacionalidad);
 //int producto_getIdNacionalidad(Producto* this,int* flagError);
 //int producto_setIdTipo(Producto* this,int idTipo);

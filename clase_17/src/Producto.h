@@ -36,7 +36,7 @@ int producto_delete(Producto* this);
 
 int producto_setIdProducto(Producto* this,int idProducto);
 int producto_getIdProducto(Producto* this,int* flagError);
-int producto_setDescripcion(Producto* this,int descripcion);
+int producto_setDescripcion(Producto* this,char* descripcion);
 char* producto_getDescripcion(Producto* this,int* flagError);
 int producto_setIdNacionalidad(Producto* this,int idNacionalidad);
 int producto_getIdNacionalidad(Producto* this,int* flagError);
@@ -46,6 +46,7 @@ int producto_setPrecioUnitario(Producto* this,int precioUnitario);
 int producto_getPrecioUnitario(Producto* this,int* flagError);
 
 int producto_isValidId(int idProducto);
+int producto_isValidDescripcion(char* descripcion);
 
 
 

@@ -584,3 +584,187 @@ Finished building target: clase_17
 22:07:07 **** Incremental Build of configuration Debug for project clase_17 ****
 make all 
 make: No se hace nada para 'all'.
+22:21:37 **** Incremental Build of configuration Debug for project clase_17 ****
+make all 
+Building file: ../src/Nacionalidad.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Nacionalidad.d" -MT"src/Nacionalidad.o" -o "src/Nacionalidad.o" "../src/Nacionalidad.c"
+Finished building: ../src/Nacionalidad.c
+ 
+Building file: ../src/Producto.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Producto.d" -MT"src/Producto.o" -o "src/Producto.o" "../src/Producto.c"
+../src/Producto.c:77:5: error: conflicting types for ‘producto_setDescripcion’
+   77 | int producto_setDescripcion(Producto* this,char* descripcion)
+      |     ^~~~~~~~~~~~~~~~~~~~~~~
+In file included from ../src/Producto.c:10:
+../src/Producto.h:39:5: note: previous declaration of ‘producto_setDescripcion’ was here
+   39 | int producto_setDescripcion(Producto* this,int descripcion);
+      |     ^~~~~~~~~~~~~~~~~~~~~~~
+../src/Producto.c: In function ‘producto_setDescripcion’:
+../src/Producto.c:82:3: warning: implicit declaration of function ‘strcpy’ [-Wimplicit-function-declaration]
+   82 |   strcpy(this->descripcion);
+      |   ^~~~~~
+../src/Producto.c:82:3: warning: incompatible implicit declaration of built-in function ‘strcpy’
+../src/Producto.c:11:1: note: include ‘<string.h>’ or provide a declaration of ‘strcpy’
+   10 | #include "Producto.h"
+  +++ |+#include <string.h>
+   11 | 
+../src/Producto.c:82:3: error: too few arguments to function ‘strcpy’
+   82 |   strcpy(this->descripcion);
+      |   ^~~~~~
+make: *** [src/subdir.mk:29: src/Producto.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+22:21:51 **** Incremental Build of configuration Debug for project clase_17 ****
+make all 
+Building file: ../src/Producto.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Producto.d" -MT"src/Producto.o" -o "src/Producto.o" "../src/Producto.c"
+../src/Producto.c:77:5: error: conflicting types for ‘producto_setDescripcion’
+   77 | int producto_setDescripcion(Producto* this,char* descripcion)
+      |     ^~~~~~~~~~~~~~~~~~~~~~~
+In file included from ../src/Producto.c:10:
+../src/Producto.h:39:5: note: previous declaration of ‘producto_setDescripcion’ was here
+   39 | int producto_setDescripcion(Producto* this,int descripcion);
+      |     ^~~~~~~~~~~~~~~~~~~~~~~
+../src/Producto.c: In function ‘producto_setDescripcion’:
+../src/Producto.c:82:3: warning: implicit declaration of function ‘strcpy’ [-Wimplicit-function-declaration]
+   82 |   strcpy(this->descripcion,descripcion);
+      |   ^~~~~~
+../src/Producto.c:82:3: warning: incompatible implicit declaration of built-in function ‘strcpy’
+../src/Producto.c:11:1: note: include ‘<string.h>’ or provide a declaration of ‘strcpy’
+   10 | #include "Producto.h"
+  +++ |+#include <string.h>
+   11 | 
+make: *** [src/subdir.mk:29: src/Producto.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+22:22:10 **** Incremental Build of configuration Debug for project clase_17 ****
+make all 
+Building file: ../src/Nacionalidad.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Nacionalidad.d" -MT"src/Nacionalidad.o" -o "src/Nacionalidad.o" "../src/Nacionalidad.c"
+Finished building: ../src/Nacionalidad.c
+ 
+Building file: ../src/Producto.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Producto.d" -MT"src/Producto.o" -o "src/Producto.o" "../src/Producto.c"
+../src/Producto.c: In function ‘producto_setDescripcion’:
+../src/Producto.c:82:3: warning: implicit declaration of function ‘strcpy’ [-Wimplicit-function-declaration]
+   82 |   strcpy(this->descripcion,descripcion);
+      |   ^~~~~~
+../src/Producto.c:82:3: warning: incompatible implicit declaration of built-in function ‘strcpy’
+../src/Producto.c:11:1: note: include ‘<string.h>’ or provide a declaration of ‘strcpy’
+   10 | #include "Producto.h"
+  +++ |+#include <string.h>
+   11 | 
+Finished building: ../src/Producto.c
+ 
+Building file: ../src/Tipo.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Tipo.d" -MT"src/Tipo.o" -o "src/Tipo.o" "../src/Tipo.c"
+Finished building: ../src/Tipo.c
+ 
+Building file: ../src/clase_17.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/clase_17.d" -MT"src/clase_17.o" -o "src/clase_17.o" "../src/clase_17.c"
+Finished building: ../src/clase_17.c
+ 
+Building target: clase_17
+Invoking: GCC C Linker
+gcc  -o "clase_17"  ./src/Nacionalidad.o ./src/Producto.o ./src/Tipo.o ./src/clase_17.o   
+Finished building target: clase_17
+ 
+22:22:43 **** Incremental Build of configuration Debug for project clase_17 ****
+make all 
+Building file: ../src/Producto.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Producto.d" -MT"src/Producto.o" -o "src/Producto.o" "../src/Producto.c"
+Finished building: ../src/Producto.c
+ 
+Building target: clase_17
+Invoking: GCC C Linker
+gcc  -o "clase_17"  ./src/Nacionalidad.o ./src/Producto.o ./src/Tipo.o ./src/clase_17.o   
+Finished building target: clase_17
+ 
+22:23:06 **** Incremental Build of configuration Debug for project clase_17 ****
+make all 
+Building file: ../src/Producto.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Producto.d" -MT"src/Producto.o" -o "src/Producto.o" "../src/Producto.c"
+../src/Producto.c: In function ‘producto_newParam’:
+../src/Producto.c:31:85: error: ‘this’ undeclared (first use in this function)
+   31 |   if(producto_setIdProducto(auxProducto, idProducto) < 0 || producto_setDescripcion(this, descripcion) < 0)
+      |                                                                                     ^~~~
+../src/Producto.c:31:85: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [src/subdir.mk:29: src/Producto.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+22:23:22 **** Incremental Build of configuration Debug for project clase_17 ****
+make all 
+Building file: ../src/Producto.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Producto.d" -MT"src/Producto.o" -o "src/Producto.o" "../src/Producto.c"
+Finished building: ../src/Producto.c
+ 
+Building target: clase_17
+Invoking: GCC C Linker
+gcc  -o "clase_17"  ./src/Nacionalidad.o ./src/Producto.o ./src/Tipo.o ./src/clase_17.o   
+Finished building target: clase_17
+ 
+22:24:22 **** Incremental Build of configuration Debug for project clase_17 ****
+make all 
+Building file: ../src/clase_17.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/clase_17.d" -MT"src/clase_17.o" -o "src/clase_17.o" "../src/clase_17.c"
+Finished building: ../src/clase_17.c
+ 
+Building target: clase_17
+Invoking: GCC C Linker
+gcc  -o "clase_17"  ./src/Nacionalidad.o ./src/Producto.o ./src/Tipo.o ./src/clase_17.o   
+Finished building target: clase_17
+ 
+22:24:24 **** Incremental Build of configuration Debug for project clase_17 ****
+make all 
+make: No se hace nada para 'all'.
+22:24:47 **** Incremental Build of configuration Debug for project clase_17 ****
+make all 
+Building file: ../src/clase_17.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/clase_17.d" -MT"src/clase_17.o" -o "src/clase_17.o" "../src/clase_17.c"
+../src/clase_17.c: In function ‘main’:
+../src/clase_17.c:40:9: warning: unknown escape sequence: '\D'
+   40 |  printf("Id Producto: %d\Descripcion: %s",auxProducto->idProducto,
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Finished building: ../src/clase_17.c
+ 
+Building target: clase_17
+Invoking: GCC C Linker
+gcc  -o "clase_17"  ./src/Nacionalidad.o ./src/Producto.o ./src/Tipo.o ./src/clase_17.o   
+Finished building target: clase_17
+ 
+22:24:50 **** Incremental Build of configuration Debug for project clase_17 ****
+make all 
+make: No se hace nada para 'all'.
+22:24:52 **** Incremental Build of configuration Debug for project clase_17 ****
+make all 
+make: No se hace nada para 'all'.
+22:24:53 **** Incremental Build of configuration Debug for project clase_17 ****
+make all 
+make: No se hace nada para 'all'.
+22:24:55 **** Incremental Build of configuration Debug for project clase_17 ****
+make all 
+make: No se hace nada para 'all'.
+22:25:01 **** Incremental Build of configuration Debug for project clase_17 ****
+make all 
+Building file: ../src/clase_17.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/clase_17.d" -MT"src/clase_17.o" -o "src/clase_17.o" "../src/clase_17.c"
+Finished building: ../src/clase_17.c
+ 
+Building target: clase_17
+Invoking: GCC C Linker
+gcc  -o "clase_17"  ./src/Nacionalidad.o ./src/Producto.o ./src/Tipo.o ./src/clase_17.o   
+Finished building target: clase_17
+ 
+22:25:03 **** Incremental Build of configuration Debug for project clase_17 ****
+make all 
+make: No se hace nada para 'all'.
