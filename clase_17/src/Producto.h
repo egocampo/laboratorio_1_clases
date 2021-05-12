@@ -26,19 +26,9 @@ typedef struct
 	float precioUnitario;
 }Producto;
 
-typedef struct
-{
-	int idNacionalidad;
-	char descripcion[50];
-}Nacionalidad;
 
-typedef struct
-{
-	int idTipo;
-	char marca[50];
-	char fabrica[50];
-	char tipoTela[50];
-}Tipo;
+
+
 
 Producto* producto_new(void);
 Producto* producto_newParam(Producto* this,int idProducto,char* descripcion,int idNacionalidad,int idTipo,float precioUnitario);
@@ -55,18 +45,6 @@ int producto_getIdTipo(Producto* this,int* flagError);
 int producto_setPrecioUnitario(Producto* this,int precioUnitario);
 int producto_getPrecioUnitario(Producto* this,int* flagError);
 
-int nacionalidad_setIdNacionalidad(Nacionalidad* this,int idNacionalidad);
-int nacionalidad_getIdNacionalidad(Nacionalidad* this,int* flagError);
-int nacionalidad_setDescripcion(Nacionalidad* this,int descripcion);
-char* nacionalidad_getDescripcion(Nacionalidad* this,int* flagError);
 
-int tipo_setIdTipo(Tipo* this,int idTipo);
-int tipo_getIdTipo(Tipo* this,int* flagError);
-int tipo_setMarca(Tipo* this,int marca);
-char* tipo_getMarca(Tipo* this,int* flagError);
-int tipo_setFabrica(Tipo* this,int fabrica);
-char* tipo_getFabrica(Tipo* this,int* flagError);
-int tipo_setTipoTela(Tipo* this,int tipoTela);
-char* tipo_getTipoTela(Tipo* this,int* flagError);
 
 #endif /* PRODUCTO_H_ */

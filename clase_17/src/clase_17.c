@@ -30,6 +30,8 @@ Realizar un programa que permita interactuar con un menú de usuarios con las
 #include <stdio.h>
 #include <stdlib.h>
 #include "Producto.h"
+#include "Nacionalidad.h"
+#include "Tipo.h"
 
 int main(void) {
 	//Producto* listadoProductos[500];
