@@ -32,13 +32,56 @@ Realizar un programa que permita interactuar con un menú de usuarios con las
 #include "Producto.h"
 #include "Nacionalidad.h"
 #include "Tipo.h"
+#include "menues.h"
+#include "Builder.h"
+#include "gets.h"
+#include "validations.h"
+#define QTY_PRODUCTOS 10
+
 
 int main(void) {
-	//Producto* listadoProductos[500];
+	Producto* listadoProductos[10];
+	producto_initArray(listadoProductos, 10);
+//	for(int i=0;i<10;i++)
+//		listadoProductos[i] = NULL;
 	Producto* auxProducto;
-	auxProducto = producto_newParam(110,"Caballo",3,3,3);
-	printf("Id Producto: %d\nDescripcion: %s",auxProducto->idProducto,
-			auxProducto->descripcion);
-
+	int opcionMenuPrincipal;
+//	auxProducto = producto_newParam(110,"Caballo",3,3,3);
+//	printf("Id Producto: %d\nDescripcion: %s",auxProducto->idProducto,
+//			auxProducto->descripcion);
+	do
+	{
+		opcionMenuPrincipal = 0;
+		menu_imprimirMenuPrincipal();
+		get_int(&opcionMenuPrincipal, 2,"Ingrese su opción: ","Error. ",1,1,5,3,0);
+		switch(opcionMenuPrincipal)
+		{
+			case 1:
+				auxProducto = producto_new();
+				if(producto_pedirDatos(auxProducto))
+				{
+					listadoProductos[0] = auxProducto;
+				}
+				menu_mensajeContinuar();
+				break;
+			case 2:
+				producto_delete(listadoProductos[0]);
+				menu_mensajeContinuar();
+				break;
+			case 3:
+				printf("%p",listadoProductos[2]);
+				menu_mensajeContinuar();
+				break;
+			case 4:
+				printf("%s",listadoProductos[0]->descripcion);
+				menu_mensajeContinuar();
+				break;
+		}
+	}while(opcionMenuPrincipal != 5);
+	menu_imprimirMensajeDespedida();
 	return EXIT_SUCCESS;
 }
+
+//	builder_constructor("Empleado");
+//	builder_setter("Empleado","int","nombre");
+

@@ -1,0 +1,30 @@
+Alumnos.c
+
+int alumnos_setAltura(Alumnos* this,float altura)
+{
+	int retorno = -1;
+	if(this != NULL && altura > 0 && isValidAltura(altura))
+	{
+		retorno = 0;
+		this->altura = altura;
+	}
+	return retorno;
+}
+
+float alumnos_getAltura(Alumnos* this,int* flagError)
+{
+	*flagError = -1;
+	float auxAltura = -1;
+	if(this != NULL && flagError != NULL)
+	{
+		auxAltura=this->altura;
+		*flagError = 0;
+	}
+	return auxAltura;
+}
+
+int isValidAltura(float altura)
+{
+	return 1;
+}
+

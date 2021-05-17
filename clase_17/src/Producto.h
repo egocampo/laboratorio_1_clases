@@ -48,6 +48,9 @@ int producto_getPrecioUnitario(Producto* this,int* flagError);
 int producto_isValidId(int idProducto);
 int producto_isValidDescripcion(char* descripcion);
 
+int producto_pedirDatos(Producto* this);
+int producto_initArray(Producto* listadoProductos[],int len);
+
 
 
 #endif /* PRODUCTO_H_ */

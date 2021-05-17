@@ -11,6 +11,23 @@
 #include "Producto.h"
 #include "Nacionalidad.h"
 #include "Tipo.h"
+#include "gets.h"
+#include "validations.h"
+
+int producto_initArray(Producto* listadoProductos[],int len)
+{
+	int returnFunction = -1;
+	int i;
+	if(listadoProductos != NULL && len > 0)
+	{
+		returnFunction = 0;
+		for(i=0;i<len;i++)
+		{
+			listadoProductos[i] = NULL;
+		}
+	}
+	return returnFunction;
+}
 
 Producto* producto_new(void)
 {
@@ -102,6 +119,22 @@ char* producto_getDescripcion(Producto* this,int* flagError)
 int producto_isValidDescripcion(char* descripcion)
 {
 	return 1;
+}
+
+int producto_pedirDatos(Producto* this)
+{
+	int returnFuncion = -1;
+	Producto bufferProducto;
+	if(this != NULL)
+	{
+		returnFuncion = 0;
+		if(get_text(bufferProducto.descripcion,50,"Ingrese descripción: ","Error. ",3))
+		{
+			producto_setDescripcion(this,bufferProducto.descripcion);
+			returnFuncion = 1;
+		}
+	}
+	return returnFuncion;
 }
 
 //int producto_setIdNacionalidad(Producto* this,int idNacionalidad);
