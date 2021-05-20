@@ -46,7 +46,7 @@ int builder_constructor(char* nombreEntidad, char* listadoParametros)
 	char bufferNombreCampoMayuscula[20];
 
 // INCLUDES
-	sprintf(bufferPuntoC,"#include <stdio.h>\n#include <stdlib.h>\n#include <string.h>\n#include \"%s.h\"\n\n",nombreEntidad);
+	sprintf(bufferPuntoC,"#include <stdio.h>\n#include <stdlib.h>\n#include <string.h>\n#include \"%s.h\"\n\n",nombreEntidadMinuscula);
 	longitudBufferPuntoC=strlen(bufferPuntoC);
 	fwrite(bufferPuntoC,sizeof(char),longitudBufferPuntoC,pArchivoPuntoC);
 
@@ -139,7 +139,7 @@ int builder_constructor(char* nombreEntidad, char* listadoParametros)
 					"int %s_set%s(%s* this,int %s)\n"
 					"{\n"
 					"\tint retorno = -1;\n"
-					"\tif(this != NULL && %s > 0 && isValid%s(%s))\n"
+					"\tif(this != NULL && %s > 0 && %s_isValid%s(%s))\n"
 					"\t{\n"
 					"\t\tretorno = 0;\n"
 					"\t\tthis->%s = %s;\n"
@@ -157,23 +157,27 @@ int builder_constructor(char* nombreEntidad, char* listadoParametros)
 					"\t}\n"
 					"\treturn aux%s;\n"
 					"}\n\n"
-					"int isValid%s(int %s)\n"
+					"int %s_isValid%s(int %s)\n"
 					"{\n"
 					"\treturn 1;\n"
 					"}\n\n",
 					nombreEntidadMinuscula,bufferNombreCampoMayuscula,nombreEntidad,bufferNombreCampo,
-					bufferNombreCampo,bufferNombreCampoMayuscula,bufferNombreCampo,
+					bufferNombreCampo,nombreEntidadMinuscula,bufferNombreCampoMayuscula,bufferNombreCampo,
 					bufferNombreCampo,bufferNombreCampo,
 					nombreEntidadMinuscula,bufferNombreCampoMayuscula,nombreEntidad,
 					bufferNombreCampoMayuscula,
 					bufferNombreCampoMayuscula,bufferNombreCampo,
 					bufferNombreCampoMayuscula,
-					bufferNombreCampoMayuscula,bufferNombreCampo);
+					nombreEntidadMinuscula,bufferNombreCampoMayuscula,bufferNombreCampo);
 			longitudBufferPuntoC=strlen(bufferPuntoC);
 			fwrite(bufferPuntoC,sizeof(char),longitudBufferPuntoC,pArchivoPuntoC);
 			sprintf(bufferPuntoH,""
-					"int %s_set%s(%s* this,int %s);\n",
-					nombreEntidadMinuscula,bufferNombreCampoMayuscula,nombreEntidad,bufferNombreCampo);
+					"int %s_set%s(%s* this,int %s);\n"
+					"int %s_get%s(%s* this,int* flagError);\n"
+					"int %s_isValid%s(int %s);\n",
+					nombreEntidadMinuscula,bufferNombreCampoMayuscula,nombreEntidad,bufferNombreCampo,
+					nombreEntidadMinuscula,bufferNombreCampoMayuscula,nombreEntidad,
+					nombreEntidadMinuscula,bufferNombreCampoMayuscula,bufferNombreCampo);
 			longitudBufferPuntoH=strlen(bufferPuntoH);
 			fwrite(bufferPuntoH,sizeof(char),longitudBufferPuntoH,pArchivoPuntoH);
 			break;
@@ -182,7 +186,7 @@ int builder_constructor(char* nombreEntidad, char* listadoParametros)
 					"int %s_set%s(%s* this,char* %s)\n"
 					"{\n"
 					"\tint retorno = -1;\n"
-					"\tif(this != NULL && %s != NULL && isValid%s(%s))\n"
+					"\tif(this != NULL && %s != NULL && %s_isValid%s(%s))\n"
 					"\t{\n"
 					"\t\tretorno = 0;\n"
 					"\t\tstrcpy(this->%s,%s);\n"
@@ -195,28 +199,32 @@ int builder_constructor(char* nombreEntidad, char* listadoParametros)
 					"\tchar* aux%s = NULL;\n"
 					"\tif(this != NULL && flagError != NULL)\n"
 					"\t{\n"
-					"\t\taux%s = this->nombre;\n"
+					"\t\taux%s = this->%s;\n"
 					"\t\t*flagError = 0;\n"
 					"\t}\n"
 					"\treturn aux%s;\n"
 					"}\n\n"
-					"int isValid%s(char* %s)\n"
+					"int %s_isValid%s(char* %s)\n"
 					"{\n"
 					"\treturn 1;\n"
 					"}\n\n",
 					nombreEntidadMinuscula,bufferNombreCampoMayuscula,nombreEntidad,bufferNombreCampo,
-					bufferNombreCampo,bufferNombreCampoMayuscula,bufferNombreCampo,
+					bufferNombreCampo,nombreEntidadMinuscula,bufferNombreCampoMayuscula,bufferNombreCampo,
 					bufferNombreCampo,bufferNombreCampo,
 					nombreEntidadMinuscula,bufferNombreCampoMayuscula,nombreEntidad,
 					bufferNombreCampoMayuscula,
+					bufferNombreCampoMayuscula,bufferNombreCampo,
 					bufferNombreCampoMayuscula,
-					bufferNombreCampoMayuscula,
-					bufferNombreCampoMayuscula,bufferNombreCampo);
+					nombreEntidadMinuscula,bufferNombreCampoMayuscula,bufferNombreCampo);
 			longitudBufferPuntoC=strlen(bufferPuntoC);
 			fwrite(bufferPuntoC,sizeof(char),longitudBufferPuntoC,pArchivoPuntoC);
 			sprintf(bufferPuntoH,""
-					"int %s_set%s(%s* this,char* %s);\n",
-					nombreEntidadMinuscula,bufferNombreCampoMayuscula,nombreEntidad,bufferNombreCampo);
+					"int %s_set%s(%s* this,char* %s);\n"
+					"char* %s_get%s(%s* this,int* flagError);\n"
+					"int %s_isValid%s(char* %s);\n",
+					nombreEntidadMinuscula,bufferNombreCampoMayuscula,nombreEntidad,bufferNombreCampo,
+					nombreEntidadMinuscula,bufferNombreCampoMayuscula,nombreEntidad,
+					nombreEntidadMinuscula,bufferNombreCampoMayuscula,bufferNombreCampo);
 			longitudBufferPuntoH=strlen(bufferPuntoH);
 			fwrite(bufferPuntoH,sizeof(char),longitudBufferPuntoH,pArchivoPuntoH);
 			break;
@@ -225,7 +233,7 @@ int builder_constructor(char* nombreEntidad, char* listadoParametros)
 					"int %s_set%s(%s* this,float %s)\n"
 					"{\n"
 					"\tint retorno = -1;\n"
-					"\tif(this != NULL && %s > 0 && isValid%s(%s))\n"
+					"\tif(this != NULL && %s > 0 && %s_isValid%s(%s))\n"
 					"\t{\n"
 					"\t\tretorno = 0;\n"
 					"\t\tthis->%s = %s;\n"
@@ -243,23 +251,27 @@ int builder_constructor(char* nombreEntidad, char* listadoParametros)
 					"\t}\n"
 					"\treturn aux%s;\n"
 					"}\n\n"
-					"int isValid%s(float %s)\n"
+					"int %s_isValid%s(float %s)\n"
 					"{\n"
 					"\treturn 1;\n"
 					"}\n\n",
 					nombreEntidadMinuscula,bufferNombreCampoMayuscula,nombreEntidad,bufferNombreCampo,
-					bufferNombreCampo,bufferNombreCampoMayuscula,bufferNombreCampo,
+					bufferNombreCampo,nombreEntidadMinuscula,bufferNombreCampoMayuscula,bufferNombreCampo,
 					bufferNombreCampo,bufferNombreCampo,
 					nombreEntidadMinuscula,bufferNombreCampoMayuscula,nombreEntidad,
 					bufferNombreCampoMayuscula,
 					bufferNombreCampoMayuscula,bufferNombreCampo,
 					bufferNombreCampoMayuscula,
-					bufferNombreCampoMayuscula,bufferNombreCampo);
+					nombreEntidadMinuscula,bufferNombreCampoMayuscula,bufferNombreCampo);
 			longitudBufferPuntoC=strlen(bufferPuntoC);
 			fwrite(bufferPuntoC,sizeof(char),longitudBufferPuntoC,pArchivoPuntoC);
 			sprintf(bufferPuntoH,""
-					"int %s_set%s(%s* this,float %s);\n",
-					nombreEntidadMinuscula,bufferNombreCampoMayuscula,nombreEntidad,bufferNombreCampo);
+					"int %s_set%s(%s* this,float %s);\n"
+					"float %s_get%s(%s* this,int* flagError);\n"
+					"int %s_isValid%s(float %s);\n",
+					nombreEntidadMinuscula,bufferNombreCampoMayuscula,nombreEntidad,bufferNombreCampo,
+					nombreEntidadMinuscula,bufferNombreCampoMayuscula,nombreEntidad,
+					nombreEntidadMinuscula,bufferNombreCampoMayuscula,bufferNombreCampo);
 			longitudBufferPuntoH=strlen(bufferPuntoH);
 			fwrite(bufferPuntoH,sizeof(char),longitudBufferPuntoH,pArchivoPuntoH);
 			break;
@@ -335,7 +347,7 @@ int builder_constructor(char* nombreEntidad, char* listadoParametros)
 	fwrite(bufferPuntoC,sizeof(char),longitudBufferPuntoC,pArchivoPuntoC);
 	sprintf(bufferPuntoH,""
 			"int %s_imprimirListado(%s* list[],int len);\n"
-			"void %s_imprimirPosicion(%s* this)\n",
+			"void %s_imprimirPosicion(%s* this);\n",
 			nombreEntidadMinuscula,nombreEntidad,
 			nombreEntidadMinuscula,nombreEntidad);
 	longitudBufferPuntoH=strlen(bufferPuntoH);

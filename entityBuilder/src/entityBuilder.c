@@ -19,21 +19,21 @@
 int main(void)
 {
 	int opcionMenuPrincipal;
-	char nombreEstructura[TAM_NOMBRE] = "";
-	char detalleParametros[TAM_PARAMETROS] = "";
+	char nombreEstructura[TAM_NOMBRE] = "Producto";
+	char detalleParametros[TAM_PARAMETROS] = "char* nombre;char* descripcion;float precioUnitario;int idProducto;";
 	do
 	{
 		opcionMenuPrincipal = 0;
 		menu_imprimirMenuPrincipal(nombreEstructura,detalleParametros);
-		get_int(&opcionMenuPrincipal, 2,"Opcion: ","Error. ",1,1,5,3,0);
+		get_int(&opcionMenuPrincipal, 2,"Ingrese una opcion: ","",1,1,5,0,0);
 		switch(opcionMenuPrincipal)
 		{
 		case 1:
-			get_name(nombreEstructura, TAM_NOMBRE,"Ingrese el nombre de la entidad: ","Error. ",3);
+			get_name(nombreEstructura, TAM_NOMBRE,"\nIngrese el nombre de la entidad: ","Error.",3);
 			menu_mensajeContinuar();
 			break;
 		case 2:
-			get_text(detalleParametros, TAM_PARAMETROS,"Ingrese los parámetros: ","Error. ",3);
+			get_text(detalleParametros, TAM_PARAMETROS,"\nIngrese los parámetros: ","Error.",3);
 			menu_mensajeContinuar();
 			break;
 		case 3:
@@ -43,7 +43,7 @@ int main(void)
 			}
 			else
 			{
-				printf("Primero debe ingresar nombre de entidad y detalle de parámetros.");
+				printf("\nPrimero debe ingresar nombre de entidad y detalle de parámetros.\n");
 			}
 			menu_mensajeContinuar();
 			break;
@@ -52,6 +52,6 @@ int main(void)
 			break;
 		}
 	}while(opcionMenuPrincipal != 5);
-
+	menu_imprimirMensajeDespedida();
 	return EXIT_SUCCESS;
 }

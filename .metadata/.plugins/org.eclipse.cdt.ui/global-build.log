@@ -1,1221 +1,207 @@
-11:51:30 **** Incremental Build of configuration Debug for project entityBuilder ****
-make all 
-Building file: ../src/Builder.c
-Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Builder.d" -MT"src/Builder.o" -o "src/Builder.o" "../src/Builder.c"
-Finished building: ../src/Builder.c
- 
-Building target: entityBuilder
-Invoking: GCC C Linker
-gcc  -o "entityBuilder"  ./src/Builder.o ./src/entityBuilder.o   
-Finished building target: entityBuilder
- 
-11:51:34 **** Incremental Build of configuration Debug for project entityBuilder ****
+13:49:13 **** Incremental Build of configuration Debug for project clase_19bis ****
 make all 
 make: No se hace nada para 'all'.
-11:51:40 **** Incremental Build of configuration Debug for project entityBuilder ****
+07:54:59 **** Incremental Build of configuration Debug for project clase_19bis ****
 make all 
-Building file: ../src/Builder.c
+Building file: ../src/clase_19bis.c
 Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Builder.d" -MT"src/Builder.o" -o "src/Builder.o" "../src/Builder.c"
-../src/Builder.c: In function ‘builder_constructor’:
-../src/Builder.c:26:33: warning: ‘.c’ directive writing 2 bytes into a region of size between 1 and 20 [-Wformat-overflow=]
-   26 |  sprintf(bufferNombreArchivo,"%s.c",nombreEntidadMinuscula);
-      |                                 ^~
-../src/Builder.c:26:2: note: ‘sprintf’ output between 3 and 22 bytes into a destination of size 20
-   26 |  sprintf(bufferNombreArchivo,"%s.c",nombreEntidadMinuscula);
-      |  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-Finished building: ../src/Builder.c
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/clase_19bis.d" -MT"src/clase_19bis.o" -o "src/clase_19bis.o" "../src/clase_19bis.c"
+Finished building: ../src/clase_19bis.c
  
-Building target: entityBuilder
+Building file: ../src/producto.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/producto.d" -MT"src/producto.o" -o "src/producto.o" "../src/producto.c"
+Finished building: ../src/producto.c
+ 
+Building target: clase_19bis
 Invoking: GCC C Linker
-gcc  -o "entityBuilder"  ./src/Builder.o ./src/entityBuilder.o   
-Finished building target: entityBuilder
+gcc  -o "clase_19bis"  ./src/clase_19bis.o ./src/gets.o ./src/menues.o ./src/producto.o ./src/validations.o   -lm
+Finished building target: clase_19bis
  
-11:52:03 **** Incremental Build of configuration Debug for project entityBuilder ****
+07:55:31 **** Incremental Build of configuration Debug for project clase_19bis ****
 make all 
-Building file: ../src/Builder.c
+Building file: ../src/clase_19bis.c
 Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Builder.d" -MT"src/Builder.o" -o "src/Builder.o" "../src/Builder.c"
-../src/Builder.c: In function ‘builder_constructor’:
-../src/Builder.c:26:33: warning: ‘aa’ directive writing 2 bytes into a region of size between 1 and 20 [-Wformat-overflow=]
-   26 |  sprintf(bufferNombreArchivo,"%saa",nombreEntidadMinuscula);
-      |                                 ^~
-../src/Builder.c:26:2: note: ‘sprintf’ output between 3 and 22 bytes into a destination of size 20
-   26 |  sprintf(bufferNombreArchivo,"%saa",nombreEntidadMinuscula);
-      |  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-Finished building: ../src/Builder.c
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/clase_19bis.d" -MT"src/clase_19bis.o" -o "src/clase_19bis.o" "../src/clase_19bis.c"
+Finished building: ../src/clase_19bis.c
  
-Building target: entityBuilder
+Building file: ../src/producto.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/producto.d" -MT"src/producto.o" -o "src/producto.o" "../src/producto.c"
+Finished building: ../src/producto.c
+ 
+Building target: clase_19bis
 Invoking: GCC C Linker
-gcc  -o "entityBuilder"  ./src/Builder.o ./src/entityBuilder.o   
-Finished building target: entityBuilder
+gcc  -o "clase_19bis"  ./src/clase_19bis.o ./src/gets.o ./src/menues.o ./src/producto.o ./src/validations.o   -lm
+Finished building target: clase_19bis
  
-11:52:13 **** Incremental Build of configuration Debug for project entityBuilder ****
+07:58:59 **** Incremental Build of configuration Debug for project clase_19bis ****
 make all 
-Building file: ../src/Builder.c
+Building file: ../src/producto.c
 Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Builder.d" -MT"src/Builder.o" -o "src/Builder.o" "../src/Builder.c"
-Finished building: ../src/Builder.c
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/producto.d" -MT"src/producto.o" -o "src/producto.o" "../src/producto.c"
+Finished building: ../src/producto.c
  
-Building target: entityBuilder
+Building target: clase_19bis
 Invoking: GCC C Linker
-gcc  -o "entityBuilder"  ./src/Builder.o ./src/entityBuilder.o   
-Finished building target: entityBuilder
+gcc  -o "clase_19bis"  ./src/clase_19bis.o ./src/gets.o ./src/menues.o ./src/producto.o ./src/validations.o   -lm
+Finished building target: clase_19bis
  
-11:55:32 **** Incremental Build of configuration Debug for project entityBuilder ****
+08:23:10 **** Incremental Build of configuration Debug for project clase_19bis ****
 make all 
-Building file: ../src/Builder.c
+Building file: ../src/producto.c
 Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Builder.d" -MT"src/Builder.o" -o "src/Builder.o" "../src/Builder.c"
-Finished building: ../src/Builder.c
- 
-Building target: entityBuilder
-Invoking: GCC C Linker
-gcc  -o "entityBuilder"  ./src/Builder.o ./src/entityBuilder.o   
-Finished building target: entityBuilder
- 
-11:56:13 **** Incremental Build of configuration Debug for project entityBuilder ****
-make all 
-Building file: ../src/Builder.c
-Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Builder.d" -MT"src/Builder.o" -o "src/Builder.o" "../src/Builder.c"
-Finished building: ../src/Builder.c
- 
-Building target: entityBuilder
-Invoking: GCC C Linker
-gcc  -o "entityBuilder"  ./src/Builder.o ./src/entityBuilder.o   
-Finished building target: entityBuilder
- 
-11:56:27 **** Incremental Build of configuration Debug for project entityBuilder ****
-make all 
-Building file: ../src/Builder.c
-Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Builder.d" -MT"src/Builder.o" -o "src/Builder.o" "../src/Builder.c"
-../src/Builder.c: In function ‘builder_constructor’:
-../src/Builder.c:26:33: warning: ‘.c’ directive writing 2 bytes into a region of size between 1 and 20 [-Wformat-overflow=]
-   26 |  sprintf(bufferNombreArchivo,"%s.c",nombreEntidadMinuscula);
-      |                                 ^~
-../src/Builder.c:26:2: note: ‘sprintf’ output between 3 and 22 bytes into a destination of size 20
-   26 |  sprintf(bufferNombreArchivo,"%s.c",nombreEntidadMinuscula);
-      |  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-Finished building: ../src/Builder.c
- 
-Building target: entityBuilder
-Invoking: GCC C Linker
-gcc  -o "entityBuilder"  ./src/Builder.o ./src/entityBuilder.o   
-Finished building target: entityBuilder
- 
-11:56:44 **** Incremental Build of configuration Debug for project entityBuilder ****
-make all 
-Building file: ../src/Builder.c
-Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Builder.d" -MT"src/Builder.o" -o "src/Builder.o" "../src/Builder.c"
-../src/Builder.c: In function ‘builder_constructor’:
-../src/Builder.c:26:34: warning: ‘sprintf’ may write a terminating nul past the end of the destination [-Wformat-overflow=]
-   26 |  sprintf(bufferNombreArchivo,"%s*",nombreEntidadMinuscula);
-      |                                  ^
-../src/Builder.c:26:2: note: ‘sprintf’ output between 2 and 21 bytes into a destination of size 20
-   26 |  sprintf(bufferNombreArchivo,"%s*",nombreEntidadMinuscula);
-      |  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-Finished building: ../src/Builder.c
- 
-Building target: entityBuilder
-Invoking: GCC C Linker
-gcc  -o "entityBuilder"  ./src/Builder.o ./src/entityBuilder.o   
-Finished building target: entityBuilder
- 
-11:57:06 **** Incremental Build of configuration Debug for project entityBuilder ****
-make all 
-Building file: ../src/Builder.c
-Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Builder.d" -MT"src/Builder.o" -o "src/Builder.o" "../src/Builder.c"
-../src/Builder.c: In function ‘builder_constructor’:
-../src/Builder.c:26:33: warning: ‘* a’ directive writing 3 bytes into a region of size between 1 and 20 [-Wformat-overflow=]
-   26 |  sprintf(bufferNombreArchivo,"%s* a",nombreEntidadMinuscula);
-      |                                 ^~~
-../src/Builder.c:26:2: note: ‘sprintf’ output between 4 and 23 bytes into a destination of size 20
-   26 |  sprintf(bufferNombreArchivo,"%s* a",nombreEntidadMinuscula);
-      |  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-Finished building: ../src/Builder.c
- 
-Building target: entityBuilder
-Invoking: GCC C Linker
-gcc  -o "entityBuilder"  ./src/Builder.o ./src/entityBuilder.o   
-Finished building target: entityBuilder
- 
-11:58:25 **** Incremental Build of configuration Debug for project entityBuilder ****
-make all 
-Building file: ../src/Builder.c
-Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Builder.d" -MT"src/Builder.o" -o "src/Builder.o" "../src/Builder.c"
-../src/Builder.c: In function ‘builder_constructor’:
-../src/Builder.c:26:33: warning: ‘ a’ directive writing 2 bytes into a region of size between 1 and 20 [-Wformat-overflow=]
-   26 |  sprintf(bufferNombreArchivo,"%s a",nombreEntidadMinuscula);
-      |                                 ^~
-../src/Builder.c:26:2: note: ‘sprintf’ output between 3 and 22 bytes into a destination of size 20
-   26 |  sprintf(bufferNombreArchivo,"%s a",nombreEntidadMinuscula);
-      |  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-Finished building: ../src/Builder.c
- 
-Building target: entityBuilder
-Invoking: GCC C Linker
-gcc  -o "entityBuilder"  ./src/Builder.o ./src/entityBuilder.o   
-Finished building target: entityBuilder
- 
-11:58:36 **** Incremental Build of configuration Debug for project entityBuilder ****
-make all 
-Building file: ../src/Builder.c
-Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Builder.d" -MT"src/Builder.o" -o "src/Builder.o" "../src/Builder.c"
-Finished building: ../src/Builder.c
- 
-Building target: entityBuilder
-Invoking: GCC C Linker
-gcc  -o "entityBuilder"  ./src/Builder.o ./src/entityBuilder.o   
-Finished building target: entityBuilder
- 
-11:58:40 **** Incremental Build of configuration Debug for project entityBuilder ****
-make all 
-Building file: ../src/Builder.c
-Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Builder.d" -MT"src/Builder.o" -o "src/Builder.o" "../src/Builder.c"
-../src/Builder.c: In function ‘builder_constructor’:
-../src/Builder.c:26:34: warning: ‘sprintf’ may write a terminating nul past the end of the destination [-Wformat-overflow=]
-   26 |  sprintf(bufferNombreArchivo,"c%s",nombreEntidadMinuscula);
-      |                                  ^
-../src/Builder.c:26:2: note: ‘sprintf’ output between 2 and 21 bytes into a destination of size 20
-   26 |  sprintf(bufferNombreArchivo,"c%s",nombreEntidadMinuscula);
-      |  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-Finished building: ../src/Builder.c
- 
-Building target: entityBuilder
-Invoking: GCC C Linker
-gcc  -o "entityBuilder"  ./src/Builder.o ./src/entityBuilder.o   
-Finished building target: entityBuilder
- 
-11:59:07 **** Incremental Build of configuration Debug for project entityBuilder ****
-make all 
-Building file: ../src/Builder.c
-Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Builder.d" -MT"src/Builder.o" -o "src/Builder.o" "../src/Builder.c"
-Finished building: ../src/Builder.c
- 
-Building target: entityBuilder
-Invoking: GCC C Linker
-gcc  -o "entityBuilder"  ./src/Builder.o ./src/entityBuilder.o   
-Finished building target: entityBuilder
- 
-11:59:14 **** Incremental Build of configuration Debug for project entityBuilder ****
-make all 
-Building file: ../src/Builder.c
-Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Builder.d" -MT"src/Builder.o" -o "src/Builder.o" "../src/Builder.c"
-Finished building: ../src/Builder.c
- 
-Building target: entityBuilder
-Invoking: GCC C Linker
-gcc  -o "entityBuilder"  ./src/Builder.o ./src/entityBuilder.o   
-Finished building target: entityBuilder
- 
-08:14:40 **** Incremental Build of configuration Debug for project entityBuilder ****
-make all 
-Building file: ../src/Builder.c
-Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Builder.d" -MT"src/Builder.o" -o "src/Builder.o" "../src/Builder.c"
-../src/Builder.c: In function ‘builder_constructor’:
-../src/Builder.c:24:6: warning: unused variable ‘longitudBufferPuntoH’ [-Wunused-variable]
-   24 |  int longitudBufferPuntoH;
-      |      ^~~~~~~~~~~~~~~~~~~~
-../src/Builder.c:22:7: warning: unused variable ‘bufferPuntoH’ [-Wunused-variable]
-   22 |  char bufferPuntoH[10000];
-      |       ^~~~~~~~~~~~
-../src/Builder.c:19:8: warning: variable ‘pArchivoPuntoH’ set but not used [-Wunused-but-set-variable]
-   19 |  FILE* pArchivoPuntoH;
-      |        ^~~~~~~~~~~~~~
-Finished building: ../src/Builder.c
- 
-Building target: entityBuilder
-Invoking: GCC C Linker
-gcc  -o "entityBuilder"  ./src/Builder.o ./src/entityBuilder.o   
-Finished building target: entityBuilder
- 
-08:14:43 **** Incremental Build of configuration Debug for project entityBuilder ****
-make all 
-make: No se hace nada para 'all'.
-08:23:30 **** Incremental Build of configuration Debug for project entityBuilder ****
-make all 
-make: No se hace nada para 'all'.
-08:24:49 **** Incremental Build of configuration Debug for project entityBuilder ****
-make all 
-Building file: ../src/Builder.c
-Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Builder.d" -MT"src/Builder.o" -o "src/Builder.o" "../src/Builder.c"
-Finished building: ../src/Builder.c
- 
-Building target: entityBuilder
-Invoking: GCC C Linker
-gcc  -o "entityBuilder"  ./src/Builder.o ./src/entityBuilder.o   
-Finished building target: entityBuilder
- 
-08:28:15 **** Incremental Build of configuration Debug for project entityBuilder ****
-make all 
-Building file: ../src/Builder.c
-Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Builder.d" -MT"src/Builder.o" -o "src/Builder.o" "../src/Builder.c"
-Finished building: ../src/Builder.c
- 
-Building target: entityBuilder
-Invoking: GCC C Linker
-gcc  -o "entityBuilder"  ./src/Builder.o ./src/entityBuilder.o   
-Finished building target: entityBuilder
- 
-08:30:19 **** Incremental Build of configuration Debug for project entityBuilder ****
-make all 
-Building file: ../src/Builder.c
-Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Builder.d" -MT"src/Builder.o" -o "src/Builder.o" "../src/Builder.c"
-../src/Builder.c: In function ‘builder_constructor’:
-../src/Builder.c:67:23: warning: too many arguments for format [-Wformat-extra-args]
-   67 |  sprintf(bufferPuntoH,"%s* %s_new(void)\n\n",
-      |                       ^~~~~~~~~~~~~~~~~~~~~~
-Finished building: ../src/Builder.c
- 
-Building target: entityBuilder
-Invoking: GCC C Linker
-gcc  -o "entityBuilder"  ./src/Builder.o ./src/entityBuilder.o   
-Finished building target: entityBuilder
- 
-08:30:28 **** Incremental Build of configuration Debug for project entityBuilder ****
-make all 
-Building file: ../src/Builder.c
-Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Builder.d" -MT"src/Builder.o" -o "src/Builder.o" "../src/Builder.c"
-Finished building: ../src/Builder.c
- 
-Building target: entityBuilder
-Invoking: GCC C Linker
-gcc  -o "entityBuilder"  ./src/Builder.o ./src/entityBuilder.o   
-Finished building target: entityBuilder
- 
-08:30:52 **** Incremental Build of configuration Debug for project entityBuilder ****
-make all 
-Building file: ../src/Builder.c
-Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Builder.d" -MT"src/Builder.o" -o "src/Builder.o" "../src/Builder.c"
-Finished building: ../src/Builder.c
- 
-Building target: entityBuilder
-Invoking: GCC C Linker
-gcc  -o "entityBuilder"  ./src/Builder.o ./src/entityBuilder.o   
-Finished building target: entityBuilder
- 
-08:31:17 **** Incremental Build of configuration Debug for project entityBuilder ****
-make all 
-Building file: ../src/Builder.c
-Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Builder.d" -MT"src/Builder.o" -o "src/Builder.o" "../src/Builder.c"
-Finished building: ../src/Builder.c
- 
-Building target: entityBuilder
-Invoking: GCC C Linker
-gcc  -o "entityBuilder"  ./src/Builder.o ./src/entityBuilder.o   
-Finished building target: entityBuilder
- 
-08:31:28 **** Incremental Build of configuration Debug for project entityBuilder ****
-make all 
-Building file: ../src/entityBuilder.c
-Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/entityBuilder.d" -MT"src/entityBuilder.o" -o "src/entityBuilder.o" "../src/entityBuilder.c"
-Finished building: ../src/entityBuilder.c
- 
-Building target: entityBuilder
-Invoking: GCC C Linker
-gcc  -o "entityBuilder"  ./src/Builder.o ./src/entityBuilder.o   
-Finished building target: entityBuilder
- 
-08:31:45 **** Incremental Build of configuration Debug for project entityBuilder ****
-make all 
-make: No se hace nada para 'all'.
-08:31:57 **** Incremental Build of configuration Debug for project entityBuilder ****
-make all 
-make: No se hace nada para 'all'.
-08:32:05 **** Incremental Build of configuration Debug for project entityBuilder ****
-make all 
-Building file: ../src/entityBuilder.c
-Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/entityBuilder.d" -MT"src/entityBuilder.o" -o "src/entityBuilder.o" "../src/entityBuilder.c"
-Finished building: ../src/entityBuilder.c
- 
-Building target: entityBuilder
-Invoking: GCC C Linker
-gcc  -o "entityBuilder"  ./src/Builder.o ./src/entityBuilder.o   
-Finished building target: entityBuilder
- 
-08:32:29 **** Incremental Build of configuration Debug for project entityBuilder ****
-make all 
-Building file: ../src/entityBuilder.c
-Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/entityBuilder.d" -MT"src/entityBuilder.o" -o "src/entityBuilder.o" "../src/entityBuilder.c"
-Finished building: ../src/entityBuilder.c
- 
-Building target: entityBuilder
-Invoking: GCC C Linker
-gcc  -o "entityBuilder"  ./src/Builder.o ./src/entityBuilder.o   
-Finished building target: entityBuilder
- 
-08:35:49 **** Incremental Build of configuration Debug for project entityBuilder ****
-make all 
-Building file: ../src/Builder.c
-Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Builder.d" -MT"src/Builder.o" -o "src/Builder.o" "../src/Builder.c"
-Finished building: ../src/Builder.c
- 
-Building target: entityBuilder
-Invoking: GCC C Linker
-gcc  -o "entityBuilder"  ./src/Builder.o ./src/entityBuilder.o   
-Finished building target: entityBuilder
- 
-08:36:11 **** Incremental Build of configuration Debug for project entityBuilder ****
-make all 
-Building file: ../src/Builder.c
-Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Builder.d" -MT"src/Builder.o" -o "src/Builder.o" "../src/Builder.c"
-Finished building: ../src/Builder.c
- 
-Building target: entityBuilder
-Invoking: GCC C Linker
-gcc  -o "entityBuilder"  ./src/Builder.o ./src/entityBuilder.o   
-Finished building target: entityBuilder
- 
-08:39:23 **** Incremental Build of configuration Debug for project entityBuilder ****
-make all 
-Building file: ../src/Builder.c
-Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Builder.d" -MT"src/Builder.o" -o "src/Builder.o" "../src/Builder.c"
-Finished building: ../src/Builder.c
- 
-Building target: entityBuilder
-Invoking: GCC C Linker
-gcc  -o "entityBuilder"  ./src/Builder.o ./src/entityBuilder.o   
-Finished building target: entityBuilder
- 
-08:42:26 **** Incremental Build of configuration Debug for project entityBuilder ****
-make all 
-Building file: ../src/Builder.c
-Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Builder.d" -MT"src/Builder.o" -o "src/Builder.o" "../src/Builder.c"
-Finished building: ../src/Builder.c
- 
-Building target: entityBuilder
-Invoking: GCC C Linker
-gcc  -o "entityBuilder"  ./src/Builder.o ./src/entityBuilder.o   
-Finished building target: entityBuilder
- 
-08:43:50 **** Incremental Build of configuration Debug for project entityBuilder ****
-make all 
-Building file: ../src/Builder.c
-Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Builder.d" -MT"src/Builder.o" -o "src/Builder.o" "../src/Builder.c"
-Finished building: ../src/Builder.c
- 
-Building target: entityBuilder
-Invoking: GCC C Linker
-gcc  -o "entityBuilder"  ./src/Builder.o ./src/entityBuilder.o   
-Finished building target: entityBuilder
- 
-08:44:34 **** Incremental Build of configuration Debug for project entityBuilder ****
-make all 
-Building file: ../src/Builder.c
-Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Builder.d" -MT"src/Builder.o" -o "src/Builder.o" "../src/Builder.c"
-Finished building: ../src/Builder.c
- 
-Building target: entityBuilder
-Invoking: GCC C Linker
-gcc  -o "entityBuilder"  ./src/Builder.o ./src/entityBuilder.o   
-Finished building target: entityBuilder
- 
-08:45:06 **** Incremental Build of configuration Debug for project entityBuilder ****
-make all 
-make: No se hace nada para 'all'.
-08:45:10 **** Incremental Build of configuration Debug for project entityBuilder ****
-make all 
-make: No se hace nada para 'all'.
-08:48:48 **** Incremental Build of configuration Debug for project entityBuilder ****
-make all 
-Building file: ../src/Builder.c
-Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Builder.d" -MT"src/Builder.o" -o "src/Builder.o" "../src/Builder.c"
-Finished building: ../src/Builder.c
- 
-Building target: entityBuilder
-Invoking: GCC C Linker
-gcc  -o "entityBuilder"  ./src/Builder.o ./src/entityBuilder.o   
-Finished building target: entityBuilder
- 
-08:49:12 **** Incremental Build of configuration Debug for project entityBuilder ****
-make all 
-Building file: ../src/Builder.c
-Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Builder.d" -MT"src/Builder.o" -o "src/Builder.o" "../src/Builder.c"
-Finished building: ../src/Builder.c
- 
-Building target: entityBuilder
-Invoking: GCC C Linker
-gcc  -o "entityBuilder"  ./src/Builder.o ./src/entityBuilder.o   
-Finished building target: entityBuilder
- 
-08:50:34 **** Incremental Build of configuration Debug for project entityBuilder ****
-make all 
-Building file: ../src/Builder.c
-Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Builder.d" -MT"src/Builder.o" -o "src/Builder.o" "../src/Builder.c"
-Finished building: ../src/Builder.c
- 
-Building target: entityBuilder
-Invoking: GCC C Linker
-gcc  -o "entityBuilder"  ./src/Builder.o ./src/entityBuilder.o   
-Finished building target: entityBuilder
- 
-08:51:11 **** Incremental Build of configuration Debug for project entityBuilder ****
-make all 
-make: No se hace nada para 'all'.
-08:52:14 **** Incremental Build of configuration Debug for project entityBuilder ****
-make all 
-Building file: ../src/Builder.c
-Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Builder.d" -MT"src/Builder.o" -o "src/Builder.o" "../src/Builder.c"
-Finished building: ../src/Builder.c
- 
-Building target: entityBuilder
-Invoking: GCC C Linker
-gcc  -o "entityBuilder"  ./src/Builder.o ./src/entityBuilder.o   
-Finished building target: entityBuilder
- 
-08:53:33 **** Incremental Build of configuration Debug for project entityBuilder ****
-make all 
-Building file: ../src/Builder.c
-Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Builder.d" -MT"src/Builder.o" -o "src/Builder.o" "../src/Builder.c"
-Finished building: ../src/Builder.c
- 
-Building target: entityBuilder
-Invoking: GCC C Linker
-gcc  -o "entityBuilder"  ./src/Builder.o ./src/entityBuilder.o   
-Finished building target: entityBuilder
- 
-08:57:15 **** Incremental Build of configuration Debug for project entityBuilder ****
-make all 
-Building file: ../src/Builder.c
-Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Builder.d" -MT"src/Builder.o" -o "src/Builder.o" "../src/Builder.c"
-Finished building: ../src/Builder.c
- 
-Building target: entityBuilder
-Invoking: GCC C Linker
-gcc  -o "entityBuilder"  ./src/Builder.o ./src/entityBuilder.o   
-Finished building target: entityBuilder
- 
-08:57:44 **** Incremental Build of configuration Debug for project entityBuilder ****
-make all 
-Building file: ../src/Builder.c
-Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Builder.d" -MT"src/Builder.o" -o "src/Builder.o" "../src/Builder.c"
-../src/Builder.c: In function ‘builder_constructor’:
-../src/Builder.c:295:4: warning: unknown escape sequence: '\N'
-  295 |    "\Nint %s_buscarIndiceVacio(%s* list[],int len);\n",
-      |    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-Finished building: ../src/Builder.c
- 
-Building target: entityBuilder
-Invoking: GCC C Linker
-gcc  -o "entityBuilder"  ./src/Builder.o ./src/entityBuilder.o   
-Finished building target: entityBuilder
- 
-08:57:56 **** Incremental Build of configuration Debug for project entityBuilder ****
-make all 
-Building file: ../src/Builder.c
-Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Builder.d" -MT"src/Builder.o" -o "src/Builder.o" "../src/Builder.c"
-Finished building: ../src/Builder.c
- 
-Building target: entityBuilder
-Invoking: GCC C Linker
-gcc  -o "entityBuilder"  ./src/Builder.o ./src/entityBuilder.o   
-Finished building target: entityBuilder
- 
-09:00:05 **** Incremental Build of configuration Debug for project entityBuilder ****
-make all 
-Building file: ../src/Builder.c
-Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Builder.d" -MT"src/Builder.o" -o "src/Builder.o" "../src/Builder.c"
-Finished building: ../src/Builder.c
- 
-Building target: entityBuilder
-Invoking: GCC C Linker
-gcc  -o "entityBuilder"  ./src/Builder.o ./src/entityBuilder.o   
-Finished building target: entityBuilder
- 
-09:02:27 **** Incremental Build of configuration Debug for project entityBuilder ****
-make all 
-Building file: ../src/Builder.c
-Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Builder.d" -MT"src/Builder.o" -o "src/Builder.o" "../src/Builder.c"
-Finished building: ../src/Builder.c
- 
-Building target: entityBuilder
-Invoking: GCC C Linker
-gcc  -o "entityBuilder"  ./src/Builder.o ./src/entityBuilder.o   
-Finished building target: entityBuilder
- 
-09:02:36 **** Incremental Build of configuration Debug for project entityBuilder ****
-make all 
-make: No se hace nada para 'all'.
-09:03:41 **** Incremental Build of configuration Debug for project entityBuilder ****
-make all 
-Building file: ../src/Builder.c
-Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Builder.d" -MT"src/Builder.o" -o "src/Builder.o" "../src/Builder.c"
-Finished building: ../src/Builder.c
- 
-Building target: entityBuilder
-Invoking: GCC C Linker
-gcc  -o "entityBuilder"  ./src/Builder.o ./src/entityBuilder.o   
-Finished building target: entityBuilder
- 
-09:05:21 **** Incremental Build of configuration Debug for project entityBuilder ****
-make all 
-Building file: ../src/Builder.c
-Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Builder.d" -MT"src/Builder.o" -o "src/Builder.o" "../src/Builder.c"
-Finished building: ../src/Builder.c
- 
-Building target: entityBuilder
-Invoking: GCC C Linker
-gcc  -o "entityBuilder"  ./src/Builder.o ./src/entityBuilder.o   
-Finished building target: entityBuilder
- 
-09:05:35 **** Incremental Build of configuration Debug for project entityBuilder ****
-make all 
-make: No se hace nada para 'all'.
-09:07:59 **** Incremental Build of configuration Debug for project entityBuilder ****
-make all 
-Building file: ../src/Builder.c
-Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Builder.d" -MT"src/Builder.o" -o "src/Builder.o" "../src/Builder.c"
-Finished building: ../src/Builder.c
- 
-Building file: ../src/entityBuilder.c
-Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/entityBuilder.d" -MT"src/entityBuilder.o" -o "src/entityBuilder.o" "../src/entityBuilder.c"
-Finished building: ../src/entityBuilder.c
- 
-Building file: ../src/menues.c
-Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/menues.d" -MT"src/menues.o" -o "src/menues.o" "../src/menues.c"
-Finished building: ../src/menues.c
- 
-Building target: entityBuilder
-Invoking: GCC C Linker
-gcc  -o "entityBuilder"  ./src/Builder.o ./src/entityBuilder.o ./src/menues.o   
-Finished building target: entityBuilder
- 
-09:09:11 **** Incremental Build of configuration Debug for project entityBuilder ****
-make all 
-Building file: ../src/menues.c
-Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/menues.d" -MT"src/menues.o" -o "src/menues.o" "../src/menues.c"
-Finished building: ../src/menues.c
- 
-Building target: entityBuilder
-Invoking: GCC C Linker
-gcc  -o "entityBuilder"  ./src/Builder.o ./src/entityBuilder.o ./src/menues.o   
-Finished building target: entityBuilder
- 
-09:09:29 **** Incremental Build of configuration Debug for project entityBuilder ****
-make all 
-Building file: ../src/entityBuilder.c
-Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/entityBuilder.d" -MT"src/entityBuilder.o" -o "src/entityBuilder.o" "../src/entityBuilder.c"
-Finished building: ../src/entityBuilder.c
- 
-Building target: entityBuilder
-Invoking: GCC C Linker
-gcc  -o "entityBuilder"  ./src/Builder.o ./src/entityBuilder.o ./src/menues.o   
-Finished building target: entityBuilder
- 
-09:10:16 **** Incremental Build of configuration Debug for project entityBuilder ****
-make all 
-Building file: ../src/entityBuilder.c
-Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/entityBuilder.d" -MT"src/entityBuilder.o" -o "src/entityBuilder.o" "../src/entityBuilder.c"
-../src/entityBuilder.c: In function ‘main’:
-../src/entityBuilder.c:22:7: warning: unused variable ‘opcionMenuPrincipal’ [-Wunused-variable]
-   22 |   int opcionMenuPrincipal = 0;
-      |       ^~~~~~~~~~~~~~~~~~~
-../src/entityBuilder.c:28:3: error: expected ‘while’ before ‘wh’
-   28 |  }wh
-      |   ^~
-make: *** [src/subdir.mk:26: src/entityBuilder.o] Error 1
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/producto.d" -MT"src/producto.o" -o "src/producto.o" "../src/producto.c"
+../src/producto.c: In function ‘producto_guardarEnArchivo’:
+../src/producto.c:403:24: error: expected expression before ‘)’ token
+  403 |    sprintf(bufferWrite,)
+      |                        ^
+../src/producto.c:398:6: warning: unused variable ‘indiceVacio’ [-Wunused-variable]
+  398 |  int indiceVacio;
+      |      ^~~~~~~~~~~
+../src/producto.c:396:6: warning: unused variable ‘rs’ [-Wunused-variable]
+  396 |  int rs,i;
+      |      ^~
+make: *** [src/subdir.mk:32: src/producto.o] Error 1
 "make all" terminated with exit code 2. Build might be incomplete.
-09:10:32 **** Incremental Build of configuration Debug for project entityBuilder ****
+08:23:18 **** Incremental Build of configuration Debug for project clase_19bis ****
 make all 
-Building file: ../src/entityBuilder.c
+Building file: ../src/producto.c
 Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/entityBuilder.d" -MT"src/entityBuilder.o" -o "src/entityBuilder.o" "../src/entityBuilder.c"
-../src/entityBuilder.c: In function ‘main’:
-../src/entityBuilder.c:28:3: error: expected ‘while’ before ‘wh’
-   28 |  }wh
-      |   ^~
-../src/entityBuilder.c:19:6: warning: variable ‘opcionMenuPrincipal’ set but not used [-Wunused-but-set-variable]
-   19 |  int opcionMenuPrincipal;
-      |      ^~~~~~~~~~~~~~~~~~~
-make: *** [src/subdir.mk:26: src/entityBuilder.o] Error 1
-"make all" terminated with exit code 2. Build might be incomplete.
-09:11:30 **** Incremental Build of configuration Debug for project entityBuilder ****
-make all 
-Building file: ../src/entityBuilder.c
-Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/entityBuilder.d" -MT"src/entityBuilder.o" -o "src/entityBuilder.o" "../src/entityBuilder.c"
-Finished building: ../src/entityBuilder.c
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/producto.d" -MT"src/producto.o" -o "src/producto.o" "../src/producto.c"
+Finished building: ../src/producto.c
  
-Building target: entityBuilder
+Building target: clase_19bis
 Invoking: GCC C Linker
-gcc  -o "entityBuilder"  ./src/Builder.o ./src/entityBuilder.o ./src/menues.o   
-Finished building target: entityBuilder
+gcc  -o "clase_19bis"  ./src/clase_19bis.o ./src/gets.o ./src/menues.o ./src/producto.o ./src/validations.o   -lm
+Finished building target: clase_19bis
  
-09:13:56 **** Incremental Build of configuration Debug for project entityBuilder ****
+08:27:29 **** Incremental Build of configuration Debug for project clase_19bis ****
 make all 
-Building file: ../src/Builder.c
+Building file: ../src/producto.c
 Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Builder.d" -MT"src/Builder.o" -o "src/Builder.o" "../src/Builder.c"
-Finished building: ../src/Builder.c
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/producto.d" -MT"src/producto.o" -o "src/producto.o" "../src/producto.c"
+../src/producto.c: In function ‘producto_guardarEnArchivo’:
+../src/producto.c:399:6: warning: unused variable ‘indiceVacio’ [-Wunused-variable]
+  399 |  int indiceVacio;
+      |      ^~~~~~~~~~~
+../src/producto.c:396:6: warning: unused variable ‘rs’ [-Wunused-variable]
+  396 |  int rs,i;
+      |      ^~
+Finished building: ../src/producto.c
  
-Building file: ../src/entityBuilder.c
-Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/entityBuilder.d" -MT"src/entityBuilder.o" -o "src/entityBuilder.o" "../src/entityBuilder.c"
-Finished building: ../src/entityBuilder.c
- 
-Building file: ../src/gets.c
-Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/gets.d" -MT"src/gets.o" -o "src/gets.o" "../src/gets.c"
-Finished building: ../src/gets.c
- 
-Building file: ../src/menues.c
-Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/menues.d" -MT"src/menues.o" -o "src/menues.o" "../src/menues.c"
-Finished building: ../src/menues.c
- 
-Building file: ../src/validations.c
-Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/validations.d" -MT"src/validations.o" -o "src/validations.o" "../src/validations.c"
-Finished building: ../src/validations.c
- 
-Building target: entityBuilder
+Building target: clase_19bis
 Invoking: GCC C Linker
-gcc  -o "entityBuilder"  ./src/Builder.o ./src/entityBuilder.o ./src/gets.o ./src/menues.o ./src/validations.o   
-/usr/bin/ld: ./src/validations.o: en la función `val_cuitDigitoVerificador':
-/home/gabriel/UTN/primerCuatrimestre/programacion1_laboratorio1/repositoriosClonados/laboratorio1_clases/entityBuilder/Debug/../src/validations.c:323: referencia a `round' sin definir
-collect2: error: ld returned 1 exit status
-make: *** [makefile:43: entityBuilder] Error 1
-"make all" terminated with exit code 2. Build might be incomplete.
-09:14:25 **** Incremental Build of configuration Debug for project entityBuilder ****
+gcc  -o "clase_19bis"  ./src/clase_19bis.o ./src/gets.o ./src/menues.o ./src/producto.o ./src/validations.o   -lm
+Finished building target: clase_19bis
+ 
+08:27:54 **** Incremental Build of configuration Debug for project clase_19bis ****
 make all 
-Building target: entityBuilder
+Building file: ../src/producto.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/producto.d" -MT"src/producto.o" -o "src/producto.o" "../src/producto.c"
+Finished building: ../src/producto.c
+ 
+Building target: clase_19bis
 Invoking: GCC C Linker
-gcc  -o "entityBuilder"  ./src/Builder.o ./src/entityBuilder.o ./src/gets.o ./src/menues.o ./src/validations.o   -lm
-Finished building target: entityBuilder
+gcc  -o "clase_19bis"  ./src/clase_19bis.o ./src/gets.o ./src/menues.o ./src/producto.o ./src/validations.o   -lm
+Finished building target: clase_19bis
  
-09:15:21 **** Incremental Build of configuration Debug for project entityBuilder ****
+08:28:03 **** Incremental Build of configuration Debug for project clase_19bis ****
 make all 
-Building file: ../src/entityBuilder.c
+Building file: ../src/clase_19bis.c
 Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/entityBuilder.d" -MT"src/entityBuilder.o" -o "src/entityBuilder.o" "../src/entityBuilder.c"
-Finished building: ../src/entityBuilder.c
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/clase_19bis.d" -MT"src/clase_19bis.o" -o "src/clase_19bis.o" "../src/clase_19bis.c"
+Finished building: ../src/clase_19bis.c
  
-Building target: entityBuilder
+Building file: ../src/producto.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/producto.d" -MT"src/producto.o" -o "src/producto.o" "../src/producto.c"
+Finished building: ../src/producto.c
+ 
+Building target: clase_19bis
 Invoking: GCC C Linker
-gcc  -o "entityBuilder"  ./src/Builder.o ./src/entityBuilder.o ./src/gets.o ./src/menues.o ./src/validations.o   -lm
-Finished building target: entityBuilder
+gcc  -o "clase_19bis"  ./src/clase_19bis.o ./src/gets.o ./src/menues.o ./src/producto.o ./src/validations.o   -lm
+Finished building target: clase_19bis
  
-09:15:44 **** Incremental Build of configuration Debug for project entityBuilder ****
+08:28:42 **** Incremental Build of configuration Debug for project clase_19bis ****
 make all 
-Building file: ../src/entityBuilder.c
+Building file: ../src/clase_19bis.c
 Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/entityBuilder.d" -MT"src/entityBuilder.o" -o "src/entityBuilder.o" "../src/entityBuilder.c"
-Finished building: ../src/entityBuilder.c
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/clase_19bis.d" -MT"src/clase_19bis.o" -o "src/clase_19bis.o" "../src/clase_19bis.c"
+Finished building: ../src/clase_19bis.c
  
-Building target: entityBuilder
+Building file: ../src/producto.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/producto.d" -MT"src/producto.o" -o "src/producto.o" "../src/producto.c"
+Finished building: ../src/producto.c
+ 
+Building target: clase_19bis
 Invoking: GCC C Linker
-gcc  -o "entityBuilder"  ./src/Builder.o ./src/entityBuilder.o ./src/gets.o ./src/menues.o ./src/validations.o   -lm
-Finished building target: entityBuilder
+gcc  -o "clase_19bis"  ./src/clase_19bis.o ./src/gets.o ./src/menues.o ./src/producto.o ./src/validations.o   -lm
+Finished building target: clase_19bis
  
-09:16:20 **** Incremental Build of configuration Debug for project entityBuilder ****
+08:30:06 **** Incremental Build of configuration Debug for project clase_19bis ****
 make all 
-Building file: ../src/entityBuilder.c
+Building file: ../src/producto.c
 Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/entityBuilder.d" -MT"src/entityBuilder.o" -o "src/entityBuilder.o" "../src/entityBuilder.c"
-Finished building: ../src/entityBuilder.c
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/producto.d" -MT"src/producto.o" -o "src/producto.o" "../src/producto.c"
+Finished building: ../src/producto.c
  
-Building target: entityBuilder
+Building target: clase_19bis
 Invoking: GCC C Linker
-gcc  -o "entityBuilder"  ./src/Builder.o ./src/entityBuilder.o ./src/gets.o ./src/menues.o ./src/validations.o   -lm
-Finished building target: entityBuilder
+gcc  -o "clase_19bis"  ./src/clase_19bis.o ./src/gets.o ./src/menues.o ./src/producto.o ./src/validations.o   -lm
+Finished building target: clase_19bis
  
-09:18:48 **** Incremental Build of configuration Debug for project entityBuilder ****
+08:32:08 **** Incremental Build of configuration Debug for project clase_19bis ****
 make all 
-Building file: ../src/entityBuilder.c
+Building file: ../src/producto.c
 Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/entityBuilder.d" -MT"src/entityBuilder.o" -o "src/entityBuilder.o" "../src/entityBuilder.c"
-Finished building: ../src/entityBuilder.c
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/producto.d" -MT"src/producto.o" -o "src/producto.o" "../src/producto.c"
+Finished building: ../src/producto.c
  
-Building target: entityBuilder
+Building target: clase_19bis
 Invoking: GCC C Linker
-gcc  -o "entityBuilder"  ./src/Builder.o ./src/entityBuilder.o ./src/gets.o ./src/menues.o ./src/validations.o   -lm
-Finished building target: entityBuilder
+gcc  -o "clase_19bis"  ./src/clase_19bis.o ./src/gets.o ./src/menues.o ./src/producto.o ./src/validations.o   -lm
+Finished building target: clase_19bis
  
-09:18:57 **** Incremental Build of configuration Debug for project entityBuilder ****
+08:32:30 **** Incremental Build of configuration Debug for project clase_19bis ****
 make all 
-make: No se hace nada para 'all'.
-09:19:16 **** Incremental Build of configuration Debug for project entityBuilder ****
-make all 
-Building file: ../src/entityBuilder.c
+Building file: ../src/producto.c
 Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/entityBuilder.d" -MT"src/entityBuilder.o" -o "src/entityBuilder.o" "../src/entityBuilder.c"
-../src/entityBuilder.c: In function ‘main’:
-../src/entityBuilder.c:28:23: error: ‘nombreEstructura’ undeclared (first use in this function)
-   28 |   builder_constructor(nombreEstructura,detalleParametros);
-      |                       ^~~~~~~~~~~~~~~~
-../src/entityBuilder.c:28:23: note: each undeclared identifier is reported only once for each function it appears in
-../src/entityBuilder.c:28:40: error: ‘detalleParametros’ undeclared (first use in this function)
-   28 |   builder_constructor(nombreEstructura,detalleParametros);
-      |                                        ^~~~~~~~~~~~~~~~~
-make: *** [src/subdir.mk:32: src/entityBuilder.o] Error 1
-"make all" terminated with exit code 2. Build might be incomplete.
-09:19:23 **** Incremental Build of configuration Debug for project entityBuilder ****
-make all 
-Building file: ../src/entityBuilder.c
-Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/entityBuilder.d" -MT"src/entityBuilder.o" -o "src/entityBuilder.o" "../src/entityBuilder.c"
-Finished building: ../src/entityBuilder.c
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/producto.d" -MT"src/producto.o" -o "src/producto.o" "../src/producto.c"
+../src/producto.c: In function ‘producto_guardarEnArchivo’:
+../src/producto.c:404:25: warning: unknown escape sequence: '\N'
+  404 |     sprintf(bufferWrite,"%s,%s,%.2f,%d\NN",
+      |                         ^~~~~~~~~~~~~~~~~~
+Finished building: ../src/producto.c
  
-Building target: entityBuilder
+Building target: clase_19bis
 Invoking: GCC C Linker
-gcc  -o "entityBuilder"  ./src/Builder.o ./src/entityBuilder.o ./src/gets.o ./src/menues.o ./src/validations.o   -lm
-Finished building target: entityBuilder
+gcc  -o "clase_19bis"  ./src/clase_19bis.o ./src/gets.o ./src/menues.o ./src/producto.o ./src/validations.o   -lm
+Finished building target: clase_19bis
  
-09:19:25 **** Incremental Build of configuration Debug for project entityBuilder ****
+08:32:36 **** Incremental Build of configuration Debug for project clase_19bis ****
 make all 
-make: No se hace nada para 'all'.
-09:20:17 **** Incremental Build of configuration Debug for project entityBuilder ****
-make all 
-Building file: ../src/entityBuilder.c
+Building file: ../src/producto.c
 Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/entityBuilder.d" -MT"src/entityBuilder.o" -o "src/entityBuilder.o" "../src/entityBuilder.c"
-../src/entityBuilder.c: In function ‘main’:
-../src/entityBuilder.c:25:11: warning: format ‘%d’ expects argument of type ‘int *’, but argument 2 has type ‘int’ [-Wformat=]
-   25 |   scanf("%d",opcionMenuPrincipal);
-      |          ~^  ~~~~~~~~~~~~~~~~~~~
-      |           |  |
-      |           |  int
-      |           int *
-Finished building: ../src/entityBuilder.c
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/producto.d" -MT"src/producto.o" -o "src/producto.o" "../src/producto.c"
+Finished building: ../src/producto.c
  
-Building target: entityBuilder
+Building target: clase_19bis
 Invoking: GCC C Linker
-gcc  -o "entityBuilder"  ./src/Builder.o ./src/entityBuilder.o ./src/gets.o ./src/menues.o ./src/validations.o   -lm
-Finished building target: entityBuilder
+gcc  -o "clase_19bis"  ./src/clase_19bis.o ./src/gets.o ./src/menues.o ./src/producto.o ./src/validations.o   -lm
+Finished building target: clase_19bis
  
-09:20:30 **** Incremental Build of configuration Debug for project entityBuilder ****
+08:35:28 **** Incremental Build of configuration Debug for project clase_19bis ****
 make all 
-Building file: ../src/entityBuilder.c
+Building file: ../src/clase_19bis.c
 Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/entityBuilder.d" -MT"src/entityBuilder.o" -o "src/entityBuilder.o" "../src/entityBuilder.c"
-Finished building: ../src/entityBuilder.c
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/clase_19bis.d" -MT"src/clase_19bis.o" -o "src/clase_19bis.o" "../src/clase_19bis.c"
+Finished building: ../src/clase_19bis.c
  
-Building target: entityBuilder
+Building target: clase_19bis
 Invoking: GCC C Linker
-gcc  -o "entityBuilder"  ./src/Builder.o ./src/entityBuilder.o ./src/gets.o ./src/menues.o ./src/validations.o   -lm
-Finished building target: entityBuilder
- 
-09:22:24 **** Incremental Build of configuration Debug for project entityBuilder ****
-make all 
-Building file: ../src/entityBuilder.c
-Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/entityBuilder.d" -MT"src/entityBuilder.o" -o "src/entityBuilder.o" "../src/entityBuilder.c"
-Finished building: ../src/entityBuilder.c
- 
-Building target: entityBuilder
-Invoking: GCC C Linker
-gcc  -o "entityBuilder"  ./src/Builder.o ./src/entityBuilder.o ./src/gets.o ./src/menues.o ./src/validations.o   -lm
-Finished building target: entityBuilder
- 
-09:23:54 **** Incremental Build of configuration Debug for project entityBuilder ****
-make all 
-Building file: ../src/entityBuilder.c
-Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/entityBuilder.d" -MT"src/entityBuilder.o" -o "src/entityBuilder.o" "../src/entityBuilder.c"
-../src/entityBuilder.c: In function ‘main’:
-../src/entityBuilder.c:29:4: error: a label can only be part of a statement and a declaration is not a statement
-   29 |    char nombreEstructura[50]= "Alumno";
-      |    ^~~~
-../src/entityBuilder.c:31:4: error: a label can only be part of a statement and a declaration is not a statement
-   31 |    char detalleParametros[100] = {"int id;char* nombre;float nota;"};
-      |    ^~~~
-make: *** [src/subdir.mk:32: src/entityBuilder.o] Error 1
-"make all" terminated with exit code 2. Build might be incomplete.
-09:24:35 **** Incremental Build of configuration Debug for project entityBuilder ****
-make all 
-Building file: ../src/entityBuilder.c
-Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/entityBuilder.d" -MT"src/entityBuilder.o" -o "src/entityBuilder.o" "../src/entityBuilder.c"
-../src/entityBuilder.c: In function ‘main’:
-../src/entityBuilder.c:31:21: error: expected expression before ‘]’ token
-   31 |    nombreEstructura[]= "Alumno";
-      |                     ^
-../src/entityBuilder.c:33:22: error: expected expression before ‘]’ token
-   33 |    detalleParametros[] = {"int id;char* nombre;float nota;"};
-      |                      ^
-make: *** [src/subdir.mk:32: src/entityBuilder.o] Error 1
-"make all" terminated with exit code 2. Build might be incomplete.
-09:24:47 **** Incremental Build of configuration Debug for project entityBuilder ****
-make all 
-Building file: ../src/entityBuilder.c
-Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/entityBuilder.d" -MT"src/entityBuilder.o" -o "src/entityBuilder.o" "../src/entityBuilder.c"
-../src/entityBuilder.c: In function ‘main’:
-../src/entityBuilder.c:31:21: error: expected expression before ‘]’ token
-   31 |    nombreEstructura[]= "Alumno";
-      |                     ^
-../src/entityBuilder.c:34:22: error: expected expression before ‘]’ token
-   34 |    detalleParametros[] = {"int id;char* nombre;float nota;"};
-      |                      ^
-make: *** [src/subdir.mk:32: src/entityBuilder.o] Error 1
-"make all" terminated with exit code 2. Build might be incomplete.
-09:32:24 **** Incremental Build of configuration Debug for project entityBuilder ****
-make all 
-Building file: ../src/entityBuilder.c
-Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/entityBuilder.d" -MT"src/entityBuilder.o" -o "src/entityBuilder.o" "../src/entityBuilder.c"
-../src/entityBuilder.c: In function ‘main’:
-../src/entityBuilder.c:31:82: error: expected ‘)’ before ‘mensajeError’
-   31 |    get_name(nombreEstructura, 50,"Ingrese el nombre de la estructura: ","Error. " mensajeError, reintentos);
-      |                                                                                  ^~~~~~~~~~~~~
-      |                                                                                  )
-../src/entityBuilder.c:31:4: error: too few arguments to function ‘get_name’
-   31 |    get_name(nombreEstructura, 50,"Ingrese el nombre de la estructura: ","Error. " mensajeError, reintentos);
-      |    ^~~~~~~~
-In file included from ../src/entityBuilder.c:16:
-../src/gets.h:15:5: note: declared here
-   15 | int get_name(char* pResultado,int len,char* mensaje,char* mensajeError,int reintentos);
-      |     ^~~~~~~~
-../src/entityBuilder.c:34:22: error: expected expression before ‘]’ token
-   34 |    detalleParametros[] = {"int id;char* nombre;float nota;"};
-      |                      ^
-make: *** [src/subdir.mk:32: src/entityBuilder.o] Error 1
-"make all" terminated with exit code 2. Build might be incomplete.
-09:32:34 **** Incremental Build of configuration Debug for project entityBuilder ****
-make all 
-Building file: ../src/entityBuilder.c
-Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/entityBuilder.d" -MT"src/entityBuilder.o" -o "src/entityBuilder.o" "../src/entityBuilder.c"
-../src/entityBuilder.c: In function ‘main’:
-../src/entityBuilder.c:34:22: error: expected expression before ‘]’ token
-   34 |    detalleParametros[] = {"int id;char* nombre;float nota;"};
-      |                      ^
-make: *** [src/subdir.mk:32: src/entityBuilder.o] Error 1
-"make all" terminated with exit code 2. Build might be incomplete.
-09:34:27 **** Incremental Build of configuration Debug for project entityBuilder ****
-make all 
-Building file: ../src/entityBuilder.c
-Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/entityBuilder.d" -MT"src/entityBuilder.o" -o "src/entityBuilder.o" "../src/entityBuilder.c"
-../src/entityBuilder.c:18: warning: "TAM_NOMBRE" redefined
-   18 | #define TAM_NOMBRE 100
-      | 
-../src/entityBuilder.c:17: note: this is the location of the previous definition
-   17 | #define TAM_NOMBRE 50
-      | 
-Finished building: ../src/entityBuilder.c
- 
-Building target: entityBuilder
-Invoking: GCC C Linker
-gcc  -o "entityBuilder"  ./src/Builder.o ./src/entityBuilder.o ./src/gets.o ./src/menues.o ./src/validations.o   -lm
-Finished building target: entityBuilder
- 
-09:34:47 **** Incremental Build of configuration Debug for project entityBuilder ****
-make all 
-Building file: ../src/entityBuilder.c
-Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/entityBuilder.d" -MT"src/entityBuilder.o" -o "src/entityBuilder.o" "../src/entityBuilder.c"
-Finished building: ../src/entityBuilder.c
- 
-Building target: entityBuilder
-Invoking: GCC C Linker
-gcc  -o "entityBuilder"  ./src/Builder.o ./src/entityBuilder.o ./src/gets.o ./src/menues.o ./src/validations.o   -lm
-Finished building target: entityBuilder
- 
-09:34:49 **** Incremental Build of configuration Debug for project entityBuilder ****
-make all 
-make: No se hace nada para 'all'.
-09:39:43 **** Incremental Build of configuration Debug for project entityBuilder ****
-make all 
-Building file: ../src/menues.c
-Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/menues.d" -MT"src/menues.o" -o "src/menues.o" "../src/menues.c"
-../src/menues.c: In function ‘menu_imprimirAyuda’:
-../src/menues.c:30:11: warning: zero-length gnu_printf format string [-Wformat-zero-length]
-   30 |    printf("");
-      |           ^~
-Finished building: ../src/menues.c
- 
-Building target: entityBuilder
-Invoking: GCC C Linker
-gcc  -o "entityBuilder"  ./src/Builder.o ./src/entityBuilder.o ./src/gets.o ./src/menues.o ./src/validations.o   -lm
-Finished building target: entityBuilder
- 
-09:42:34 **** Incremental Build of configuration Debug for project entityBuilder ****
-make all 
-Building file: ../src/entityBuilder.c
-Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/entityBuilder.d" -MT"src/entityBuilder.o" -o "src/entityBuilder.o" "../src/entityBuilder.c"
-Finished building: ../src/entityBuilder.c
- 
-Building file: ../src/menues.c
-Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/menues.d" -MT"src/menues.o" -o "src/menues.o" "../src/menues.c"
-Finished building: ../src/menues.c
- 
-Building target: entityBuilder
-Invoking: GCC C Linker
-gcc  -o "entityBuilder"  ./src/Builder.o ./src/entityBuilder.o ./src/gets.o ./src/menues.o ./src/validations.o   -lm
-Finished building target: entityBuilder
- 
-09:43:33 **** Incremental Build of configuration Debug for project entityBuilder ****
-make all 
-Building file: ../src/entityBuilder.c
-Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/entityBuilder.d" -MT"src/entityBuilder.o" -o "src/entityBuilder.o" "../src/entityBuilder.c"
-../src/entityBuilder.c: In function ‘main’:
-../src/entityBuilder.c:42:3: error: duplicate case value
-   42 |   case 3:
-      |   ^~~~
-../src/entityBuilder.c:39:3: note: previously used here
-   39 |   case 3:
-      |   ^~~~
-make: *** [src/subdir.mk:32: src/entityBuilder.o] Error 1
-"make all" terminated with exit code 2. Build might be incomplete.
-09:43:40 **** Incremental Build of configuration Debug for project entityBuilder ****
-make all 
-Building file: ../src/entityBuilder.c
-Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/entityBuilder.d" -MT"src/entityBuilder.o" -o "src/entityBuilder.o" "../src/entityBuilder.c"
-Finished building: ../src/entityBuilder.c
- 
-Building target: entityBuilder
-Invoking: GCC C Linker
-gcc  -o "entityBuilder"  ./src/Builder.o ./src/entityBuilder.o ./src/gets.o ./src/menues.o ./src/validations.o   -lm
-Finished building target: entityBuilder
- 
-09:43:56 **** Incremental Build of configuration Debug for project entityBuilder ****
-make all 
-Building file: ../src/menues.c
-Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/menues.d" -MT"src/menues.o" -o "src/menues.o" "../src/menues.c"
-Finished building: ../src/menues.c
- 
-Building target: entityBuilder
-Invoking: GCC C Linker
-gcc  -o "entityBuilder"  ./src/Builder.o ./src/entityBuilder.o ./src/gets.o ./src/menues.o ./src/validations.o   -lm
-Finished building target: entityBuilder
- 
-09:44:18 **** Incremental Build of configuration Debug for project entityBuilder ****
-make all 
-make: No se hace nada para 'all'.
-09:44:25 **** Incremental Build of configuration Debug for project entityBuilder ****
-make all 
-Building file: ../src/entityBuilder.c
-Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/entityBuilder.d" -MT"src/entityBuilder.o" -o "src/entityBuilder.o" "../src/entityBuilder.c"
-Finished building: ../src/entityBuilder.c
- 
-Building target: entityBuilder
-Invoking: GCC C Linker
-gcc  -o "entityBuilder"  ./src/Builder.o ./src/entityBuilder.o ./src/gets.o ./src/menues.o ./src/validations.o   -lm
-Finished building target: entityBuilder
- 
-09:45:15 **** Incremental Build of configuration Debug for project entityBuilder ****
-make all 
-Building file: ../src/entityBuilder.c
-Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/entityBuilder.d" -MT"src/entityBuilder.o" -o "src/entityBuilder.o" "../src/entityBuilder.c"
-Finished building: ../src/entityBuilder.c
- 
-Building target: entityBuilder
-Invoking: GCC C Linker
-gcc  -o "entityBuilder"  ./src/Builder.o ./src/entityBuilder.o ./src/gets.o ./src/menues.o ./src/validations.o   -lm
-Finished building target: entityBuilder
- 
-09:45:36 **** Incremental Build of configuration Debug for project entityBuilder ****
-make all 
-Building file: ../src/menues.c
-Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/menues.d" -MT"src/menues.o" -o "src/menues.o" "../src/menues.c"
-Finished building: ../src/menues.c
- 
-Building target: entityBuilder
-Invoking: GCC C Linker
-gcc  -o "entityBuilder"  ./src/Builder.o ./src/entityBuilder.o ./src/gets.o ./src/menues.o ./src/validations.o   -lm
-Finished building target: entityBuilder
- 
-09:45:52 **** Incremental Build of configuration Debug for project entityBuilder ****
-make all 
-Building file: ../src/menues.c
-Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/menues.d" -MT"src/menues.o" -o "src/menues.o" "../src/menues.c"
-Finished building: ../src/menues.c
- 
-Building target: entityBuilder
-Invoking: GCC C Linker
-gcc  -o "entityBuilder"  ./src/Builder.o ./src/entityBuilder.o ./src/gets.o ./src/menues.o ./src/validations.o   -lm
-Finished building target: entityBuilder
- 
-09:45:53 **** Incremental Build of configuration Debug for project entityBuilder ****
-make all 
-make: No se hace nada para 'all'.
-09:49:49 **** Incremental Build of configuration Debug for project entityBuilder ****
-make all 
-Building file: ../src/menues.c
-Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/menues.d" -MT"src/menues.o" -o "src/menues.o" "../src/menues.c"
-Finished building: ../src/menues.c
- 
-Building target: entityBuilder
-Invoking: GCC C Linker
-gcc  -o "entityBuilder"  ./src/Builder.o ./src/entityBuilder.o ./src/gets.o ./src/menues.o ./src/validations.o   -lm
-Finished building target: entityBuilder
- 
-09:50:00 **** Incremental Build of configuration Debug for project entityBuilder ****
-make all 
-Building file: ../src/menues.c
-Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/menues.d" -MT"src/menues.o" -o "src/menues.o" "../src/menues.c"
-Finished building: ../src/menues.c
- 
-Building target: entityBuilder
-Invoking: GCC C Linker
-gcc  -o "entityBuilder"  ./src/Builder.o ./src/entityBuilder.o ./src/gets.o ./src/menues.o ./src/validations.o   -lm
-Finished building target: entityBuilder
- 
-09:50:41 **** Incremental Build of configuration Debug for project entityBuilder ****
-make all 
-Building file: ../src/menues.c
-Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/menues.d" -MT"src/menues.o" -o "src/menues.o" "../src/menues.c"
-Finished building: ../src/menues.c
- 
-Building target: entityBuilder
-Invoking: GCC C Linker
-gcc  -o "entityBuilder"  ./src/Builder.o ./src/entityBuilder.o ./src/gets.o ./src/menues.o ./src/validations.o   -lm
-Finished building target: entityBuilder
- 
-09:50:59 **** Incremental Build of configuration Debug for project entityBuilder ****
-make all 
-Building file: ../src/menues.c
-Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/menues.d" -MT"src/menues.o" -o "src/menues.o" "../src/menues.c"
-Finished building: ../src/menues.c
- 
-Building target: entityBuilder
-Invoking: GCC C Linker
-gcc  -o "entityBuilder"  ./src/Builder.o ./src/entityBuilder.o ./src/gets.o ./src/menues.o ./src/validations.o   -lm
-Finished building target: entityBuilder
- 
-09:58:35 **** Incremental Build of configuration Debug for project entityBuilder ****
-make all 
-Building file: ../src/entityBuilder.c
-Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/entityBuilder.d" -MT"src/entityBuilder.o" -o "src/entityBuilder.o" "../src/entityBuilder.c"
-Finished building: ../src/entityBuilder.c
- 
-Building file: ../src/menues.c
-Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/menues.d" -MT"src/menues.o" -o "src/menues.o" "../src/menues.c"
-Finished building: ../src/menues.c
- 
-Building target: entityBuilder
-Invoking: GCC C Linker
-gcc  -o "entityBuilder"  ./src/Builder.o ./src/entityBuilder.o ./src/gets.o ./src/menues.o ./src/validations.o   -lm
-Finished building target: entityBuilder
- 
-09:58:59 **** Incremental Build of configuration Debug for project entityBuilder ****
-make all 
-Building file: ../src/menues.c
-Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/menues.d" -MT"src/menues.o" -o "src/menues.o" "../src/menues.c"
-../src/menues.c:13:6: error: conflicting types for ‘menu_imprimirMenuPrincipal’
-   13 | void menu_imprimirMenuPrincipal(char* nombreEstructura,char* detalleParametros)
-      |      ^~~~~~~~~~~~~~~~~~~~~~~~~~
-In file included from ../src/menues.c:11:
-../src/menues.h:11:6: note: previous declaration of ‘menu_imprimirMenuPrincipal’ was here
-   11 | void menu_imprimirMenuPrincipal(void);
-      |      ^~~~~~~~~~~~~~~~~~~~~~~~~~
-make: *** [src/subdir.mk:32: src/menues.o] Error 1
-"make all" terminated with exit code 2. Build might be incomplete.
-09:59:07 **** Incremental Build of configuration Debug for project entityBuilder ****
-make all 
-Building file: ../src/entityBuilder.c
-Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/entityBuilder.d" -MT"src/entityBuilder.o" -o "src/entityBuilder.o" "../src/entityBuilder.c"
-../src/entityBuilder.c: In function ‘main’:
-../src/entityBuilder.c:27:3: error: too few arguments to function ‘menu_imprimirMenuPrincipal’
-   27 |   menu_imprimirMenuPrincipal();
-      |   ^~~~~~~~~~~~~~~~~~~~~~~~~~
-In file included from ../src/entityBuilder.c:15:
-../src/menues.h:11:6: note: declared here
-   11 | void menu_imprimirMenuPrincipal(char* nombreEstructura,char* detalleParametros);
-      |      ^~~~~~~~~~~~~~~~~~~~~~~~~~
-make: *** [src/subdir.mk:32: src/entityBuilder.o] Error 1
-"make all" terminated with exit code 2. Build might be incomplete.
-09:59:35 **** Incremental Build of configuration Debug for project entityBuilder ****
-make all 
-Building file: ../src/entityBuilder.c
-Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/entityBuilder.d" -MT"src/entityBuilder.o" -o "src/entityBuilder.o" "../src/entityBuilder.c"
-Finished building: ../src/entityBuilder.c
- 
-Building file: ../src/menues.c
-Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/menues.d" -MT"src/menues.o" -o "src/menues.o" "../src/menues.c"
-Finished building: ../src/menues.c
- 
-Building target: entityBuilder
-Invoking: GCC C Linker
-gcc  -o "entityBuilder"  ./src/Builder.o ./src/entityBuilder.o ./src/gets.o ./src/menues.o ./src/validations.o   -lm
-Finished building target: entityBuilder
- 
-10:00:11 **** Incremental Build of configuration Debug for project entityBuilder ****
-make all 
-Building file: ../src/menues.c
-Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/menues.d" -MT"src/menues.o" -o "src/menues.o" "../src/menues.c"
-Finished building: ../src/menues.c
- 
-Building target: entityBuilder
-Invoking: GCC C Linker
-gcc  -o "entityBuilder"  ./src/Builder.o ./src/entityBuilder.o ./src/gets.o ./src/menues.o ./src/validations.o   -lm
-Finished building target: entityBuilder
- 
-10:04:58 **** Incremental Build of configuration Debug for project entityBuilder ****
-make all 
-Building file: ../src/entityBuilder.c
-Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/entityBuilder.d" -MT"src/entityBuilder.o" -o "src/entityBuilder.o" "../src/entityBuilder.c"
-Finished building: ../src/entityBuilder.c
- 
-Building target: entityBuilder
-Invoking: GCC C Linker
-gcc  -o "entityBuilder"  ./src/Builder.o ./src/entityBuilder.o ./src/gets.o ./src/menues.o ./src/validations.o   -lm
-Finished building target: entityBuilder
+gcc  -o "clase_19bis"  ./src/clase_19bis.o ./src/gets.o ./src/menues.o ./src/producto.o ./src/validations.o   -lm
+Finished building target: clase_19bis
  

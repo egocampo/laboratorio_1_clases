@@ -10,19 +10,20 @@
 #include <stdlib.h>
 #include "menues.h"
 
-void menu_imprimirMenuPrincipal(char* nombreEstructura,char* detalleParametros)
+void menu_imprimirMenuPrincipal(void)
 {
 	system("clear");
-			printf("ENTITY BUILDER\n"
-					"‾‾‾‾‾‾‾‾‾‾‾‾‾‾\n"
+			printf("EMPRESA SERIA S.R.L.\n"
+					"‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾\n"
 					"MENU PRINCIPAL\n"
 					"‾‾‾‾‾‾‾‾‾‾‾‾‾‾\n"
-					"1) Ingresar NOMBRE de entidad: %s\n"
-					"2) Ingresar CAMPOS de la entidad: %s\n"
-					"3) Generar archivos .C y .H\n"
-					"4) Ayuda\n"
-					"5) Salir del programa\n\n",
-					nombreEstructura,detalleParametros);
+					"1) ALTA Producto\n"
+					"2) BAJA Producto\n"
+					"3) MODIFICAR Producto\n"
+					"4) Cargar desde ARCHIVO\n"
+					"5) Guardar en ARCHIVO\n"
+					"6) Imprimir listado de Productos\n"
+					"7) Salir del programa\n\n");
 }
 
 void menu_imprimirAyuda(void)
@@ -54,24 +55,14 @@ void menu_mensajeContinuar(void)
 	getchar();
 }
 
-void menu_imprimirSectores(void)
-{
-	printf("\nListado de sectores:\n"
-			"1) Programación\n"
-			"2) Diseño\n"
-			"3) Soporte técnico\n"
-			"4) RR.HH.\n"
-			"5) Mantenimiento\n");
-}
-
-void menu_modificarEmpleado(void)
+void menu_modificarProducto(char* nombre,char* descripcion,float precioUnitario)
 {
 	printf("\nOpciones disponibles para modificar:\n"
-			"a) Nombre\n"
-			"b) Apellido\n"
-			"c) Salario\n"
-			"d) Sector\n"
-			"e) Cancelar modificación\n");
+			"a) Nombre: %s\n"
+			"b) Descripcion: %s\n"
+			"c) Precio Unitario: %.2f\n"
+			"d) Cancelar modificación\n",
+			nombre,descripcion,precioUnitario);
 }
 
 void menu_imprimirMensajeDespedida(void)
