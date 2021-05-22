@@ -1,41 +1,16 @@
-13:49:13 **** Incremental Build of configuration Debug for project clase_19bis ****
+09:50:21 **** Incremental Build of configuration Debug for project clase_19bis ****
 make all 
 make: No se hace nada para 'all'.
-07:54:59 **** Incremental Build of configuration Debug for project clase_19bis ****
+09:50:33 **** Incremental Build of configuration Debug for project clase_19bis ****
 make all 
-Building file: ../src/clase_19bis.c
-Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/clase_19bis.d" -MT"src/clase_19bis.o" -o "src/clase_19bis.o" "../src/clase_19bis.c"
-Finished building: ../src/clase_19bis.c
- 
-Building file: ../src/producto.c
-Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/producto.d" -MT"src/producto.o" -o "src/producto.o" "../src/producto.c"
-Finished building: ../src/producto.c
- 
-Building target: clase_19bis
-Invoking: GCC C Linker
-gcc  -o "clase_19bis"  ./src/clase_19bis.o ./src/gets.o ./src/menues.o ./src/producto.o ./src/validations.o   -lm
-Finished building target: clase_19bis
- 
-07:55:31 **** Incremental Build of configuration Debug for project clase_19bis ****
+make: No se hace nada para 'all'.
+09:50:57 **** Incremental Build of configuration Debug for project clase_19bis ****
 make all 
-Building file: ../src/clase_19bis.c
-Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/clase_19bis.d" -MT"src/clase_19bis.o" -o "src/clase_19bis.o" "../src/clase_19bis.c"
-Finished building: ../src/clase_19bis.c
- 
-Building file: ../src/producto.c
-Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/producto.d" -MT"src/producto.o" -o "src/producto.o" "../src/producto.c"
-Finished building: ../src/producto.c
- 
-Building target: clase_19bis
-Invoking: GCC C Linker
-gcc  -o "clase_19bis"  ./src/clase_19bis.o ./src/gets.o ./src/menues.o ./src/producto.o ./src/validations.o   -lm
-Finished building target: clase_19bis
- 
-07:58:59 **** Incremental Build of configuration Debug for project clase_19bis ****
+make: No se hace nada para 'all'.
+09:50:59 **** Incremental Build of configuration Debug for project clase_19bis ****
+make all 
+make: No se hace nada para 'all'.
+11:03:17 **** Incremental Build of configuration Debug for project clase_19bis ****
 make all 
 Building file: ../src/producto.c
 Invoking: GCC C Compiler
@@ -47,24 +22,13 @@ Invoking: GCC C Linker
 gcc  -o "clase_19bis"  ./src/clase_19bis.o ./src/gets.o ./src/menues.o ./src/producto.o ./src/validations.o   -lm
 Finished building target: clase_19bis
  
-08:23:10 **** Incremental Build of configuration Debug for project clase_19bis ****
+11:03:19 **** Incremental Build of configuration Debug for project entityBuilder ****
 make all 
-Building file: ../src/producto.c
-Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/producto.d" -MT"src/producto.o" -o "src/producto.o" "../src/producto.c"
-../src/producto.c: In function ‘producto_guardarEnArchivo’:
-../src/producto.c:403:24: error: expected expression before ‘)’ token
-  403 |    sprintf(bufferWrite,)
-      |                        ^
-../src/producto.c:398:6: warning: unused variable ‘indiceVacio’ [-Wunused-variable]
-  398 |  int indiceVacio;
-      |      ^~~~~~~~~~~
-../src/producto.c:396:6: warning: unused variable ‘rs’ [-Wunused-variable]
-  396 |  int rs,i;
-      |      ^~
-make: *** [src/subdir.mk:32: src/producto.o] Error 1
-"make all" terminated with exit code 2. Build might be incomplete.
-08:23:18 **** Incremental Build of configuration Debug for project clase_19bis ****
+make: No se hace nada para 'all'.
+11:03:28 **** Incremental Build of configuration Debug for project clase_19bis ****
+make all 
+make: No se hace nada para 'all'.
+11:03:57 **** Incremental Build of configuration Debug for project clase_19bis ****
 make all 
 Building file: ../src/producto.c
 Invoking: GCC C Compiler
@@ -76,26 +40,10 @@ Invoking: GCC C Linker
 gcc  -o "clase_19bis"  ./src/clase_19bis.o ./src/gets.o ./src/menues.o ./src/producto.o ./src/validations.o   -lm
 Finished building target: clase_19bis
  
-08:27:29 **** Incremental Build of configuration Debug for project clase_19bis ****
+11:03:58 **** Incremental Build of configuration Debug for project clase_19bis ****
 make all 
-Building file: ../src/producto.c
-Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/producto.d" -MT"src/producto.o" -o "src/producto.o" "../src/producto.c"
-../src/producto.c: In function ‘producto_guardarEnArchivo’:
-../src/producto.c:399:6: warning: unused variable ‘indiceVacio’ [-Wunused-variable]
-  399 |  int indiceVacio;
-      |      ^~~~~~~~~~~
-../src/producto.c:396:6: warning: unused variable ‘rs’ [-Wunused-variable]
-  396 |  int rs,i;
-      |      ^~
-Finished building: ../src/producto.c
- 
-Building target: clase_19bis
-Invoking: GCC C Linker
-gcc  -o "clase_19bis"  ./src/clase_19bis.o ./src/gets.o ./src/menues.o ./src/producto.o ./src/validations.o   -lm
-Finished building target: clase_19bis
- 
-08:27:54 **** Incremental Build of configuration Debug for project clase_19bis ****
+make: No se hace nada para 'all'.
+11:04:20 **** Incremental Build of configuration Debug for project clase_19bis ****
 make all 
 Building file: ../src/producto.c
 Invoking: GCC C Compiler
@@ -107,41 +55,13 @@ Invoking: GCC C Linker
 gcc  -o "clase_19bis"  ./src/clase_19bis.o ./src/gets.o ./src/menues.o ./src/producto.o ./src/validations.o   -lm
 Finished building target: clase_19bis
  
-08:28:03 **** Incremental Build of configuration Debug for project clase_19bis ****
+11:04:21 **** Incremental Build of configuration Debug for project entityBuilder ****
 make all 
-Building file: ../src/clase_19bis.c
-Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/clase_19bis.d" -MT"src/clase_19bis.o" -o "src/clase_19bis.o" "../src/clase_19bis.c"
-Finished building: ../src/clase_19bis.c
- 
-Building file: ../src/producto.c
-Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/producto.d" -MT"src/producto.o" -o "src/producto.o" "../src/producto.c"
-Finished building: ../src/producto.c
- 
-Building target: clase_19bis
-Invoking: GCC C Linker
-gcc  -o "clase_19bis"  ./src/clase_19bis.o ./src/gets.o ./src/menues.o ./src/producto.o ./src/validations.o   -lm
-Finished building target: clase_19bis
- 
-08:28:42 **** Incremental Build of configuration Debug for project clase_19bis ****
+make: No se hace nada para 'all'.
+11:04:22 **** Incremental Build of configuration Debug for project clase_19bis ****
 make all 
-Building file: ../src/clase_19bis.c
-Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/clase_19bis.d" -MT"src/clase_19bis.o" -o "src/clase_19bis.o" "../src/clase_19bis.c"
-Finished building: ../src/clase_19bis.c
- 
-Building file: ../src/producto.c
-Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/producto.d" -MT"src/producto.o" -o "src/producto.o" "../src/producto.c"
-Finished building: ../src/producto.c
- 
-Building target: clase_19bis
-Invoking: GCC C Linker
-gcc  -o "clase_19bis"  ./src/clase_19bis.o ./src/gets.o ./src/menues.o ./src/producto.o ./src/validations.o   -lm
-Finished building target: clase_19bis
- 
-08:30:06 **** Incremental Build of configuration Debug for project clase_19bis ****
+make: No se hace nada para 'all'.
+11:05:38 **** Incremental Build of configuration Debug for project clase_19bis ****
 make all 
 Building file: ../src/producto.c
 Invoking: GCC C Compiler
@@ -153,7 +73,10 @@ Invoking: GCC C Linker
 gcc  -o "clase_19bis"  ./src/clase_19bis.o ./src/gets.o ./src/menues.o ./src/producto.o ./src/validations.o   -lm
 Finished building target: clase_19bis
  
-08:32:08 **** Incremental Build of configuration Debug for project clase_19bis ****
+11:05:39 **** Incremental Build of configuration Debug for project entityBuilder ****
+make all 
+make: No se hace nada para 'all'.
+11:24:43 **** Incremental Build of configuration Debug for project clase_19bis ****
 make all 
 Building file: ../src/producto.c
 Invoking: GCC C Compiler
@@ -165,23 +88,13 @@ Invoking: GCC C Linker
 gcc  -o "clase_19bis"  ./src/clase_19bis.o ./src/gets.o ./src/menues.o ./src/producto.o ./src/validations.o   -lm
 Finished building target: clase_19bis
  
-08:32:30 **** Incremental Build of configuration Debug for project clase_19bis ****
+11:24:44 **** Incremental Build of configuration Debug for project entityBuilder ****
 make all 
-Building file: ../src/producto.c
-Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/producto.d" -MT"src/producto.o" -o "src/producto.o" "../src/producto.c"
-../src/producto.c: In function ‘producto_guardarEnArchivo’:
-../src/producto.c:404:25: warning: unknown escape sequence: '\N'
-  404 |     sprintf(bufferWrite,"%s,%s,%.2f,%d\NN",
-      |                         ^~~~~~~~~~~~~~~~~~
-Finished building: ../src/producto.c
- 
-Building target: clase_19bis
-Invoking: GCC C Linker
-gcc  -o "clase_19bis"  ./src/clase_19bis.o ./src/gets.o ./src/menues.o ./src/producto.o ./src/validations.o   -lm
-Finished building target: clase_19bis
- 
-08:32:36 **** Incremental Build of configuration Debug for project clase_19bis ****
+make: No se hace nada para 'all'.
+11:24:47 **** Incremental Build of configuration Debug for project clase_19bis ****
+make all 
+make: No se hace nada para 'all'.
+11:25:07 **** Incremental Build of configuration Debug for project clase_19bis ****
 make all 
 Building file: ../src/producto.c
 Invoking: GCC C Compiler
@@ -193,15 +106,131 @@ Invoking: GCC C Linker
 gcc  -o "clase_19bis"  ./src/clase_19bis.o ./src/gets.o ./src/menues.o ./src/producto.o ./src/validations.o   -lm
 Finished building target: clase_19bis
  
-08:35:28 **** Incremental Build of configuration Debug for project clase_19bis ****
+11:25:07 **** Incremental Build of configuration Debug for project entityBuilder ****
 make all 
-Building file: ../src/clase_19bis.c
+make: No se hace nada para 'all'.
+11:25:08 **** Incremental Build of configuration Debug for project clase_19bis ****
+make all 
+make: No se hace nada para 'all'.
+11:25:10 **** Incremental Build of configuration Debug for project clase_19bis ****
+make all 
+make: No se hace nada para 'all'.
+11:29:37 **** Incremental Build of configuration Debug for project clase_19bis ****
+make all 
+Building file: ../src/producto.c
 Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/clase_19bis.d" -MT"src/clase_19bis.o" -o "src/clase_19bis.o" "../src/clase_19bis.c"
-Finished building: ../src/clase_19bis.c
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/producto.d" -MT"src/producto.o" -o "src/producto.o" "../src/producto.c"
+Finished building: ../src/producto.c
  
 Building target: clase_19bis
 Invoking: GCC C Linker
 gcc  -o "clase_19bis"  ./src/clase_19bis.o ./src/gets.o ./src/menues.o ./src/producto.o ./src/validations.o   -lm
 Finished building target: clase_19bis
+ 
+11:29:37 **** Incremental Build of configuration Debug for project entityBuilder ****
+make all 
+make: No se hace nada para 'all'.
+11:29:39 **** Incremental Build of configuration Debug for project clase_19bis ****
+make all 
+make: No se hace nada para 'all'.
+11:30:09 **** Incremental Build of configuration Debug for project clase_19bis ****
+make all 
+make: No se hace nada para 'all'.
+11:30:19 **** Incremental Build of configuration Debug for project clase_19bis ****
+make all 
+make: No se hace nada para 'all'.
+11:31:21 **** Incremental Build of configuration Debug for project clase_19bis ****
+make all 
+Building file: ../src/producto.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/producto.d" -MT"src/producto.o" -o "src/producto.o" "../src/producto.c"
+Finished building: ../src/producto.c
+ 
+Building target: clase_19bis
+Invoking: GCC C Linker
+gcc  -o "clase_19bis"  ./src/clase_19bis.o ./src/gets.o ./src/menues.o ./src/producto.o ./src/validations.o   -lm
+Finished building target: clase_19bis
+ 
+11:31:22 **** Incremental Build of configuration Debug for project entityBuilder ****
+make all 
+make: No se hace nada para 'all'.
+11:31:28 **** Incremental Build of configuration Debug for project clase_19bis ****
+make all 
+make: No se hace nada para 'all'.
+11:38:53 **** Incremental Build of configuration Debug for project clase_19bis ****
+make all 
+make: No se hace nada para 'all'.
+11:38:53 **** Incremental Build of configuration Debug for project entityBuilder ****
+make all 
+Building file: ../src/Builder.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Builder.d" -MT"src/Builder.o" -o "src/Builder.o" "../src/Builder.c"
+Finished building: ../src/Builder.c
+ 
+Building target: entityBuilder
+Invoking: GCC C Linker
+gcc  -o "entityBuilder"  ./src/Builder.o ./src/entityBuilder.o ./src/gets.o ./src/menues.o ./src/validations.o   -lm
+Finished building target: entityBuilder
+ 
+11:40:23 **** Incremental Build of configuration Debug for project clase_19bis ****
+make all 
+make: No se hace nada para 'all'.
+11:40:24 **** Incremental Build of configuration Debug for project entityBuilder ****
+make all 
+Building file: ../src/Builder.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Builder.d" -MT"src/Builder.o" -o "src/Builder.o" "../src/Builder.c"
+../src/Builder.c: In function ‘builder_constructor’:
+../src/Builder.c:32:2: warning: implicit declaration of function ‘builder_generarListadoParametrosComma’; did you mean ‘generarListadoParametrosComma’? [-Wimplicit-function-declaration]
+   32 |  builder_generarListadoParametrosComma(listadoParametros,listadoParametrosComma);
+      |  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |  generarListadoParametrosComma
+../src/Builder.c: At top level:
+../src/Builder.c:404:6: warning: conflicting types for ‘builder_generarListadoParametrosComma’
+  404 | void builder_generarListadoParametrosComma(char* listadoParametros,char* listadoParametrosComma)
+      |      ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/Builder.c:32:2: note: previous implicit declaration of ‘builder_generarListadoParametrosComma’ was here
+   32 |  builder_generarListadoParametrosComma(listadoParametros,listadoParametrosComma);
+      |  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Finished building: ../src/Builder.c
+ 
+Building target: entityBuilder
+Invoking: GCC C Linker
+gcc  -o "entityBuilder"  ./src/Builder.o ./src/entityBuilder.o ./src/gets.o ./src/menues.o ./src/validations.o   -lm
+Finished building target: entityBuilder
+ 
+11:40:51 **** Incremental Build of configuration Debug for project clase_19bis ****
+make all 
+make: No se hace nada para 'all'.
+11:40:51 **** Incremental Build of configuration Debug for project entityBuilder ****
+make all 
+Building file: ../src/Builder.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Builder.d" -MT"src/Builder.o" -o "src/Builder.o" "../src/Builder.c"
+Finished building: ../src/Builder.c
+ 
+Building file: ../src/entityBuilder.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/entityBuilder.d" -MT"src/entityBuilder.o" -o "src/entityBuilder.o" "../src/entityBuilder.c"
+Finished building: ../src/entityBuilder.c
+ 
+Building target: entityBuilder
+Invoking: GCC C Linker
+gcc  -o "entityBuilder"  ./src/Builder.o ./src/entityBuilder.o ./src/gets.o ./src/menues.o ./src/validations.o   -lm
+Finished building target: entityBuilder
+ 
+11:50:21 **** Incremental Build of configuration Debug for project clase_19bis ****
+make all 
+make: No se hace nada para 'all'.
+11:50:22 **** Incremental Build of configuration Debug for project entityBuilder ****
+make all 
+Building file: ../src/Builder.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Builder.d" -MT"src/Builder.o" -o "src/Builder.o" "../src/Builder.c"
+Finished building: ../src/Builder.c
+ 
+Building target: entityBuilder
+Invoking: GCC C Linker
+gcc  -o "entityBuilder"  ./src/Builder.o ./src/entityBuilder.o ./src/gets.o ./src/menues.o ./src/validations.o   -lm
+Finished building target: entityBuilder
  

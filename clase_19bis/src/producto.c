@@ -4,6 +4,7 @@
 #include "producto.h"
 #include "gets.h"
 #include "menues.h"
+#include "validations.h"
 
 Producto* producto_new(void)
 {
@@ -12,15 +13,17 @@ Producto* producto_new(void)
 
 Producto* producto_newParam(char* nombre,char* descripcion,float precioUnitario,int idProducto)
 {
-	Producto* bufferProducto = producto_new();
+	Producto* bufferProducto = NULL;
 	if(nombre != NULL && descripcion != NULL && precioUnitario > 0 && idProducto > 0)
 	{
+		bufferProducto = producto_new();
 		if(producto_setNombre(bufferProducto,nombre) != 0 ||
 				producto_setDescripcion(bufferProducto,descripcion) != 0 ||
 				producto_setPrecioUnitario(bufferProducto,precioUnitario) != 0 ||
 				producto_setIdProducto(bufferProducto, idProducto) != 0)
 		{
 			free(bufferProducto);
+			bufferProducto = NULL;
 		}
 	}
 	return bufferProducto;
@@ -28,17 +31,18 @@ Producto* producto_newParam(char* nombre,char* descripcion,float precioUnitario,
 
 Producto* producto_newParamFromTxt(char* nombre,char* descripcion,char* precioUnitario,char* idProducto)
 {
-	Producto* bufferProducto = producto_new();
+	Producto* bufferProducto = NULL;
 	if(nombre != NULL && descripcion != NULL && precioUnitario != NULL && idProducto != NULL)
 	{
-		if(producto_setNombre(bufferProducto,nombre) != 0 || producto_setDescripcion(bufferProducto,descripcion) != 0 || producto_setPrecioUnitario(bufferProducto,atof(precioUnitario)) != 0 || producto_setIdProducto(bufferProducto, atoi(idProducto)) != 0)
+		bufferProducto = producto_new();
+		if(producto_setNombre(bufferProducto,nombre) ||
+				producto_setDescripcion(bufferProducto,descripcion) ||
+				producto_setPrecioUnitario(bufferProducto,atof(precioUnitario))  ||
+				producto_setIdProducto(bufferProducto, atoi(idProducto)) )
 		{
-
+			free(bufferProducto);
+			bufferProducto = NULL;
 		}
-	}
-	else
-	{
-		free(bufferProducto);
 	}
 	return bufferProducto;
 }
@@ -238,7 +242,6 @@ int producto_cargarDatosDesdeArchivo(Producto* list[])
 			"programacion1_laboratorio1/repositoriosClonados/laboratorio1_clases/"
 			"clase_19bis/src/listadoProductos","r");
 	Producto* bufferProducto;
-	int rs;
 	char bufferNombre[50];
 	char bufferDescripcion[50];
 	char bufferPrecioUnitario[10];
@@ -248,12 +251,11 @@ int producto_cargarDatosDesdeArchivo(Producto* list[])
 	{
 		do
 		{
-			rs = fscanf(pArchivoProductos,"%[^,],%[^,],%[^,],%[^\n]\n",
+			if(fscanf(pArchivoProductos,"%[^,],%[^,],%[^,],%[^\n]\n",
 					bufferNombre,
 					bufferDescripcion,
 					bufferPrecioUnitario,
-					bufferIdProducto);
-			if(rs == 4)
+					bufferIdProducto) == 4)
 			{
 				bufferProducto = producto_newParamFromTxt(bufferNombre, bufferDescripcion, bufferPrecioUnitario, bufferIdProducto);
 				if(bufferProducto != NULL)

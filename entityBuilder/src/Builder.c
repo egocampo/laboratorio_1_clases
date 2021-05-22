@@ -9,7 +9,12 @@
 #include <stdlib.h>
 #include <string.h>
 #include <ctype.h>
+#include "menues.h"
 #include "Builder.h"
+#define TAM_BUFFER_NOMBRE_ARCHIVO 50
+#define TAM_NOMBRE_ENTIDAD 20
+#define TAM_TIPO_CAMPO 20
+#define TAM_NOMBRE_CAMPO 30
 
 FILE* pArchivoPuntoC;
 
@@ -18,13 +23,13 @@ int builder_constructor(char* nombreEntidad, char* listadoParametros)
 	FILE* pArchivoPuntoC;
 	FILE* pArchivoPuntoH;
 
-	char bufferPuntoC[10000];
-	char bufferPuntoH[10000];
-	int longitudBufferPuntoC;
-	int longitudBufferPuntoH;
-	char bufferNombreArchivo[50];
-	char nombreEntidadMinuscula[20];
+//	int tamListadoParametros = strlen(listadoParametros);
+
+	char bufferNombreArchivo[TAM_BUFFER_NOMBRE_ARCHIVO];
+	char nombreEntidadMinuscula[TAM_NOMBRE_ENTIDAD];
 	builder_entidadMinuscula(nombreEntidad, nombreEntidadMinuscula);
+	char listadoParametrosComma[100];
+	builder_generarListadoParametrosComma(listadoParametros,listadoParametrosComma);
 
 	sprintf(bufferNombreArchivo,"%s.c",nombreEntidadMinuscula);
 	pArchivoPuntoC=fopen(bufferNombreArchivo,"w");
@@ -32,75 +37,102 @@ int builder_constructor(char* nombreEntidad, char* listadoParametros)
 	sprintf(bufferNombreArchivo,"%s.h",nombreEntidadMinuscula);
 	pArchivoPuntoH=fopen(bufferNombreArchivo,"w");
 
-	int contadorComas = 0;
-	int cantidadParametros;
+	int cantidadParametros = 0;
 	int i;
 	for(i=0;i<strlen(listadoParametros);i++)
 	{
-		if(listadoParametros[i] == 59)
-			contadorComas++;
+		if(listadoParametros[i] == ';')
+			cantidadParametros++;
 	}
-	cantidadParametros = contadorComas;
-	char bufferTipoCampo[10];
-	char bufferNombreCampo[20];
-	char bufferNombreCampoMayuscula[20];
+	char bufferTipoCampo[TAM_TIPO_CAMPO];
+	char bufferNombreCampo[TAM_NOMBRE_CAMPO];
+	char bufferNombreCampoMayuscula[TAM_NOMBRE_CAMPO];
 
 // INCLUDES
-	sprintf(bufferPuntoC,"#include <stdio.h>\n#include <stdlib.h>\n#include <string.h>\n#include \"%s.h\"\n\n",nombreEntidadMinuscula);
-	longitudBufferPuntoC=strlen(bufferPuntoC);
-	fwrite(bufferPuntoC,sizeof(char),longitudBufferPuntoC,pArchivoPuntoC);
-
-	sprintf(bufferPuntoH,""
+	fprintf(pArchivoPuntoC,"#include <stdio.h>\n#include <stdlib.h>\n#include <string.h>\n#include \"%s.h\"\n\n",
+			nombreEntidadMinuscula);
+	fprintf(pArchivoPuntoH,""
 			"typedef struct\n"
 			"{\n"
 			"\t%s\n"
 			"}%s;\n\n",
 			listadoParametros,nombreEntidad);
-	longitudBufferPuntoH=strlen(bufferPuntoH);
-	fwrite(bufferPuntoH,sizeof(char),longitudBufferPuntoH,pArchivoPuntoH);
 
 // NEW
-	sprintf(bufferPuntoC,"%s* %s_new(void)\n{\n\treturn malloc(sizeof(%s));\n}\n\n",
+	fprintf(pArchivoPuntoC,"%s* %s_new(void)\n{\n\treturn malloc(sizeof(%s));\n}\n\n",
 						nombreEntidad,nombreEntidadMinuscula,nombreEntidad);
-	longitudBufferPuntoC=strlen(bufferPuntoC);
-	fwrite(bufferPuntoC,sizeof(char),longitudBufferPuntoC,pArchivoPuntoC);
-	sprintf(bufferPuntoH,"%s* %s_new(void);\n",
+	fprintf(pArchivoPuntoH,"%s* %s_new(void);\n",
 						nombreEntidad,nombreEntidadMinuscula);
-	longitudBufferPuntoH=strlen(bufferPuntoH);
-	fwrite(bufferPuntoH,sizeof(char),longitudBufferPuntoH,pArchivoPuntoH);
 
-// NEWPARAM,
-	char listadoParametrosComma[100];
-	generarListadoParametrosComma(listadoParametros,listadoParametrosComma);
-	sprintf(bufferPuntoC,"%s* %s_newParam(%s)\n{\n\treturn malloc(sizeof(%s));\n}\n\n",
-						nombreEntidad,nombreEntidadMinuscula,listadoParametrosComma,nombreEntidad);
-	longitudBufferPuntoC=strlen(bufferPuntoC);
-	fwrite(bufferPuntoC,sizeof(char),longitudBufferPuntoC,pArchivoPuntoC);
-	sprintf(bufferPuntoH,"%s* %s_newParam(%s);\n",
+// NEWPARAM
+	fprintf(pArchivoPuntoC,""
+			"%s* %s_newParam(%s)\n"
+			"{\n"
+			"\t%s* buffer%s = NULL;\n"
+			"\tif(%s)\n"
+			"\t{\n"
+			"\t\tbuffer%s = %s_new();\n"
+			"\t\tif(/*INGRESAR AQUI LOS SETTERS DE CADA CAMPO COMO != 0 ||*/)\n"
+			"\t\t{\n"
+			"\t\t\tfree(buffer%s);\n"
+			"\t\t\tbuffer%s = NULL;\n"
+			"\t\t}\n"
+			"\t}\n"
+			"\treturn buffer%s;\n"
+			"}\n"
+			"\n",
+			nombreEntidad,nombreEntidadMinuscula,listadoParametrosComma,
+			nombreEntidad,nombreEntidad,
+			listadoParametros,
+			nombreEntidad,nombreEntidad,
+			nombreEntidad,
+			nombreEntidad,
+			nombreEntidad);
+	fprintf(pArchivoPuntoH,"%s* %s_newParam(%s);\n",
 						nombreEntidad,nombreEntidadMinuscula,listadoParametrosComma);
-	longitudBufferPuntoH=strlen(bufferPuntoH);
-	fwrite(bufferPuntoH,sizeof(char),longitudBufferPuntoH,pArchivoPuntoH);
+
+// NEWPARAM FROM TXT
+	fprintf(pArchivoPuntoC,""
+			"%s* %s_newParamFromText(%s)\n"
+			"{\n"
+			"\t%s* buffer%s = %s_new();\n"
+			"\tif(%s)\n"
+			"\t{\n"
+			"\t\tif(/*INGRESAR AQUI LOS SETTERS DE CADA CAMPO COMO || (LOS INT/FLOAT PASANDOLOS POR ATOI/ATOF)*/)\n"
+			"\t\t{\n"
+			"\t\t\tfree(buffer%s);\n"
+			"\t\t\tbuffer%s = NULL;\n"
+			"\t\t}\n"
+			"\t}\n"
+			"\treturn buffer%s;\n"
+			"}\n"
+			"\n",
+			nombreEntidad,nombreEntidadMinuscula,listadoParametrosComma,
+			nombreEntidad,nombreEntidad,nombreEntidadMinuscula,
+			listadoParametros,
+			nombreEntidad,
+			nombreEntidad,
+			nombreEntidad);
+	fprintf(pArchivoPuntoH,"%s* %s_newParam(%s);\n",
+				nombreEntidad,nombreEntidadMinuscula,listadoParametrosComma);
 
 // DELETE
-	sprintf(bufferPuntoC,"int %s_delete(%s* this)\n{\n"
+	fprintf(pArchivoPuntoC,"int %s_delete(%s* this,int indice)\n{\n"
 						"\tint retorno = -1;\n"
 						"\tif(this != NULL)\n"
 						"\t{\n"
 						"\t\tfree(this);\n"
+						"\t\tthis[indice] = NULL;\n"
 						"\t\tretorno = 0;\n"
 						"\t}\n"
 						"\treturn retorno;\n"
 						"}\n\n",
 						nombreEntidadMinuscula,nombreEntidad);
-	longitudBufferPuntoC=strlen(bufferPuntoC);
-	fwrite(bufferPuntoC,sizeof(char),longitudBufferPuntoC,pArchivoPuntoC);
-	sprintf(bufferPuntoH,"int %s_delete(%s* this);\n",
+	fprintf(pArchivoPuntoH,"int %s_delete(%s* this);\n",
 						nombreEntidadMinuscula,nombreEntidad);
-	longitudBufferPuntoH=strlen(bufferPuntoH);
-	fwrite(bufferPuntoH,sizeof(char),longitudBufferPuntoH,pArchivoPuntoH);
 
 //	INIT ARRAY
-	sprintf(bufferPuntoC,""
+	fprintf(pArchivoPuntoC,""
 			"int %s_initArray(%s* list[],int len)\n"
 			"{\n"
 			"\tint retorno = -1;\n"
@@ -116,14 +148,9 @@ int builder_constructor(char* nombreEntidad, char* listadoParametros)
 			"\treturn retorno;\n"
 			"}\n\n",
 			nombreEntidadMinuscula,nombreEntidad);
-	longitudBufferPuntoC=strlen(bufferPuntoC);
-	fwrite(bufferPuntoC,sizeof(char),longitudBufferPuntoC,pArchivoPuntoC);
-	sprintf(bufferPuntoH,""
+	fprintf(pArchivoPuntoH,""
 			"int %s_initArray(%s* list[],int len);\n\n",
 			nombreEntidadMinuscula,nombreEntidad);
-	longitudBufferPuntoH=strlen(bufferPuntoH);
-	fwrite(bufferPuntoH,sizeof(char),longitudBufferPuntoH,pArchivoPuntoH);
-
 
 // CAMPOS
 	for(i=0;i<cantidadParametros;i++)
@@ -135,7 +162,7 @@ int builder_constructor(char* nombreEntidad, char* listadoParametros)
 		switch(caracterBufferTipoCampo)
 		{
 		case 'i':
-			sprintf(bufferPuntoC,""
+			fprintf(pArchivoPuntoC,""
 					"int %s_set%s(%s* this,int %s)\n"
 					"{\n"
 					"\tint retorno = -1;\n"
@@ -169,20 +196,16 @@ int builder_constructor(char* nombreEntidad, char* listadoParametros)
 					bufferNombreCampoMayuscula,bufferNombreCampo,
 					bufferNombreCampoMayuscula,
 					nombreEntidadMinuscula,bufferNombreCampoMayuscula,bufferNombreCampo);
-			longitudBufferPuntoC=strlen(bufferPuntoC);
-			fwrite(bufferPuntoC,sizeof(char),longitudBufferPuntoC,pArchivoPuntoC);
-			sprintf(bufferPuntoH,""
+			fprintf(pArchivoPuntoH,""
 					"int %s_set%s(%s* this,int %s);\n"
 					"int %s_get%s(%s* this,int* flagError);\n"
 					"int %s_isValid%s(int %s);\n",
 					nombreEntidadMinuscula,bufferNombreCampoMayuscula,nombreEntidad,bufferNombreCampo,
 					nombreEntidadMinuscula,bufferNombreCampoMayuscula,nombreEntidad,
 					nombreEntidadMinuscula,bufferNombreCampoMayuscula,bufferNombreCampo);
-			longitudBufferPuntoH=strlen(bufferPuntoH);
-			fwrite(bufferPuntoH,sizeof(char),longitudBufferPuntoH,pArchivoPuntoH);
 			break;
 		case 'c':
-			sprintf(bufferPuntoC,""
+			fprintf(pArchivoPuntoC,""
 					"int %s_set%s(%s* this,char* %s)\n"
 					"{\n"
 					"\tint retorno = -1;\n"
@@ -216,20 +239,16 @@ int builder_constructor(char* nombreEntidad, char* listadoParametros)
 					bufferNombreCampoMayuscula,bufferNombreCampo,
 					bufferNombreCampoMayuscula,
 					nombreEntidadMinuscula,bufferNombreCampoMayuscula,bufferNombreCampo);
-			longitudBufferPuntoC=strlen(bufferPuntoC);
-			fwrite(bufferPuntoC,sizeof(char),longitudBufferPuntoC,pArchivoPuntoC);
-			sprintf(bufferPuntoH,""
+			fprintf(pArchivoPuntoH,""
 					"int %s_set%s(%s* this,char* %s);\n"
 					"char* %s_get%s(%s* this,int* flagError);\n"
 					"int %s_isValid%s(char* %s);\n",
 					nombreEntidadMinuscula,bufferNombreCampoMayuscula,nombreEntidad,bufferNombreCampo,
 					nombreEntidadMinuscula,bufferNombreCampoMayuscula,nombreEntidad,
 					nombreEntidadMinuscula,bufferNombreCampoMayuscula,bufferNombreCampo);
-			longitudBufferPuntoH=strlen(bufferPuntoH);
-			fwrite(bufferPuntoH,sizeof(char),longitudBufferPuntoH,pArchivoPuntoH);
 			break;
 		case 'f':
-			sprintf(bufferPuntoC,""
+			fprintf(pArchivoPuntoC,""
 					"int %s_set%s(%s* this,float %s)\n"
 					"{\n"
 					"\tint retorno = -1;\n"
@@ -263,23 +282,19 @@ int builder_constructor(char* nombreEntidad, char* listadoParametros)
 					bufferNombreCampoMayuscula,bufferNombreCampo,
 					bufferNombreCampoMayuscula,
 					nombreEntidadMinuscula,bufferNombreCampoMayuscula,bufferNombreCampo);
-			longitudBufferPuntoC=strlen(bufferPuntoC);
-			fwrite(bufferPuntoC,sizeof(char),longitudBufferPuntoC,pArchivoPuntoC);
-			sprintf(bufferPuntoH,""
+			fprintf(pArchivoPuntoH,""
 					"int %s_set%s(%s* this,float %s);\n"
 					"float %s_get%s(%s* this,int* flagError);\n"
 					"int %s_isValid%s(float %s);\n",
 					nombreEntidadMinuscula,bufferNombreCampoMayuscula,nombreEntidad,bufferNombreCampo,
 					nombreEntidadMinuscula,bufferNombreCampoMayuscula,nombreEntidad,
 					nombreEntidadMinuscula,bufferNombreCampoMayuscula,bufferNombreCampo);
-			longitudBufferPuntoH=strlen(bufferPuntoH);
-			fwrite(bufferPuntoH,sizeof(char),longitudBufferPuntoH,pArchivoPuntoH);
 			break;
 		}
 	}
 
 //	buscarIndiceVacio
-	sprintf(bufferPuntoC,""
+	fprintf(pArchivoPuntoC,""
 			"int %s_buscarIndiceVacio(%s* list[],int len)\n"
 			"{\n"
 			"\tint retorno = -1;\n"
@@ -295,16 +310,12 @@ int builder_constructor(char* nombreEntidad, char* listadoParametros)
 			"\treturn retorno;\n"
 			"}\n\n",
 			nombreEntidadMinuscula,nombreEntidad);
-	longitudBufferPuntoC=strlen(bufferPuntoC);
-	fwrite(bufferPuntoC,sizeof(char),longitudBufferPuntoC,pArchivoPuntoC);
-	sprintf(bufferPuntoH,""
+	fprintf(pArchivoPuntoH,""
 			"\nint %s_buscarIndiceVacio(%s* list[],int len);\n",
 			nombreEntidadMinuscula,nombreEntidad);
-	longitudBufferPuntoH=strlen(bufferPuntoH);
-	fwrite(bufferPuntoH,sizeof(char),longitudBufferPuntoH,pArchivoPuntoH);
 
 //	GENERAR ID
-	sprintf(bufferPuntoC,""
+	fprintf(pArchivoPuntoC,""
 			"int %s_generarId(void)\n"
 			"{\n"
 			"\tstatic int contadorId = 0;\n"
@@ -312,16 +323,12 @@ int builder_constructor(char* nombreEntidad, char* listadoParametros)
 			"\treturn contadorId;\n"
 			"}\n\n",
 			nombreEntidadMinuscula);
-	longitudBufferPuntoC=strlen(bufferPuntoC);
-	fwrite(bufferPuntoC,sizeof(char),longitudBufferPuntoC,pArchivoPuntoC);
-	sprintf(bufferPuntoH,""
+	fprintf(pArchivoPuntoH,""
 			"int %s_generarId(void);\n",
 			nombreEntidadMinuscula);
-	longitudBufferPuntoH=strlen(bufferPuntoH);
-	fwrite(bufferPuntoH,sizeof(char),longitudBufferPuntoH,pArchivoPuntoH);
 
 //	IMPRIMIR LISTADO
-	sprintf(bufferPuntoC,""
+	fprintf(pArchivoPuntoC,""
 			"int %s_imprimirListado(%s* list[],int len)\n"
 			"{\n"
 			"\tint retorno = -1;\n"
@@ -343,16 +350,11 @@ int builder_constructor(char* nombreEntidad, char* listadoParametros)
 			nombreEntidadMinuscula,nombreEntidad,
 			nombreEntidadMinuscula,
 			nombreEntidadMinuscula,nombreEntidad);
-	longitudBufferPuntoC=strlen(bufferPuntoC);
-	fwrite(bufferPuntoC,sizeof(char),longitudBufferPuntoC,pArchivoPuntoC);
-	sprintf(bufferPuntoH,""
+	fprintf(pArchivoPuntoH,""
 			"int %s_imprimirListado(%s* list[],int len);\n"
 			"void %s_imprimirPosicion(%s* this);\n",
 			nombreEntidadMinuscula,nombreEntidad,
 			nombreEntidadMinuscula,nombreEntidad);
-	longitudBufferPuntoH=strlen(bufferPuntoH);
-	fwrite(bufferPuntoH,sizeof(char),longitudBufferPuntoH,pArchivoPuntoH);
-
 
 	fclose(pArchivoPuntoC);
 	fclose(pArchivoPuntoH);
@@ -424,10 +426,10 @@ void builder_obtenerParametro(char* listadoParametros,char* tipoCampo,char* nomb
 	strcpy(nombreCampo,bufferNombre);
 }
 
-void generarListadoParametrosComma(char* listadoParametros,char* listadoParametrosComma)
+void builder_generarListadoParametrosComma(char* listadoParametros,char* listadoParametrosComma)
 {
-	int i;
-	for(i=0;listadoParametros[i+1]!=0;i++)
+	int i=0;
+	do
 	{
 		if(listadoParametros[i]==59)
 		{
@@ -437,9 +439,6 @@ void generarListadoParametrosComma(char* listadoParametros,char* listadoParametr
 		{
 			listadoParametrosComma[i]=listadoParametros[i];
 		}
-	}
+		i++;
+	}while(listadoParametros[i-1]!=0);
 }
-
-
-
-
